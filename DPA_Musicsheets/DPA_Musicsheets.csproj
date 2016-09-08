@@ -68,6 +68,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="classes\ApplicationController.cs" />
+    <Compile Include="classes\Note.cs" />
+    <Compile Include="classes\Staf.cs" />
+    <Compile Include="classes\StafDrawer.cs" />
+    <Compile Include="Facade\MidiFacade.cs" />
+    <Compile Include="factories\ReaderFactory.cs" />
+    <Compile Include="interfaces\InputReader.cs" />
+    <Compile Include="interfaces\NoteObserver.cs" />
     <Compile Include="MidiTrack.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -110,7 +118,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
