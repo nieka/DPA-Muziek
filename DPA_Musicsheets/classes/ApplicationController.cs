@@ -24,6 +24,7 @@ namespace DPA_Musicsheets.classes
         {
             inputReader = ReaderFactory.getReader(System.IO.Path.GetExtension(location));
             staf = inputReader.readNotes(location);
+            notifyAll();
         }
 
         public void attach(NoteObserver observer)

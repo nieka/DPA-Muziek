@@ -1,4 +1,5 @@
-﻿using DPA_Musicsheets.Facade;
+﻿using DPA_Musicsheets.classes;
+using DPA_Musicsheets.Facade;
 using DPA_Musicsheets.interfaces;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,8 @@ namespace DPA_Musicsheets.factories
         static ReaderFactory()
         {
             readers = new Dictionary<String, InputReader>();
-            readers.Add(".mid", new MidiFacade());
+            readers.Add(".mid", new MidiAdapter());
+            readers.Add(".ly", new LilypondReader());
         }
 
         public static InputReader getReader(string readerName)

@@ -38,6 +38,7 @@ namespace DPA_Musicsheets
                             // 160 is centrale C op piano.
                             trackLog.Messages.Add(String.Format("Keycode: {0}, Command: {1}, absolute time: {2}, delta time: {3}"
                                 , channelMessage.Data1, channelMessage.Command, midiEvent.AbsoluteTicks, midiEvent.DeltaTicks));
+                            
                             break;
                         case MessageType.SystemExclusive:
                             break;
@@ -59,7 +60,6 @@ namespace DPA_Musicsheets
                             break;
                     }
                 }
-
                 yield return trackLog;
             }
         }

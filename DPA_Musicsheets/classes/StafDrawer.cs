@@ -12,15 +12,28 @@ namespace DPA_Musicsheets.classes
     class StafDrawer : NoteObserver
     {
         IncipitViewerWPF staff;
+        private Dictionary<double,MusicalSymbolDuration> noteLengteLookup = new Dictionary<double,MusicalSymbolDuration>();
+        private Dictionary<TieType, NoteTieType> noteTieLookup = new Dictionary<TieType, NoteTieType>();
         public StafDrawer(IncipitViewerWPF staff)
         {
             this.staff = staff;
+            //lookup table vullen
+            noteLengteLookup.Add(1, MusicalSymbolDuration.Whole);
+            noteLengteLookup.Add(2, MusicalSymbolDuration.Half);
+            noteLengteLookup.Add(4, MusicalSymbolDuration.Quarter);
+            noteLengteLookup.Add(8, MusicalSymbolDuration.Eighth);
+            noteLengteLookup.Add(16, MusicalSymbolDuration.Sixteenth);
+            noteLengteLookup.Add(32, MusicalSymbolDuration.d32nd);
+            noteTieLookup.Add(TieType.None, NoteTieType.None);
+            noteTieLookup.Add(TieType.start, NoteTieType.Start);
+            noteTieLookup.Add(TieType.startStop, NoteTieType.StopAndStartAnother);
+            noteTieLookup.Add(TieType.stop, NoteTieType.Stop);
         } 
 
         public void update(Staf data)
         {
             staff.AddMusicalSymbol(new Clef(ClefType.GClef, 2));
-            String[] timeSig = data.getTimeSignature().Split('/');
+            int[] timeSig = data.getTimeSignature();
             staff.AddMusicalSymbol(new TimeSignature(TimeSignatureType.Numbers,Convert.ToUInt32(timeSig[0]),Convert.ToUInt32(timeSig[1])));
  
             List<Note> noten = data.getNoten();
@@ -34,7 +47,10 @@ namespace DPA_Musicsheets.classes
                 } else {
                     sharp = 0;
                 }
-                staff.AddMusicalSymbol(new PSAMControlLibrary.Note(noot.getToonhoogte(),sharp,noot.getOctaaf(),)
+             
+                //bepalen welke note type het is
+                staff.AddMusicalSymbol(new PSAMControlLibrary.Note(noot.getToonhoogte(),sharp,noot.getOctaaf(),noteLengteLookup[noot.getDuur()],NoteStemDirection.Up
+                    ,noteTieLookup[noot.isTied()],new List<NoteBeamType>(){NoteBeamType.Single}));
             }
         }
     }

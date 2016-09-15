@@ -10,16 +10,23 @@ namespace DPA_Musicsheets.classes
     {
         private int octaaf;
         private String toonHoogte;
-        private int duur;
+        private double duur;
         private Boolean sharp;
+        private TieType tied;
 
-        public Note(int octaaf, String toonHoogte, int duur, Boolean sharp)
+        public Note(int octaaf, String toonHoogte, double duur, Boolean sharp, TieType tied)
         {
             this.octaaf = octaaf;
             this.duur = duur;
             this.toonHoogte = toonHoogte;
             this.sharp = sharp;
+            this.tied = tied;
             
+        }
+
+        public TieType isTied()
+        {
+            return tied;
         }
 
         public int getOctaaf()
@@ -31,7 +38,7 @@ namespace DPA_Musicsheets.classes
             return toonHoogte;
         }
 
-        public int getDuur()
+        public double getDuur()
         {
             return duur;
         }

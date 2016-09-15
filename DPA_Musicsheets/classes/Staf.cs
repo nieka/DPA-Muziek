@@ -10,11 +10,12 @@ namespace DPA_Musicsheets.classes
     {
         private List<Note> noten;
         private int tempo;
-        private String  timeSignature;
+        private int[] timeSignature;
         private String naam;
 
         public Staf (){
             noten = new List<Note>();
+            timeSignature = new int[2];
         }
         public void setTempo(int tempo)
         {
@@ -25,7 +26,7 @@ namespace DPA_Musicsheets.classes
             this.naam = naam;
         }
 
-        public void settimeSignature(String timeSignature)
+        public void settimeSignature(int[] timeSignature)
         {
             this.timeSignature = timeSignature;
         }
@@ -44,7 +45,7 @@ namespace DPA_Musicsheets.classes
             return tempo;
         }
 
-        public String getTimeSignature()
+        public int[] getTimeSignature()
         {
             return timeSignature;
         }
