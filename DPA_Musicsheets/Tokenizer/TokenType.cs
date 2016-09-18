@@ -10,6 +10,10 @@ namespace DPA_Musicsheets.Tokenizer
     {
         Note,
         Clef,
+        relative,
+        treble,
+        Startblok,
+        EndBlok
 
     }
 }

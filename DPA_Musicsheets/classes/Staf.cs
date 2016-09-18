@@ -8,13 +8,13 @@ namespace DPA_Musicsheets.classes
 {
     class Staf
     {
-        private List<Note> noten;
+        private LinkedList<Note> noten;
         private int tempo;
         private int[] timeSignature;
         private String naam;
 
         public Staf (){
-            noten = new List<Note>();
+            noten = new LinkedList<Note>();
             timeSignature = new int[2];
         }
         public void setTempo(int tempo)
@@ -32,10 +32,10 @@ namespace DPA_Musicsheets.classes
         }
         public void AddNote(Note note)
         {
-            noten.Add(note);
+            noten.AddLast(note);
         }
 
-        public List<Note> getNoten()
+        public LinkedList<Note> getNoten()
         {
             return noten;
         }

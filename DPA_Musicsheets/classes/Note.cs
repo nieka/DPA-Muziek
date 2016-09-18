@@ -6,47 +6,23 @@ using System.Threading.Tasks;
 
 namespace DPA_Musicsheets.classes
 {
-    class Note
+    class Note : AbstractNode
     {
-        private int octaaf;
-        private String toonHoogte;
-        private double duur;
-        private Boolean sharp;
-        private TieType tied;
-
         public Note(int octaaf, String toonHoogte, double duur, Boolean sharp, TieType tied)
         {
-            this.octaaf = octaaf;
-            this.duur = duur;
-            this.toonHoogte = toonHoogte;
-            this.sharp = sharp;
-            this.tied = tied;
-            
+            setOctaaf(octaaf);
+            setDuur(duur);
+            setSharp(sharp);
+            setToonhoogte(toonHoogte);
+            setTied(tied);
         }
 
-        public TieType isTied()
-        {
-            return tied;
+        public Note() {
+            sharp = false;
+            tied = TieType.None;
         }
 
-        public int getOctaaf()
-        {
-            return octaaf;
-        }
-
-        public String getToonhoogte(){
-            return toonHoogte;
-        }
-
-        public double getDuur()
-        {
-            return duur;
-        }
-
-        public Boolean isSharp()
-        {
-            return sharp;
-        }
+        
 
     }
 }

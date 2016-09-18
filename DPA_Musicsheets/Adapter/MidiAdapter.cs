@@ -53,9 +53,6 @@ namespace DPA_Musicsheets.Facade
                                 {
                                     sharp = false;
                                 }
-                                //double deltaTime = midiEvent.DeltaTicks;
-                                //double duur = (double)midiEvent.DeltaTicks / (double)TicksPerBeat;
-                                //duur = duur * (staf.getTimeSignature()[0] / (staf.getTimeSignature()[0] / staf.getTimeSignature()[1]));
                                 double deltaTicks = midiEvent.AbsoluteTicks - prevEvent.AbsoluteTicks;
                                 double percentageOfBeatNote = deltaTicks / _sequence.Division;
                                 double percentageOfWholeNote = (1.0 / staf.getTimeSignature()[1]) * percentageOfBeatNote;

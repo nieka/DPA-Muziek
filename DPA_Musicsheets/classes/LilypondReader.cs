@@ -1,4 +1,5 @@
 ﻿using DPA_Musicsheets.interfaces;
+using DPA_Musicsheets.Interperter;
 using DPA_Musicsheets.Tokenizer;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,9 @@ namespace DPA_Musicsheets.classes
             LilypondTokenizer tokenizer = new LilypondTokenizer();
             String file = System.IO.File.ReadAllText(fileLocation);
             tokenizer.proces(file);
+            LinkedList<Token> tokens = tokenizer.getTokens();
+            LyInterperter it = new LyInterperter();
+            it.proces(tokens);
 
             return null;
         }
