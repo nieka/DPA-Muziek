@@ -8,12 +8,12 @@ namespace DPA_Musicsheets.classes
 {
     class RustNode : AbstractNode
     {
-        public RustNode(double duur)
+        public RustNode()
         {
-            setDuur(duur);
+            setDuur(0);
             setOctaaf(0);
             setSharp(false);
-            setToonhoogte("");
+            setToonhoogte("r");
             setTied(TieType.None);
         }
     }

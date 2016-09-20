@@ -16,7 +16,7 @@ namespace DPA_Musicsheets.Interperter.expresions
         {
             if (token.Previous.Value.type != TokenType.relative)
             {
-                Note note = new Note();
+                AbstractNode note = new Note();
                 Staf staf = context.staf;
                 String value = token.Value.value;
                 int pos = 0;
@@ -32,13 +32,18 @@ namespace DPA_Musicsheets.Interperter.expresions
                     note.setToonhoogte(Convert.ToString(value[pos]));
                     pos++;
                 }
+                else if (value[pos] == 'r')
+                {
+                    note = new RustNode();
+                    pos++;
+                }
                 if (Char.IsNumber(value[pos]))
                 {
                     note.setDuur(Char.GetNumericValue(value[pos]));
                 }
                 if (context["relative"])
                 {
-                    LinkedListNode<Note> noten = context.staf.getNoten().Last;
+                    LinkedListNode<AbstractNode> noten = context.staf.getNoten().Last;
                     int temp = Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
 
                     if (noten != null && Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte)) < Array.IndexOf(noteLookup, Convert.ToChar(noten.Value.toonHoogte)))

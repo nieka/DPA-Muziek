@@ -36,11 +36,11 @@ namespace DPA_Musicsheets.classes
             int[] timeSig = data.getTimeSignature();
             staff.AddMusicalSymbol(new TimeSignature(TimeSignatureType.Numbers,Convert.ToUInt32(timeSig[0]),Convert.ToUInt32(timeSig[1])));
 
-            LinkedList<Note> noten = data.getNoten();
-            LinkedListNode<Note> currentNode = noten.First;
+            LinkedList<AbstractNode> noten = data.getNoten();
+            LinkedListNode<AbstractNode> currentNode = noten.First;
             while (currentNode != null)
             {
-                Note noot = currentNode.Value;
+                AbstractNode noot = currentNode.Value;
                 //staff.AddMusicalSymbol(new Note("A", 0, 4, MusicalSymbolDuration.Sixteenth, NoteStemDirection.Down, NoteTieType.None, new List<NoteBeamType>() { NoteBeamType.Start, NoteBeamType.Start }));
                 int sharp;
                 if (noot.isSharp())
@@ -53,8 +53,16 @@ namespace DPA_Musicsheets.classes
                 }
 
                 //bepalen welke note type het is
-                staff.AddMusicalSymbol(new PSAMControlLibrary.Note(noot.getToonhoogte().ToUpper(), sharp, noot.getOctaaf(), noteLengteLookup[noot.getDuur()], NoteStemDirection.Up
+                if (noot.getToonhoogte() != "r")
+                {
+                    staff.AddMusicalSymbol(new PSAMControlLibrary.Note(noot.getToonhoogte().ToUpper(), sharp, noot.getOctaaf(), noteLengteLookup[noot.getDuur()], NoteStemDirection.Up
                     , noteTieLookup[noot.isTied()], new List<NoteBeamType>() { NoteBeamType.Single }));
+                }
+                else
+                {
+                    staff.AddMusicalSymbol(new PSAMControlLibrary.Rest(noteLengteLookup[noot.getDuur()]));
+                }
+                
                 currentNode = currentNode.Next;
             }
             
