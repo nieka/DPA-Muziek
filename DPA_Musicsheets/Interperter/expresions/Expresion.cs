@@ -10,7 +10,7 @@ namespace DPA_Musicsheets.Interperter
 {
     interface Expresion
     {
-        void evaluat(LinkedListNode<Token> token, Staf staf);
+        void evaluat(LinkedListNode<Token> token, Context context);
 
         Expresion clone();
     }

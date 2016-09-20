@@ -12,10 +12,11 @@ namespace DPA_Musicsheets.classes
         private int tempo;
         private int[] timeSignature;
         private String naam;
+        private int startOctaaf;
 
         public Staf (){
             noten = new LinkedList<Note>();
-            timeSignature = new int[2];
+            timeSignature = new int[] {4,4};
         }
         public void setTempo(int tempo)
         {
@@ -26,6 +27,11 @@ namespace DPA_Musicsheets.classes
             this.naam = naam;
         }
 
+        public void setOctaaf(int octaaf)
+        {
+            this.startOctaaf = octaaf;
+        }
+
         public void settimeSignature(int[] timeSignature)
         {
             this.timeSignature = timeSignature;
@@ -33,6 +39,10 @@ namespace DPA_Musicsheets.classes
         public void AddNote(Note note)
         {
             noten.AddLast(note);
+        }
+        public int getOctaaf()
+        {
+            return startOctaaf;
         }
 
         public LinkedList<Note> getNoten()

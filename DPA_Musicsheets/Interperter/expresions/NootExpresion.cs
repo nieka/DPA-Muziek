@@ -12,11 +12,12 @@ namespace DPA_Musicsheets.Interperter.expresions
     {
         private char[] noteLookup = { 'c', 'd', 'e', 'f', 'g', 'a', 'b' };
 
-        public void evaluat(LinkedListNode<Token> token, classes.Staf staf)
+        public void evaluat(LinkedListNode<Token> token, Context context)
         {
             if (token.Previous.Value.type != TokenType.relative)
             {
                 Note note = new Note();
+                Staf staf = context.staf;
                 String value = token.Value.value;
                 int pos = 0;
                 if (value[pos] == '~')
@@ -35,8 +36,27 @@ namespace DPA_Musicsheets.Interperter.expresions
                 {
                     note.setDuur(Char.GetNumericValue(value[pos]));
                 }
+                if (context["relative"])
+                {
+                    LinkedListNode<Note> noten = context.staf.getNoten().Last;
+                    int temp = Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
 
+                    if (noten != null && Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte)) < Array.IndexOf(noteLookup, Convert.ToChar(noten.Value.toonHoogte)))
+                    {
+                        note.setOctaaf(noten.Value.octaaf + 1);
+                    }
+                    else
+                    {
+                        note.setOctaaf(staf.getOctaaf());
+                    }
+                }
+                else
+                {
+                    note.setOctaaf(staf.getOctaaf());
+                }
+                
                 staf.AddNote(note);
+                context.staf = staf;
             }
         }
 

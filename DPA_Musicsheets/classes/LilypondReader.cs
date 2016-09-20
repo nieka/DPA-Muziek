@@ -19,9 +19,7 @@ namespace DPA_Musicsheets.classes
             tokenizer.proces(file);
             LinkedList<Token> tokens = tokenizer.getTokens();
             LyInterperter it = new LyInterperter();
-            it.proces(tokens);
-
-            return null;
+            return it.proces(tokens);
         }
 
         public InputReader clone()

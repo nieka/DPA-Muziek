@@ -10,26 +10,22 @@ namespace DPA_Musicsheets.Interperter
 {
     class LyInterperter
     {
-        Staf staff;
-
-        public LyInterperter()
+        public Staf proces(LinkedList<Token> tokens)
         {
-            staff = new Staf();
-        }
-        
-        public void proces(LinkedList<Token> tokens)
-        {
+            Context context = new Context();
             LinkedListNode<Token> currentToken = tokens.First;
             while (currentToken != null)
             {
                 Expresion handler = ExpressionFactory.getExpresionHandler(currentToken.Value.type);
                 if (handler != null)
                 {
-                    handler.evaluat(currentToken, staff);
+                    handler.evaluat(currentToken, context);
                      
                 }
                 currentToken = currentToken.Next;
             }
+
+            return context.staf;
 
         }
     }

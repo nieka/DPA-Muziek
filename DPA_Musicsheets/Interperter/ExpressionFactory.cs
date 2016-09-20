@@ -15,6 +15,7 @@ namespace DPA_Musicsheets.Interperter
         {
             expressions = new Dictionary<TokenType, Expresion>();
             expressions.Add(TokenType.Note, new NootExpresion());
+            expressions.Add(TokenType.relative, new RelativeExpresion());
         }
 
         public static Expresion getExpresionHandler(TokenType type)

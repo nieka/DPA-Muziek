@@ -80,8 +80,10 @@
     <Compile Include="factories\ReaderFactory.cs" />
     <Compile Include="interfaces\InputReader.cs" />
     <Compile Include="interfaces\NoteObserver.cs" />
+    <Compile Include="Interperter\Context.cs" />
     <Compile Include="Interperter\expresions\Expresion.cs" />
     <Compile Include="Interperter\expresions\NootExpresion.cs" />
+    <Compile Include="Interperter\expresions\RelativeExpresion.cs" />
     <Compile Include="Interperter\ExpressionFactory.cs" />
     <Compile Include="Interperter\LyInterperter.cs" />
     <Compile Include="MidiTrack.cs" />

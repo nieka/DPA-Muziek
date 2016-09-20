@@ -35,23 +35,29 @@ namespace DPA_Musicsheets.classes
             staff.AddMusicalSymbol(new Clef(ClefType.GClef, 2));
             int[] timeSig = data.getTimeSignature();
             staff.AddMusicalSymbol(new TimeSignature(TimeSignatureType.Numbers,Convert.ToUInt32(timeSig[0]),Convert.ToUInt32(timeSig[1])));
- 
-            //List<Note> noten = data.getNoten();
-            //for (int i = 0; i < noten.Count; i++)
-            //{
-            //    Note noot = noten[i];
-            //    //staff.AddMusicalSymbol(new Note("A", 0, 4, MusicalSymbolDuration.Sixteenth, NoteStemDirection.Down, NoteTieType.None, new List<NoteBeamType>() { NoteBeamType.Start, NoteBeamType.Start }));
-            //    int sharp;
-            //    if(noot.isSharp()){
-            //        sharp = 1;
-            //    } else {
-            //        sharp = 0;
-            //    }
-             
-            //    //bepalen welke note type het is
-            //    staff.AddMusicalSymbol(new PSAMControlLibrary.Note(noot.getToonhoogte(),sharp,noot.getOctaaf(),noteLengteLookup[noot.getDuur()],NoteStemDirection.Up
-            //        ,noteTieLookup[noot.isTied()],new List<NoteBeamType>(){NoteBeamType.Single}));
-            //}
+
+            LinkedList<Note> noten = data.getNoten();
+            LinkedListNode<Note> currentNode = noten.First;
+            while (currentNode != null)
+            {
+                Note noot = currentNode.Value;
+                //staff.AddMusicalSymbol(new Note("A", 0, 4, MusicalSymbolDuration.Sixteenth, NoteStemDirection.Down, NoteTieType.None, new List<NoteBeamType>() { NoteBeamType.Start, NoteBeamType.Start }));
+                int sharp;
+                if (noot.isSharp())
+                {
+                    sharp = 1;
+                }
+                else
+                {
+                    sharp = 0;
+                }
+
+                //bepalen welke note type het is
+                staff.AddMusicalSymbol(new PSAMControlLibrary.Note(noot.getToonhoogte().ToUpper(), sharp, noot.getOctaaf(), noteLengteLookup[noot.getDuur()], NoteStemDirection.Up
+                    , noteTieLookup[noot.isTied()], new List<NoteBeamType>() { NoteBeamType.Single }));
+                currentNode = currentNode.Next;
+            }
+            
         }
     }
 }
