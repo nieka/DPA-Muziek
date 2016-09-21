@@ -11,8 +11,9 @@ namespace DPA_Musicsheets.classes
         public int octaaf;
         public String toonHoogte;
         public double duur;
-        public Boolean sharp;
+        public NootItem nootItem = NootItem.Geen;
         public TieType tied;
+        public int punten;
 
         public TieType isTied()
         {
@@ -33,9 +34,9 @@ namespace DPA_Musicsheets.classes
             return duur;
         }
 
-        public Boolean isSharp()
+        public NootItem getNootItem()
         {
-            return sharp;
+            return nootItem;
         }
         public void setTied(TieType tied)
         {
@@ -57,9 +58,9 @@ namespace DPA_Musicsheets.classes
             this.duur = duur;
         }
 
-        public void setSharp(Boolean sharp)
+        public void setNootItem(NootItem item)
         {
-            this.sharp = sharp;
+            this.nootItem = item;
         }
 
     }

@@ -71,6 +71,7 @@
     <Compile Include="classes\AbstractNode.cs" />
     <Compile Include="classes\ApplicationController.cs" />
     <Compile Include="classes\LilypondReader.cs" />
+    <Compile Include="classes\NootItem.cs" />
     <Compile Include="classes\RustNode.cs" />
     <Compile Include="classes\TieType.cs" />
     <Compile Include="classes\Note.cs" />

@@ -43,20 +43,16 @@ namespace DPA_Musicsheets.Facade
                             {
                                 int octaaf = (int)Math.Floor((Double)channelMessage.Data1 / 12);
                                 String toonHoogte = noteLookup[channelMessage.Data1 - (octaaf * 12)];
-                                Boolean sharp;
+                                NootItem item = NootItem.Geen;
                                 if (toonHoogte.Contains("#"))
                                 {
-                                    sharp = true;
+                                    item = NootItem.Kruis;
                                     toonHoogte.Replace("#", "");
-                                }
-                                else
-                                {
-                                    sharp = false;
                                 }
                                 double deltaTicks = midiEvent.AbsoluteTicks - prevEvent.AbsoluteTicks;
                                 double percentageOfBeatNote = deltaTicks / _sequence.Division;
                                 double percentageOfWholeNote = (1.0 / staf.getTimeSignature()[1]) * percentageOfBeatNote;
-                                Note note = new Note(octaaf, toonHoogte, berekenDuur(percentageOfWholeNote), sharp, TieType.None);
+                                Note note = new Note(octaaf, toonHoogte, berekenDuur(percentageOfWholeNote),item, TieType.None);
                                 staf.AddNote(note);
                                 prevDeltaTime = midiEvent.DeltaTicks;
                                 

@@ -8,17 +8,16 @@ namespace DPA_Musicsheets.classes
 {
     class Note : AbstractNode
     {
-        public Note(int octaaf, String toonHoogte, double duur, Boolean sharp, TieType tied)
+        public Note(int octaaf, String toonHoogte, double duur, NootItem item, TieType tied)
         {
             setOctaaf(octaaf);
             setDuur(duur);
-            setSharp(sharp);
+            setNootItem(item);
             setToonhoogte(toonHoogte);
             setTied(tied);
         }
 
         public Note() {
-            sharp = false;
             tied = TieType.None;
         }
 

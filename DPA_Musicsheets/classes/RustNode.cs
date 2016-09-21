@@ -12,7 +12,6 @@ namespace DPA_Musicsheets.classes
         {
             setDuur(0);
             setOctaaf(0);
-            setSharp(false);
             setToonhoogte("r");
             setTied(TieType.None);
         }
