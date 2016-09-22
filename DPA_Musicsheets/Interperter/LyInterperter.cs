@@ -10,7 +10,7 @@ namespace DPA_Musicsheets.Interperter
 {
     class LyInterperter
     {
-        public Staf proces(LinkedList<Token> tokens)
+        public MusicSheet proces(LinkedList<Token> tokens)
         {
             Context context = new Context();
             LinkedListNode<Token> currentToken = tokens.First;
@@ -24,9 +24,8 @@ namespace DPA_Musicsheets.Interperter
                 }
                 currentToken = currentToken.Next;
             }
-
-            return context.staf;
-
+            context.musicSheet.staffs.Add(context.currentStaff);
+            return context.musicSheet;
         }
     }
 }

@@ -21,7 +21,11 @@ namespace DPA_Musicsheets.Interperter.expresions
             if (token.Next.Value.type == Tokenizer.TokenType.Note)
             {
                 string note = token.Next.Value.value;
-                context.staf.setOctaaf(startWaarde[note[0]]);
+                if(context.currentStaff == null)
+                {
+                    context.currentStaff = new classes.Staf();
+                }
+                context.currentStaff.setOctaaf(startWaarde[note[0]]);
                 context["relative"] = true;
             }
         }

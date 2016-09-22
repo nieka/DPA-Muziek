@@ -17,7 +17,7 @@ namespace DPA_Musicsheets.Interperter.expresions
             if (token.Previous.Value.type != TokenType.relative)
             {
                 AbstractNode note = new Note();
-                Staf staf = context.staf;
+                Staf staf = context.currentStaff;
                 String value = token.Value.value;
                 int pos =0;
                 while (pos < value.Length)
@@ -98,14 +98,22 @@ namespace DPA_Musicsheets.Interperter.expresions
                         pos++;
                         continue;
                     }
+                    //mocht er een } staan dan ben je zo ie zo aan het einde van de noot en kan je dus verder met de volgende
+                    if(value[pos] == '}')
+                    {
+                        pos++;
+                        continue;
+                    }
                 }
                 //bepaald de octaaf van de noot
                 if (context["relative"])
                 {
-                    LinkedListNode<AbstractNode> noten = context.staf.getNoten().Last;
+                    LinkedListNode<AbstractNode> noten = context.currentStaff.getNoten().Last;
                     int temp = Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
 
-                    if (noten != null && Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte)) < Array.IndexOf(noteLookup, Convert.ToChar(noten.Value.toonHoogte)))
+                    if (noten != null 
+                        && Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte)) < Array.IndexOf(noteLookup, Convert.ToChar(noten.Value.toonHoogte))
+                        && note.getToonhoogte() != "r")
                     {
                         staf.setOctaaf(staf.getOctaaf() + 1);
                     }
@@ -114,7 +122,7 @@ namespace DPA_Musicsheets.Interperter.expresions
                 note.setOctaaf(staf.getOctaaf());
 
                 staf.AddNote(note);
-                context.staf = staf;
+                context.currentStaff = staf;
             }
         }
 

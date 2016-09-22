@@ -11,19 +11,19 @@ namespace DPA_Musicsheets.classes
     class ApplicationController
     {
         private InputReader inputReader;
-        private Staf staf;
+        private MusicSheet musicSheet;
         private List<NoteObserver> noteObservers;
 
         public ApplicationController()
         {
-            staf = new Staf();
+            musicSheet = new MusicSheet();
             noteObservers = new List<NoteObserver>();
         }
 
         public void convertFile(String location)
         {
             inputReader = ReaderFactory.getReader(System.IO.Path.GetExtension(location));
-            staf = inputReader.readNotes(location);
+            musicSheet = inputReader.readNotes(location);
             notifyAll();
         }
 
@@ -39,7 +39,7 @@ namespace DPA_Musicsheets.classes
         {
             for (int i = 0; i < noteObservers.Count; i++)
             {
-                noteObservers[i].update(staf);
+                noteObservers[i].update(musicSheet);
             }
         }
     }

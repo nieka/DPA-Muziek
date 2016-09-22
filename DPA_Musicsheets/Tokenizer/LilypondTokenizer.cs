@@ -20,6 +20,7 @@ namespace DPA_Musicsheets.Tokenizer
             keyWords.Add("\\relative", TokenType.relative);
             keyWords.Add("{", TokenType.Startblok);
             keyWords.Add("}", TokenType.EndBlok);
+            keyWords.Add("\\time", TokenType.timeSignature);
         }
 
         public void proces(String music)
@@ -35,7 +36,11 @@ namespace DPA_Musicsheets.Tokenizer
                 }
                 else
                 {
-                    if (input.Length > 0)
+                    if (input.Contains("/"))
+                    {
+                        Token token = new Token(TokenType.timeSignaturedata, input);
+                        tokens.AddLast(token);
+                    } else if (input.Length > 0)
                     {
                         Token token = new Token(TokenType.Note, input);
                         tokens.AddLast(token);

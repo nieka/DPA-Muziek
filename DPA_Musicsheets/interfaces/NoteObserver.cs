@@ -9,6 +9,6 @@ namespace DPA_Musicsheets.interfaces
 {
     interface NoteObserver
     {
-        void update(Staf data);
+        void update(MusicSheet data);
     }
 }

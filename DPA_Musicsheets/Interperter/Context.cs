@@ -10,12 +10,13 @@ namespace DPA_Musicsheets.Interperter
     class Context
     {
         private Dictionary<string, Boolean> _variables;
-        public Staf staf { get; set; }
+        public MusicSheet musicSheet { get; set; }
+        public Staf currentStaff { get; set; }
 
         public Context()
         {
             _variables = new Dictionary<string, Boolean>();
-            staf = new Staf();
+            musicSheet = new MusicSheet();
         }
 
         public Boolean this[string variableName]

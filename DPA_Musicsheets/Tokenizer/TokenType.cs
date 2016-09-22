@@ -11,6 +11,8 @@ namespace DPA_Musicsheets.Tokenizer
         Note,
         Clef,
         relative,
+        timeSignature,
+        timeSignaturedata,
         treble,
         Startblok,
         EndBlok

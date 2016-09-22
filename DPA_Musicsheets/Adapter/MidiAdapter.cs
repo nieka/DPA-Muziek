@@ -15,7 +15,7 @@ namespace DPA_Musicsheets.Facade
         // De inhoud voor de midi file. Hier zitten onder andere tracks en metadata in.
         private Sequence _sequence;
         private String[] noteLookup = { "C", "C#","D","D#","E","F","F#","G","G#","A","A#","B" };
-        public Staf readNotes(String fileLocation)
+        public MusicSheet readNotes(String fileLocation)
         {
             this._sequence = new Sequence();
             this._sequence.Load(fileLocation);
@@ -85,7 +85,9 @@ namespace DPA_Musicsheets.Facade
                     }
                 }
             }
-            return staf;
+            MusicSheet musicSheet = new MusicSheet();
+            musicSheet.staffs.Add(staf);
+            return musicSheet;
         }
 
         private static string GetMetaString(MetaMessage metaMessage)

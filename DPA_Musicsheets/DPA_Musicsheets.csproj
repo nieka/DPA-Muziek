@@ -71,6 +71,7 @@
     <Compile Include="classes\AbstractNode.cs" />
     <Compile Include="classes\ApplicationController.cs" />
     <Compile Include="classes\LilypondReader.cs" />
+    <Compile Include="classes\MusicSheet.cs" />
     <Compile Include="classes\NootItem.cs" />
     <Compile Include="classes\RustNode.cs" />
     <Compile Include="classes\TieType.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Interperter\expresions\RelativeExpresion.cs" />
     <Compile Include="Interperter\ExpressionFactory.cs" />
     <Compile Include="Interperter\LyInterperter.cs" />
+    <Compile Include="Interperter\TimeSignatureExpresion.cs" />
     <Compile Include="MidiTrack.cs" />
     <Compile Include="Tokenizer\LilypondTokenizer.cs" />
     <Compile Include="Tokenizer\Token.cs" />

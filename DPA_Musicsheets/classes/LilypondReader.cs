@@ -12,7 +12,7 @@ namespace DPA_Musicsheets.classes
     class LilypondReader : InputReader
     {
 
-        public Staf readNotes(string fileLocation)
+        public MusicSheet readNotes(string fileLocation)
         {
             LilypondTokenizer tokenizer = new LilypondTokenizer();
             String file = System.IO.File.ReadAllText(fileLocation);
