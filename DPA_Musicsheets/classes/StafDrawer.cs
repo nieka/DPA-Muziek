@@ -37,7 +37,8 @@ namespace DPA_Musicsheets.classes
         public void update(MusicSheet data)
         {
             staff.ClearMusicalIncipit();
-            staff.AddMusicalSymbol(new Clef(ClefType.GClef, 2));
+            staff.AddMusicalSymbol(data.getClef());
+
             for (int i = 0; i < data.staffs.Count; i++)
             {
                 Staf staf = data.staffs[i];
@@ -54,8 +55,16 @@ namespace DPA_Musicsheets.classes
                     //bepalen welke note type het is
                     if (noot.getToonhoogte() != "r")
                     {
-                        muziekNote = new PSAMControlLibrary.Note(noot.getToonhoogte().ToUpper(), noteItemLookup[noot.getNootItem()], noot.getOctaaf(), noteLengteLookup[noot.getDuur()], NoteStemDirection.Up
-                        , noteTieLookup[noot.isTied()], new List<NoteBeamType>() { NoteBeamType.Single });
+                        muziekNote = new PSAMControlLibrary.Note(
+                            noot.getToonhoogte().ToUpper(), 
+                            noteItemLookup[noot.getNootItem()], 
+                            noot.getOctaaf(), 
+                            noteLengteLookup[noot.getDuur()], 
+                            NoteStemDirection.Up, 
+                            noteTieLookup[noot.isTied()], 
+                            new List<NoteBeamType>() { NoteBeamType.Single 
+                        });
+
                         muziekNote.NumberOfDots = noot.punten;
                         staff.AddMusicalSymbol(muziekNote);
                     }
