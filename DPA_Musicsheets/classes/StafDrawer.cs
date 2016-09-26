@@ -1,4 +1,5 @@
-﻿using DPA_Musicsheets.interfaces;
+﻿using DPA_Musicsheets.Adapter;
+using DPA_Musicsheets.interfaces;
 using PSAMControlLibrary;
 using PSAMWPFControlLibrary;
 using System;
@@ -12,6 +13,7 @@ namespace DPA_Musicsheets.classes
     class StafDrawer : NoteObserver
     {
         IncipitViewerWPF staff;
+        ClefAdapter clefAdapter = new ClefAdapter();
         private Dictionary<double,MusicalSymbolDuration> noteLengteLookup = new Dictionary<double,MusicalSymbolDuration>();
         private Dictionary<TieType, NoteTieType> noteTieLookup = new Dictionary<TieType, NoteTieType>();
         private Dictionary<NootItem, int> noteItemLookup = new Dictionary<NootItem, int>();
@@ -37,7 +39,7 @@ namespace DPA_Musicsheets.classes
         public void update(MusicSheet data)
         {
             staff.ClearMusicalIncipit();
-            staff.AddMusicalSymbol(data.getClef());
+            staff.AddMusicalSymbol(clefAdapter.ModelToLibrary(data.getClef()));
 
             for (int i = 0; i < data.staffs.Count; i++)
             {

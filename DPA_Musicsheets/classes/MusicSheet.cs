@@ -1,5 +1,4 @@
-﻿using PSAMControlLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +15,7 @@ namespace DPA_Musicsheets.classes
 
         public MusicSheet()
         {
-            clef = new Clef(ClefType.GClef, 2);
+            clef = new Clef();
             staffs = new List<Staf>();
         }
 
