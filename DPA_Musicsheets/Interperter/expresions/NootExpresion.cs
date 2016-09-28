@@ -1,4 +1,5 @@
 ﻿using DPA_Musicsheets.classes;
+using DPA_Musicsheets.interfaces;
 using DPA_Musicsheets.Tokenizer;
 using System;
 using System.Collections.Generic;
@@ -14,29 +15,23 @@ namespace DPA_Musicsheets.Interperter.expresions
         {
             if (token.Previous.Value.type != TokenType.relative)
             {
-                AbstractNode note = new Note();
-                Staf staf = context.currentStaff;
+                Note note = new Note();
+                Note lastNote = getLastNote(context.musicSheet);
                 String value = token.Value.value;
                 int pos =0;
                 while (pos < value.Length)
                 {
-                    if (value[pos] == '~')
+                    if (value[pos] == '~' && lastNote != null)
                     {
                         //De noot hoort aan de vorige noot
                         note.setTied(TieType.stop);
-                        staf.getNoten().Last.Value.setTied(TieType.start);
+                        lastNote.setTied(TieType.start);
                         pos++;
                         continue;
                     }
                     if(noteLookup.Contains(value[pos]) && note.getToonhoogte() == null) { 
                         //Het eerste karakter is een noot dus we kunnen er hier vanuit gaan dat we een normale noot hebben
                         note.setToonhoogte(Convert.ToString(value[pos]));
-                        pos++;
-                        continue;
-                    }
-                    else if (value[pos] == 'r')
-                    {
-                        note = new RustNode();
                         pos++;
                         continue;
                     }
@@ -104,52 +99,31 @@ namespace DPA_Musicsheets.Interperter.expresions
                     }
                 }
                 //bepaald de octaaf van de noot
-                if (context["relative"] && note.getToonhoogte() != "r")
+                if (context["relative"] )
                 {
-                    
-
-
-
-                    //if (noten != null 
-                    //    && Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte)) < Array.IndexOf(noteLookup, Convert.ToChar(noten.Value.toonHoogte))
-                    //    && note.getToonhoogte() != "r")
-                    //{
-                    //    staf.setOctaaf(staf.getOctaaf() + 1);
-                    //}
-                    //note.setOctaaf(staf.getOctaaf());
-                    if(context.currentStaff.getNoten().Count != 0)
+                    int defaultOctaaf = context.musicSheet.startOctaaf;
+                    AbstractNode noten = getLastNote(context.musicSheet);
+                    if(noten != null)
                     {
-                        AbstractNode noten = context.currentStaff.getNoten().Last.Value;
-                        int waardenoot = staf.getOctaaf() * 12 + Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
+                        int waardenoot = defaultOctaaf * 12 + Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
                         int waardeEersteNoot = noten.getOctaaf() * 12 + Array.IndexOf(noteLookup, Convert.ToChar(noten.toonHoogte));
                         int diffrents = Math.Abs(waardeEersteNoot - waardenoot);
-                        if (diffrents >=5 )
+                        if (diffrents >= 5)
                         {
-                            if(noten.getOctaaf() == staf.getOctaaf())
+                            if (noten.getOctaaf() == defaultOctaaf)
                             {
-                                note.setOctaaf(staf.getOctaaf() + 1);
-                            } else
-                            {
-                                note.setOctaaf(staf.getOctaaf());
+                                note.setOctaaf(defaultOctaaf + 1);
                             }
-                            
-                        } else
-                        {
-                            note.setOctaaf(staf.getOctaaf());
                         }
-                    } else
-                    {
-                        note.setOctaaf(staf.getOctaaf());
                     }
+                } 
 
-                } else
+                if(note.octaaf == 0)
                 {
-                    note.setOctaaf(staf.getOctaaf());
+                    note.octaaf = context.musicSheet.startOctaaf;
                 }
-                
 
-                staf.AddNote(note);
-                context.currentStaff = staf;
+                context.musicSheet.addmusicSymbol(note);
             }
         }
 
@@ -157,6 +131,25 @@ namespace DPA_Musicsheets.Interperter.expresions
         public Expresion clone()
         {
             return new NootExpresion();
+        }
+
+        private Note getLastNote(MusicSheet musicSheet)
+        {
+            LinkedListNode<IMusicSymbol> currentItem = musicSheet.items.Last;
+            while(currentItem != null)
+            {
+                try
+                {
+                    return (Note) currentItem.Value;
+                }
+                catch (FormatException)
+                {
+                    currentItem = currentItem.Previous;
+                }
+
+               
+            }
+            return null;
         }
     }
 }

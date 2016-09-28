@@ -19,17 +19,9 @@ namespace DPA_Musicsheets.Interperter
         {
             if(token.Previous.Value.type == TokenType.timeSignature)
             {
-                Staf staff = context.currentStaff;
-                if(staff.getNoten().Count > 0)
-                {
-                    context.musicSheet.staffs.Add(staff);
-                    staff = new Staf();
-                    staff.setOctaaf(context.currentStaff.getOctaaf());
-                }
                 String[] splitValue = token.Value.value.Split('/');
                 int[] timeSignature = new int[] { Convert.ToInt16(splitValue[0]), Convert.ToInt16(splitValue[1]) };
-                staff.settimeSignature(timeSignature);
-                context.currentStaff = staff;
+                context.musicSheet.addmusicSymbol(new TimeSignature(timeSignature));
             }
         }
     }

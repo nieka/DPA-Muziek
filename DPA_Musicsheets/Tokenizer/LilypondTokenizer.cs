@@ -40,9 +40,13 @@ namespace DPA_Musicsheets.Tokenizer
                 }
                 else
                 {
+                    //todo chain of responsebilitie toevoegen inplaats van if else
                     if (input.Contains("/"))
                     {
                         Token token = new Token(TokenType.timeSignaturedata, input);
+                        tokens.AddLast(token);
+                    } else if (input.Contains("r")){
+                        Token token = new Token(TokenType.Rust, input);
                         tokens.AddLast(token);
                     } else if (input.Length > 0)
                     {

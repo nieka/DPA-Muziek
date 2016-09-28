@@ -11,7 +11,6 @@ namespace DPA_Musicsheets.Interperter
     {
         private Dictionary<string, Boolean> _variables;
         public MusicSheet musicSheet { get; set; }
-        public Staf currentStaff { get; set; }
 
         public Context()
         {

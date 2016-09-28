@@ -7,8 +7,15 @@ using System.Threading.Tasks;
 
 namespace DPA_Musicsheets.classes
 {
-    class RustNode : AbstractNode, IMusicSymbol  
+    class TimeSignature : IMusicSymbol
     {
+        public int[] timeSignature = new int[2];
+
+        public TimeSignature(int[] timeSignature)
+        {
+            this.timeSignature = timeSignature;
+        }
+
         public void accept(IVisotor visotor)
         {
             visotor.visit(this);

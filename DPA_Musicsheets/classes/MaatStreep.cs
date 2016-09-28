@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DPA_Musicsheets.classes
 {
-    class RustNode : AbstractNode, IMusicSymbol  
+    class MaatStreep : IMusicSymbol
     {
         public void accept(IVisotor visotor)
         {

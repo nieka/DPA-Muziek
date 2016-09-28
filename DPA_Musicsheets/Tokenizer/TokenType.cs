@@ -18,7 +18,8 @@ namespace DPA_Musicsheets.Tokenizer
         EndBlok,
         Tempo,
         Maatstreep,
-        TempoValue
+        TempoValue,
+        Rust
 
     }
 }

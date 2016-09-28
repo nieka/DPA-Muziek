@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DPA_Musicsheets.interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,6 @@ namespace DPA_Musicsheets.classes
         public NootItem nootItem = NootItem.Geen;
         public TieType tied;
         public int punten;
-        public Boolean endOfBox;
 
         public TieType isTied()
         {
@@ -63,6 +63,5 @@ namespace DPA_Musicsheets.classes
         {
             this.nootItem = item;
         }
-
     }
 }

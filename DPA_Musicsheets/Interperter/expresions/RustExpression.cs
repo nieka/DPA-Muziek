@@ -8,19 +8,20 @@ using DPA_Musicsheets.classes;
 
 namespace DPA_Musicsheets.Interperter.expresions
 {
-    class MaatExpresion : Expresion
+    class RustExpression : Expresion
     {
         public Expresion clone()
         {
-            return new MaatExpresion();
+            return new RustExpression();
         }
 
         public void evaluat(LinkedListNode<Token> token, Context context)
         {
-            if(token.Value.type == TokenType.Maatstreep)
-            {
-                context.musicSheet.addmusicSymbol(new MaatStreep());
-            }
+            RustNode note = new RustNode();
+            String input = token.Value.value;
+            note.octaaf = context.musicSheet.startOctaaf;
+            note.duur = Convert.ToInt16(input.Substring(1));
+            context.musicSheet.addmusicSymbol(note);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DPA_Musicsheets.interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DPA_Musicsheets.classes
 {
-    class Note : AbstractNode
+    class Note : AbstractNode , IMusicSymbol
     {
         public Note(int octaaf, String toonHoogte, double duur, NootItem item, TieType tied)
         {
@@ -21,7 +22,9 @@ namespace DPA_Musicsheets.classes
             tied = TieType.None;
         }
 
-        
-
+        public void accept(IVisotor visotor)
+        {
+            visotor.visit(this);
+        }
     }
 }

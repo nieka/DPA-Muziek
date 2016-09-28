@@ -27,7 +27,7 @@ namespace DPA_Musicsheets.Interperter.expresions
             if(token.Previous.Value.type == TokenType.Clef && token.Value.type == TokenType.ClefType)
             {
                 Clef clef = new Clef(clefLookup[token.Value.value], 2);
-                context.musicSheet.setClef(clef);
+                context.musicSheet.addmusicSymbol(clef);
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DPA_Musicsheets.interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,27 +9,19 @@ namespace DPA_Musicsheets.classes
 {
     class MusicSheet
     {
-        private Clef clef;
-
-        public List<Staf> staffs {get; set;}
-        
+        public LinkedList<IMusicSymbol> items { get; set; }
+        public int tempo { get; set; }
+        public int startOctaaf { get; set; }
 
         public MusicSheet()
         {
-            clef = new Clef();
-            staffs = new List<Staf>();
+            items = new LinkedList<IMusicSymbol>();
         }
 
-        
-        public Clef getClef()
+        public void addmusicSymbol(IMusicSymbol symbol)
         {
-            return clef;
+            items.AddLast(symbol);
         }
 
-        public void setClef(Clef clef)
-        {
-            this.clef = clef;
-        }
-        
     }
 }

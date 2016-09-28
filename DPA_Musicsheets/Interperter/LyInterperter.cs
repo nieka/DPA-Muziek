@@ -24,7 +24,6 @@ namespace DPA_Musicsheets.Interperter
                 }
                 currentToken = currentToken.Next;
             }
-            context.musicSheet.staffs.Add(context.currentStaff);
             return context.musicSheet;
         }
     }
