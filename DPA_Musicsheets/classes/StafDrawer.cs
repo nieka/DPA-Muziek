@@ -14,26 +14,11 @@ namespace DPA_Musicsheets.classes
     {
         IncipitViewerWPF staff;
         ClefAdapter clefAdapter = new ClefAdapter();
-        private Dictionary<double,MusicalSymbolDuration> noteLengteLookup = new Dictionary<double,MusicalSymbolDuration>();
-        private Dictionary<TieType, NoteTieType> noteTieLookup = new Dictionary<TieType, NoteTieType>();
-        private Dictionary<NootItem, int> noteItemLookup = new Dictionary<NootItem, int>();
+        NootAdapter nootAdapter = new NootAdapter();
+
         public StafDrawer(IncipitViewerWPF staff)
         {
             this.staff = staff;
-            //lookup table vullen
-            noteLengteLookup.Add(1, MusicalSymbolDuration.Whole);
-            noteLengteLookup.Add(2, MusicalSymbolDuration.Half);
-            noteLengteLookup.Add(4, MusicalSymbolDuration.Quarter);
-            noteLengteLookup.Add(8, MusicalSymbolDuration.Eighth);
-            noteLengteLookup.Add(16, MusicalSymbolDuration.Sixteenth);
-            noteLengteLookup.Add(32, MusicalSymbolDuration.d32nd);
-            noteTieLookup.Add(TieType.None, NoteTieType.None);
-            noteTieLookup.Add(TieType.start, NoteTieType.Start);
-            noteTieLookup.Add(TieType.startStop, NoteTieType.StopAndStartAnother);
-            noteTieLookup.Add(TieType.stop, NoteTieType.Stop);
-            noteItemLookup.Add(NootItem.Mol, -1);
-            noteItemLookup.Add(NootItem.Kruis, 1);
-            noteItemLookup.Add(NootItem.Geen, 0);
         }
 
         public void update(MusicSheet data)
@@ -52,30 +37,23 @@ namespace DPA_Musicsheets.classes
                 while (currentNode != null)
                 {
                     AbstractNode noot = currentNode.Value;
-                    //staff.AddMusicalSymbol(new Note("A", 0, 4, MusicalSymbolDuration.Sixteenth, NoteStemDirection.Down, NoteTieType.None, new List<NoteBeamType>() { NoteBeamType.Start, NoteBeamType.Start }));
                     PSAMControlLibrary.Note muziekNote;
-                    //bepalen welke note type het is
+
                     if (noot.getToonhoogte() != "r")
                     {
-                        muziekNote = new PSAMControlLibrary.Note(
-                            noot.getToonhoogte().ToUpper(), 
-                            noteItemLookup[noot.getNootItem()], 
-                            noot.getOctaaf(), 
-                            noteLengteLookup[noot.getDuur()], 
-                            NoteStemDirection.Up, 
-                            noteTieLookup[noot.isTied()], 
-                            new List<NoteBeamType>() { NoteBeamType.Single 
-                        });
-
-                        muziekNote.NumberOfDots = noot.punten;
-                        staff.AddMusicalSymbol(muziekNote);
+                        staff.AddMusicalSymbol(nootAdapter.NootModelToLibrary(noot));
                     }
                     else
-                    {
-                        Rest rest = new Rest(noteLengteLookup[noot.getDuur()]);
-                        rest.NumberOfDots = noot.punten;
-                        staff.AddMusicalSymbol(rest);
+                    {    
+                        staff.AddMusicalSymbol(nootAdapter.RestModelToLibrary(noot));
                     }
+
+                    /*
+                    if(noot.isLastNoot())
+                    {
+                        staff.AddMusicalSymbol(new Barline());
+                    }
+                    */
                     currentNode = currentNode.Next;
                 }
 
