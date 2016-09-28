@@ -3,8 +3,6 @@ using DPA_Musicsheets.Tokenizer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DPA_Musicsheets.Interperter.expresions
 {
@@ -106,20 +104,49 @@ namespace DPA_Musicsheets.Interperter.expresions
                     }
                 }
                 //bepaald de octaaf van de noot
-                if (context["relative"])
+                if (context["relative"] && note.getToonhoogte() != "r")
                 {
-                    LinkedListNode<AbstractNode> noten = context.currentStaff.getNoten().Last;
-                    int temp = Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
+                    
 
-                    if (noten != null 
-                        && Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte)) < Array.IndexOf(noteLookup, Convert.ToChar(noten.Value.toonHoogte))
-                        && note.getToonhoogte() != "r")
+
+
+                    //if (noten != null 
+                    //    && Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte)) < Array.IndexOf(noteLookup, Convert.ToChar(noten.Value.toonHoogte))
+                    //    && note.getToonhoogte() != "r")
+                    //{
+                    //    staf.setOctaaf(staf.getOctaaf() + 1);
+                    //}
+                    //note.setOctaaf(staf.getOctaaf());
+                    if(context.currentStaff.getNoten().Count != 0)
                     {
-                        staf.setOctaaf(staf.getOctaaf() + 1);
+                        AbstractNode noten = context.currentStaff.getNoten().Last.Value;
+                        int waardenoot = staf.getOctaaf() * 12 + Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
+                        int waardeEersteNoot = noten.getOctaaf() * 12 + Array.IndexOf(noteLookup, Convert.ToChar(noten.toonHoogte));
+                        int diffrents = Math.Abs(waardeEersteNoot - waardenoot);
+                        if (diffrents >=5 )
+                        {
+                            if(noten.getOctaaf() == staf.getOctaaf())
+                            {
+                                note.setOctaaf(staf.getOctaaf() + 1);
+                            } else
+                            {
+                                note.setOctaaf(staf.getOctaaf());
+                            }
+                            
+                        } else
+                        {
+                            note.setOctaaf(staf.getOctaaf());
+                        }
+                    } else
+                    {
+                        note.setOctaaf(staf.getOctaaf());
                     }
+
+                } else
+                {
                     note.setOctaaf(staf.getOctaaf());
                 }
-                note.setOctaaf(staf.getOctaaf());
+                
 
                 staf.AddNote(note);
                 context.currentStaff = staf;

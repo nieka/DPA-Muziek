@@ -25,9 +25,9 @@ namespace DPA_Musicsheets.classes
             return clef;
         }
 
-        public void setClef(ClefType type, int location)
+        public void setClef(Clef clef)
         {
-            clef = new Clef(type, location);
+            this.clef = clef;
         }
         
     }

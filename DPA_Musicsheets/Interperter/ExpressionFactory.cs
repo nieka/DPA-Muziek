@@ -17,6 +17,7 @@ namespace DPA_Musicsheets.Interperter
             expressions.Add(TokenType.Note, new NootExpresion());
             expressions.Add(TokenType.relative, new RelativeExpresion());
             expressions.Add(TokenType.timeSignaturedata, new TimeSignatureExpresion());
+            expressions.Add(TokenType.Maatstreep, new MaatExpresion());
         }
 
         public static Expresion getExpresionHandler(TokenType type)

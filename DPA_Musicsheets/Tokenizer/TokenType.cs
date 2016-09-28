@@ -13,9 +13,12 @@ namespace DPA_Musicsheets.Tokenizer
         relative,
         timeSignature,
         timeSignaturedata,
-        treble,
+        ClefType,
         Startblok,
-        EndBlok
+        EndBlok,
+        Tempo,
+        Maatstreep,
+        TempoValue
 
     }
 }

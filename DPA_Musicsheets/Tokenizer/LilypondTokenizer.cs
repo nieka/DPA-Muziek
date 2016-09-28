@@ -21,6 +21,10 @@ namespace DPA_Musicsheets.Tokenizer
             keyWords.Add("{", TokenType.Startblok);
             keyWords.Add("}", TokenType.EndBlok);
             keyWords.Add("\\time", TokenType.timeSignature);
+            keyWords.Add("\\clef", TokenType.Clef);
+            keyWords.Add("treble", TokenType.ClefType);
+            keyWords.Add("|", TokenType.Maatstreep);
+            keyWords.Add("\\tempo", TokenType.Tempo);
         }
 
         public void proces(String music)

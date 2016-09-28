@@ -14,6 +14,7 @@ namespace DPA_Musicsheets.classes
         public NootItem nootItem = NootItem.Geen;
         public TieType tied;
         public int punten;
+        public Boolean endOfBox;
 
         public TieType isTied()
         {
