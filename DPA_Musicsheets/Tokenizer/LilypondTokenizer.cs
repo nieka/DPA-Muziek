@@ -45,10 +45,14 @@ namespace DPA_Musicsheets.Tokenizer
                     {
                         Token token = new Token(TokenType.timeSignaturedata, input);
                         tokens.AddLast(token);
-                    } else if (input.Contains("r")){
+                    } else if (input.Contains("r")) {
                         Token token = new Token(TokenType.Rust, input);
                         tokens.AddLast(token);
-                    } else if (input.Length > 0)
+                    } else if (input.Contains("=")) {
+                        Token token = new Token(TokenType.TempoValue, input);
+                        tokens.AddLast(token);
+                    }
+                    else if (input.Length > 0)
                     {
                         Token token = new Token(TokenType.Note, input);
                         tokens.AddLast(token);

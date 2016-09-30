@@ -13,6 +13,7 @@ namespace DPA_Musicsheets.Adapter
         private Dictionary<NootItem, int> noteItemLookup = new Dictionary<NootItem, int>();
         private Dictionary<double, MusicalSymbolDuration> noteLengteLookup = new Dictionary<double, MusicalSymbolDuration>();
         private Dictionary<TieType, NoteTieType> noteTieLookup = new Dictionary<TieType, NoteTieType>();
+        private char[] noteLookup = { 'c', 'd', 'e', 'f', 'g', 'a', 'b' };
 
         public NootAdapter()
         {
@@ -33,12 +34,13 @@ namespace DPA_Musicsheets.Adapter
 
         public PSAMControlLibrary.Note NootModelToLibrary(DPA_Musicsheets.classes.AbstractNode noot)
         {
+
             PSAMControlLibrary.Note muziekNote = new PSAMControlLibrary.Note(
                             noot.getToonhoogte().ToUpper(),
                             noteItemLookup[noot.getNootItem()],
                             noot.getOctaaf(),
                             noteLengteLookup[noot.getDuur()],
-                            NoteStemDirection.Up,
+                            getStemDirection(noot),
                             noteTieLookup[noot.isTied()],
                             new List<NoteBeamType>() { NoteBeamType.Single 
                         });
@@ -54,6 +56,18 @@ namespace DPA_Musicsheets.Adapter
             rest.NumberOfDots = noot.punten;
 
             return rest;
+        }
+
+        private  NoteStemDirection getStemDirection(AbstractNode note)
+        {
+            int nootWaarde = note.getOctaaf() * 12 + Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
+            if (nootWaarde < 54)
+            {
+                return NoteStemDirection.Up;
+            } else
+            {
+                return NoteStemDirection.Down;
+            }
         }
         
     }

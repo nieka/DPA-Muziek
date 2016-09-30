@@ -19,6 +19,7 @@ namespace DPA_Musicsheets.Interperter
             expressions.Add(TokenType.timeSignaturedata, new TimeSignatureExpresion());
             expressions.Add(TokenType.Maatstreep, new MaatExpresion());
             expressions.Add(TokenType.Rust, new RustExpression());
+            expressions.Add(TokenType.TempoValue, new TempoExpresioncs());
         }
 
         public static Expresion getExpresionHandler(TokenType type)

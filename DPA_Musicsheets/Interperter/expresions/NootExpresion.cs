@@ -10,10 +10,11 @@ namespace DPA_Musicsheets.Interperter.expresions
     class NootExpresion : Expresion
     {
         private char[] noteLookup = { 'c', 'd', 'e', 'f', 'g', 'a', 'b' };
-       
+        private int down = 0;
+        private int up = 0;
         public void evaluat(LinkedListNode<Token> token, Context context)
         {
-            if (token.Previous.Value.type != TokenType.relative)
+            if (token.Previous != null && token.Previous.Value.type != TokenType.relative)
             {
                 Note note = new Note();
                 Note lastNote = getLastNote(context.musicSheet);
@@ -35,9 +36,23 @@ namespace DPA_Musicsheets.Interperter.expresions
                         pos++;
                         continue;
                     }
-                    if(pos != value.Length - 1)
+                    if (value[pos] == ',')
                     {
-                        if(value.Substring(pos,value.Length -1).Contains("is") || value.Substring(pos, value.Length -1).Contains("es"))
+                        down++;
+                        pos++;
+                        continue;
+                    }
+                    if (value[pos] == '\'')
+                    {
+                        up++;
+                        pos++;
+                        continue;
+                    }
+                    if (value.Length - 1 - pos > 1)
+                    {
+                        string temp1 = value.Substring(pos, value.Length - 1);
+                        string temp2 = value.Substring(pos, value.Length - 1);
+                        if (value.Substring(pos,value.Length -1).Contains("is") || value.Substring(pos, value.Length -1).Contains("es"))
                         {
                             if(value.Substring(pos, value.Length -1).Contains("is"))
                             {
@@ -92,7 +107,7 @@ namespace DPA_Musicsheets.Interperter.expresions
                         continue;
                     }
                     //mocht er een } staan dan ben je zo ie zo aan het einde van de noot en kan je dus verder met de volgende
-                    if(value[pos] == '}')
+                    if (value[pos] == '}')
                     {
                         pos++;
                         continue;
@@ -108,13 +123,26 @@ namespace DPA_Musicsheets.Interperter.expresions
                         int waardenoot = defaultOctaaf * 12 + Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
                         int waardeEersteNoot = noten.getOctaaf() * 12 + Array.IndexOf(noteLookup, Convert.ToChar(noten.toonHoogte));
                         int diffrents = Math.Abs(waardeEersteNoot - waardenoot);
-                        if (diffrents >= 5)
+                        if (diffrents >= 4 && down == 0 || (down > 0 && (diffrents >=5 || diffrents == 0)) || (diffrents == 0 && up > 0) || (down > 0 && waardeEersteNoot < waardenoot))
                         {
                             if (noten.getOctaaf() == defaultOctaaf)
                             {
-                                note.setOctaaf(defaultOctaaf + 1);
-                            }
-                        }
+                                int multyplayer = down + up;
+                                if(multyplayer < 1)
+                                {
+                                    multyplayer = 1;
+                                }
+                                if((waardeEersteNoot > waardenoot && down == 0) || up > 0)
+                                {
+                                    note.setOctaaf(defaultOctaaf + multyplayer);
+                                    context.musicSheet.startOctaaf = defaultOctaaf + multyplayer;
+                                } else if (up == 0)
+                                {
+                                    note.setOctaaf(defaultOctaaf - multyplayer);
+                                    context.musicSheet.startOctaaf = defaultOctaaf - multyplayer;
+                                }
+                            } 
+                        } 
                     }
                 } 
 
@@ -142,7 +170,7 @@ namespace DPA_Musicsheets.Interperter.expresions
                 {
                     return (Note) currentItem.Value;
                 }
-                catch (FormatException)
+                catch (InvalidCastException)
                 {
                     currentItem = currentItem.Previous;
                 }

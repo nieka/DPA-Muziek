@@ -54,5 +54,10 @@ namespace DPA_Musicsheets.Visitor
         {
             staff.AddMusicalSymbol(new Barline());
         }
+
+        public void visit(Tempo tempo)
+        {
+            //niet ondersteund door de gebruikte library
+        }
     }
 }

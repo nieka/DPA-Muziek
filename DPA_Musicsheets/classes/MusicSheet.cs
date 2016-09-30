@@ -10,7 +10,6 @@ namespace DPA_Musicsheets.classes
     class MusicSheet
     {
         public LinkedList<IMusicSymbol> items { get; set; }
-        public int tempo { get; set; }
         public int startOctaaf { get; set; }
 
         public MusicSheet()
