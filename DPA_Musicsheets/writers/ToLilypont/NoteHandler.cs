@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DPA_Musicsheets.interfaces
+namespace DPA_Musicsheets.writers.ToLilypont
 {
-    interface IMusicSymbol
+    interface NoteHandler
     {
-        MusicType getType();
-
-        void accept(IVisotor visotor);
+        string Handle(Note noot);
     }
 }

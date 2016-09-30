@@ -77,6 +77,7 @@
     <Compile Include="classes\LilypondReader.cs" />
     <Compile Include="classes\MaatStreep.cs" />
     <Compile Include="classes\MusicSheet.cs" />
+    <Compile Include="classes\MusicType.cs" />
     <Compile Include="classes\NootItem.cs" />
     <Compile Include="classes\RustNode.cs" />
     <Compile Include="classes\Tempo.cs" />
@@ -106,6 +107,21 @@
     <Compile Include="Tokenizer\Token.cs" />
     <Compile Include="Tokenizer\TokenType.cs" />
     <Compile Include="Visitor\StafVisitor.cs" />
+    <Compile Include="writers\ISave.cs" />
+    <Compile Include="writers\LilypondSaver.cs" />
+    <Compile Include="writers\MidiSaver.cs" />
+    <Compile Include="writers\PdfSaver.cs" />
+    <Compile Include="writers\SaveFactory.cs" />
+    <Compile Include="writers\ToLilypont\handlers\ApostrofHandler .cs" />
+    <Compile Include="writers\ToLilypont\handlers\KommaHandler.cs" />
+    <Compile Include="writers\ToLilypont\handlers\LinkHandler.cs" />
+    <Compile Include="writers\ToLilypont\handlers\MolKruisHandler.cs" />
+    <Compile Include="writers\ToLilypont\handlers\PuntHandler.cs" />
+    <Compile Include="writers\ToLilypont\handlers\ToonhoogteHandler.cs" />
+    <Compile Include="writers\ToLilypont\LilypontVisitor.cs" />
+    <Compile Include="writers\ToLilypont\NoteHandler.cs" />
+    <Compile Include="writers\ToLilypont\handlers\TimeHandler.cs" />
+    <Compile Include="writers\ToLilypont\ToLilypontConverter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

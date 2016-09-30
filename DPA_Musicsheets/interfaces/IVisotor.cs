@@ -13,7 +13,7 @@ namespace DPA_Musicsheets.interfaces
         void visit(RustNode rustNode);
         void visit(Clef clef);
         void visit(TimeSignature timeSignature);
-        void visit(MaatStreep rustNode);
+        void visit(MaatStreep maatstreep);
         void visit(Tempo tempo);
     }
 }

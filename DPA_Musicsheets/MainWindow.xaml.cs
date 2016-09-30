@@ -64,6 +64,17 @@ namespace DPA_Musicsheets
         {
             
         }
+        private void btn_Save(object sender, RoutedEventArgs e)
+        {
+            String type = saveState.Text;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Title = "Sla je muziek op";
+            saveFileDialog1.ShowDialog();
+            if (saveFileDialog1.FileName != "")
+            {
+                controller.save(type, saveFileDialog1.FileName);
+            }
+        }
 
         private void btn_ShowContent_Click(object sender, RoutedEventArgs e)
         {

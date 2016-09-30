@@ -14,13 +14,18 @@ namespace DPA_Musicsheets.classes
 
         public Tempo (int temp, int nootLength)
         {
-            this.tempo = tempo;
+            this.tempo = temp;
             this.nootLength = nootLength;
         }
 
         public void accept(IVisotor visotor)
         {
             visotor.visit(this);
+        }
+
+        public MusicType getType()
+        {
+            return MusicType.Tempo;
         }
     }
 }

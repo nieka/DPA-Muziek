@@ -12,11 +12,10 @@ namespace DPA_Musicsheets.classes
     class LilypondReader : InputReader
     {
 
-        public MusicSheet readNotes(string fileLocation)
+        public MusicSheet readNotes(string data)
         {
             LilypondTokenizer tokenizer = new LilypondTokenizer();
-            String file = System.IO.File.ReadAllText(fileLocation);
-            tokenizer.proces(file);
+            tokenizer.proces(data);
             LinkedList<Token> tokens = tokenizer.getTokens();
             LyInterperter it = new LyInterperter();
             return it.proces(tokens);

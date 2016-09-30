@@ -19,6 +19,8 @@ namespace DPA_Musicsheets.Tokenizer
         Tempo,
         TempoValue,
         Maatstreep,
-        Rust
+        Rust,
+        Version,
+        Header
     }
 }

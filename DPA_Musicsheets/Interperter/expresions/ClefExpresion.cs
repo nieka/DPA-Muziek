@@ -15,6 +15,8 @@ namespace DPA_Musicsheets.Interperter.expresions
         public ClefExpresion()
         {
             clefLookup.Add("treble", ClefType.GClef);
+            clefLookup.Add("bass", ClefType.FClef);
+            clefLookup.Add("alto", ClefType.CClef);
         }
 
         public Expresion clone()

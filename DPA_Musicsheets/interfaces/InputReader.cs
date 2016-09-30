@@ -9,7 +9,7 @@ namespace DPA_Musicsheets.interfaces
 {
     interface InputReader
     {
-        MusicSheet readNotes(String fileLocation);
+        MusicSheet readNotes(String data);
 
         InputReader clone();
     }

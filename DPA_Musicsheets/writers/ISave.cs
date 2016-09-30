@@ -5,12 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DPA_Musicsheets.interfaces
+namespace DPA_Musicsheets.writers
 {
-    interface IMusicSymbol
+    interface ISave
     {
-        MusicType getType();
-
-        void accept(IVisotor visotor);
+        void save(MusicSheet musicsheet, String fileLocation);
+        ISave clone();
     }
 }

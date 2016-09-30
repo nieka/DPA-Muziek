@@ -20,5 +20,10 @@ namespace DPA_Musicsheets.classes
         {
             visotor.visit(this);
         }
+
+        public MusicType getType()
+        {
+            return MusicType.TimeSignature;
+        }
     }
 }

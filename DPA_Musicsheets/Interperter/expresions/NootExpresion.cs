@@ -39,12 +39,14 @@ namespace DPA_Musicsheets.Interperter.expresions
                     if (value[pos] == ',')
                     {
                         down++;
+                        note.kommas++;
                         pos++;
                         continue;
                     }
                     if (value[pos] == '\'')
                     {
                         up++;
+                        note.apostrof++;
                         pos++;
                         continue;
                     }
@@ -112,6 +114,8 @@ namespace DPA_Musicsheets.Interperter.expresions
                         pos++;
                         continue;
                     }
+                    //Als je bij geen van de if statments ben gekomen klopt er iets niet en is het geen noot
+                    return;
                 }
                 //bepaald de octaaf van de noot
                 if (context["relative"] )
@@ -132,7 +136,7 @@ namespace DPA_Musicsheets.Interperter.expresions
                                 {
                                     multyplayer = 1;
                                 }
-                                if((waardeEersteNoot > waardenoot && down == 0) || up > 0)
+                                if((waardeEersteNoot > waardenoot && down == 0) /*|| up > 0*/)
                                 {
                                     note.setOctaaf(defaultOctaaf + multyplayer);
                                     context.musicSheet.startOctaaf = defaultOctaaf + multyplayer;

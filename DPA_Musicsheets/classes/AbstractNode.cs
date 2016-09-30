@@ -15,6 +15,8 @@ namespace DPA_Musicsheets.classes
         public NootItem nootItem = NootItem.Geen;
         public TieType tied;
         public int punten;
+        public int kommas { get; set; }
+        public int apostrof { get; set; }
 
         public TieType isTied()
         {

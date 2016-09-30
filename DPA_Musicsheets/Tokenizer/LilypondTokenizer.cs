@@ -25,6 +25,8 @@ namespace DPA_Musicsheets.Tokenizer
             keyWords.Add("treble", TokenType.ClefType);
             keyWords.Add("|", TokenType.Maatstreep);
             keyWords.Add("\\tempo", TokenType.Tempo);
+            keyWords.Add("\\version", TokenType.Version);
+            keyWords.Add("\\header", TokenType.Header);
         }
 
         public void proces(String music)
@@ -52,7 +54,7 @@ namespace DPA_Musicsheets.Tokenizer
                         Token token = new Token(TokenType.TempoValue, input);
                         tokens.AddLast(token);
                     }
-                    else if (input.Length > 0)
+                    else if (input.Length > 0 && !input.Contains("\""))
                     {
                         Token token = new Token(TokenType.Note, input);
                         tokens.AddLast(token);
