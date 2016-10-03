@@ -21,6 +21,9 @@ namespace DPA_Musicsheets.Tokenizer
         Maatstreep,
         Rust,
         Version,
-        Header
+        Header,
+        Repeat,
+        Number,
+        Nothing //Voor keywords die nog niet gebruikt worden
     }
 }

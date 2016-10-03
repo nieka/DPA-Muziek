@@ -20,7 +20,15 @@ namespace DPA_Musicsheets.Interperter
 
         public Boolean this[string variableName]
         {
-            get { return _variables[variableName]; }
+            get {
+                    if (_variables.ContainsKey(variableName))
+                    {
+                        return _variables[variableName];
+                    } else
+                    {
+                        return false;
+                    }
+                }
             set { _variables[variableName] = value; }
         }
     }

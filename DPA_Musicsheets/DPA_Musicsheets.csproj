@@ -79,6 +79,7 @@
     <Compile Include="classes\MusicSheet.cs" />
     <Compile Include="classes\MusicType.cs" />
     <Compile Include="classes\NootItem.cs" />
+    <Compile Include="classes\Repeater.cs" />
     <Compile Include="classes\RustNode.cs" />
     <Compile Include="classes\Tempo.cs" />
     <Compile Include="classes\TieType.cs" />
@@ -93,10 +94,12 @@
     <Compile Include="interfaces\NoteObserver.cs" />
     <Compile Include="Interperter\Context.cs" />
     <Compile Include="Interperter\expresions\ClefExpresion.cs" />
+    <Compile Include="Interperter\expresions\EndblokExpresion.cs" />
     <Compile Include="Interperter\expresions\Expresion.cs" />
     <Compile Include="Interperter\expresions\MaatExpresion.cs" />
     <Compile Include="Interperter\expresions\NootExpresion.cs" />
     <Compile Include="Interperter\expresions\RelativeExpresion.cs" />
+    <Compile Include="Interperter\expresions\RepeatExpression.cs" />
     <Compile Include="Interperter\expresions\RustExpression.cs" />
     <Compile Include="Interperter\expresions\TempoExpresioncs.cs" />
     <Compile Include="Interperter\ExpressionFactory.cs" />
@@ -109,6 +112,7 @@
     <Compile Include="Visitor\StafVisitor.cs" />
     <Compile Include="writers\ISave.cs" />
     <Compile Include="writers\LilypondSaver.cs" />
+    <Compile Include="writers\LilypondToPdfExample.cs" />
     <Compile Include="writers\MidiSaver.cs" />
     <Compile Include="writers\PdfSaver.cs" />
     <Compile Include="writers\SaveFactory.cs" />

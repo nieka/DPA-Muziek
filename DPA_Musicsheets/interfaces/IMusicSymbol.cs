@@ -9,8 +9,6 @@ namespace DPA_Musicsheets.interfaces
 {
     interface IMusicSymbol
     {
-        MusicType getType();
-
         void accept(IVisotor visotor);
     }
 }

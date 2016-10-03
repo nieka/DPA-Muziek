@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DPA_Musicsheets.classes;
+using System.IO;
 
 namespace DPA_Musicsheets.writers
 {
@@ -16,7 +17,13 @@ namespace DPA_Musicsheets.writers
 
         public void save(MusicSheet musicsheet, string fileLocation)
         {
-            throw new NotImplementedException();
+            LilypondSaver lilypondSaver = new LilypondSaver();
+            lilypondSaver.save(musicsheet, @"c:\temp\Twee-emmertjes-water-halen");
+            //fileLocation += ".pdf";
+            String[] tempArr = fileLocation.Split('\\');
+            //  LilypondToPdfExample.SaveLilypondToPdf(fileLocation, tempArr[tempArr.Length - 1]);
+            LilypondToPdfExample.SaveLilypondToPdf();
+            //File.Delete(@"c:\temp\Twee-emmertjes-water-halen.ly");
         }
     }
 }

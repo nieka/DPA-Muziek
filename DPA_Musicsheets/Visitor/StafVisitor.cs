@@ -59,5 +59,21 @@ namespace DPA_Musicsheets.Visitor
         {
             //niet ondersteund door de gebruikte library
         }
+
+        public void visit(Repeater repeater)
+        {
+            LinkedListNode<IMusicSymbol> currentNote = repeater.items.First;
+
+            while(currentNote != null)
+            {
+                IMusicSymbol symbol = currentNote.Value;
+                symbol.accept(this);
+                currentNote = currentNote.Next;
+            }
+
+            Barline b = new Barline();
+            b.RepeatSign = RepeatSignType.Backward;
+            staff.AddMusicalSymbol(b);
+        }
     }
 }

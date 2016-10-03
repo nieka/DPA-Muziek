@@ -20,6 +20,8 @@ namespace DPA_Musicsheets.Interperter
             expressions.Add(TokenType.Maatstreep, new MaatExpresion());
             expressions.Add(TokenType.Rust, new RustExpression());
             expressions.Add(TokenType.TempoValue, new TempoExpresioncs());
+            expressions.Add(TokenType.EndBlok, new EndblokExpresion());
+            expressions.Add(TokenType.Repeat, new RepeatExpression());
         }
 
         public static Expresion getExpresionHandler(TokenType type)

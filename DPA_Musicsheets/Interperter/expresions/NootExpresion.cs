@@ -12,11 +12,15 @@ namespace DPA_Musicsheets.Interperter.expresions
         private char[] noteLookup = { 'c', 'd', 'e', 'f', 'g', 'a', 'b' };
         private int down = 0;
         private int up = 0;
+        private Context context;
+        private Note note;
+
         public void evaluat(LinkedListNode<Token> token, Context context)
         {
             if (token.Previous != null && token.Previous.Value.type != TokenType.relative)
             {
-                Note note = new Note();
+                this.context = context;
+                this.note = new Note();
                 Note lastNote = getLastNote(context.musicSheet);
                 String value = token.Value.value;
                 int pos =0;
@@ -127,7 +131,7 @@ namespace DPA_Musicsheets.Interperter.expresions
                         int waardenoot = defaultOctaaf * 12 + Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
                         int waardeEersteNoot = noten.getOctaaf() * 12 + Array.IndexOf(noteLookup, Convert.ToChar(noten.toonHoogte));
                         int diffrents = Math.Abs(waardeEersteNoot - waardenoot);
-                        if (diffrents >= 4 && down == 0 || (down > 0 && (diffrents >=5 || diffrents == 0)) || (diffrents == 0 && up > 0) || (down > 0 && waardeEersteNoot < waardenoot))
+                        if (diffrents >= 6 && down == 0 || (down > 0 && (diffrents >=5 || diffrents == 0)) || (diffrents == 0 && up > 0) || (down > 0 && waardeEersteNoot < waardenoot))
                         {
                             if (noten.getOctaaf() == defaultOctaaf)
                             {
@@ -155,7 +159,8 @@ namespace DPA_Musicsheets.Interperter.expresions
                     note.octaaf = context.musicSheet.startOctaaf;
                 }
 
-                context.musicSheet.addmusicSymbol(note);
+                addNote();
+                
             }
         }
 
@@ -165,9 +170,31 @@ namespace DPA_Musicsheets.Interperter.expresions
             return new NootExpresion();
         }
 
+        private void addNote()
+        {
+            if (context["repeat"])
+            {
+                Repeater repeater = (Repeater) context.musicSheet.items.Last.Value;
+                repeater.addmusicSymbol(note);
+            } else
+            {
+                context.musicSheet.addmusicSymbol(note);
+            }
+            
+        }
+
         private Note getLastNote(MusicSheet musicSheet)
         {
-            LinkedListNode<IMusicSymbol> currentItem = musicSheet.items.Last;
+            LinkedListNode<IMusicSymbol> currentItem;
+            if (context["repeat"])
+            {
+                Repeater repeater = (Repeater) musicSheet.items.Last.Value;
+                currentItem = repeater.items.Last;
+            } else
+            {
+                currentItem = musicSheet.items.Last;
+            }
+
             while(currentItem != null)
             {
                 try

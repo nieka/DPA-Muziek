@@ -27,6 +27,8 @@ namespace DPA_Musicsheets.Tokenizer
             keyWords.Add("\\tempo", TokenType.Tempo);
             keyWords.Add("\\version", TokenType.Version);
             keyWords.Add("\\header", TokenType.Header);
+            keyWords.Add("\\repeat", TokenType.Repeat);
+            keyWords.Add("volta", TokenType.Nothing);
         }
 
         public void proces(String music)
@@ -47,7 +49,11 @@ namespace DPA_Musicsheets.Tokenizer
                     {
                         Token token = new Token(TokenType.timeSignaturedata, input);
                         tokens.AddLast(token);
-                    } else if (input.Contains("r")) {
+                    } else if (isNumber(input)) {
+                        Token token = new Token(TokenType.Number, input);
+                        tokens.AddLast(token);
+                    }
+                    else if (input.Contains("r")) {
                         Token token = new Token(TokenType.Rust, input);
                         tokens.AddLast(token);
                     } else if (input.Contains("=")) {
@@ -66,6 +72,12 @@ namespace DPA_Musicsheets.Tokenizer
         public LinkedList<Token> getTokens()
         {
             return tokens;
+        }
+
+        private Boolean isNumber(String input)
+        {
+            int n;
+            return int.TryParse(input, out n);
         }
 
         private void setKeyWord(String keyword){

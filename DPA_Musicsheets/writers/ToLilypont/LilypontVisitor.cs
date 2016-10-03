@@ -76,5 +76,10 @@ namespace DPA_Musicsheets.writers.ToLilypont
 
             data += tempNoot + " ";
         }
+
+        public void visit(Repeater repeater)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
