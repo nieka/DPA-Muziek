@@ -55,3 +55,6 @@ C:\Users\Niekh\OneDrive\Documenten\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\D
 C:\Users\Niekh\OneDrive\Documenten\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.csproj.GenerateResource.Cache
 C:\Users\Niekh\OneDrive\Documenten\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.exe
 C:\Users\Niekh\OneDrive\Documenten\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.pdb
+D:\miche\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\bin\Debug\DPA_Musicsheets.exe.config
+D:\miche\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.exe
+D:\miche\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.pdb
