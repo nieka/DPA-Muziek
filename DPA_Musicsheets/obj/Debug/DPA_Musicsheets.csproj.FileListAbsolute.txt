@@ -61,7 +61,6 @@ D:\miche\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.p
 C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\bin\Debug\DPA_Musicsheets.exe.config
 C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.exe
 C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.pdb
-C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.csprojResolveAssemblyReference.cache
 C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\MainWindow.g.cs
 C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\App.g.cs
 C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets_MarkupCompile.cache

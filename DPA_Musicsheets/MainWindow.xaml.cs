@@ -76,11 +76,29 @@ namespace DPA_Musicsheets
             }
         }
 
-        private void btn_ShowContent_Click(object sender, RoutedEventArgs e)
+        private void btn_Edit_Click(object sender, RoutedEventArgs e)
         {
             //ShowMidiTracks(MidiReader.ReadMidi(txt_MidiFilePath.Text));
 
-            EditBox.Text = controller.GetLilypond();
+            if(controller.State.Type == StateType.Play)
+            {
+                EditBox.IsEnabled = true;
+                btn_Edit.Content = "Play mode";               
+
+                btnPlay.IsEnabled = false;
+                btn_Stop.IsEnabled = false;
+
+                EditBox.Text = controller.GetLilypond();
+            }
+            else if(controller.State.Type == StateType.Edit)
+            {
+                EditBox.IsEnabled = false;
+                btn_Edit.Content = "Edit mode";
+                btnPlay.IsEnabled = true;
+                btn_Stop.IsEnabled = true;
+            }
+
+            controller.SwitchState();
         }
 
         private void ShowMidiTracks(IEnumerable<MidiTrack> midiTracks)

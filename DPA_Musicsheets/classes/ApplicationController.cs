@@ -1,5 +1,6 @@
 ﻿using DPA_Musicsheets.factories;
 using DPA_Musicsheets.interfaces;
+using DPA_Musicsheets.States;
 using DPA_Musicsheets.writers;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,9 @@ namespace DPA_Musicsheets.classes
         private InputReader inputReader;
         private MusicSheet musicSheet;
         private List<NoteObserver> noteObservers;
-
         private ToLilypontConverter LilypondConverter;
         public bool HasSaved { get; set; }
+        public IState State { get; private set; }
 
         public ApplicationController()
         {
@@ -24,6 +25,7 @@ namespace DPA_Musicsheets.classes
             noteObservers = new List<NoteObserver>();
             LilypondConverter = new ToLilypontConverter();
             HasSaved = true;
+            State = new PlayState();
         }
 
         public void convertFile(String location)
@@ -58,6 +60,18 @@ namespace DPA_Musicsheets.classes
         public string GetLilypond()
         {
             return LilypondConverter.ToLilypoint(musicSheet);
+        }
+
+        public void SwitchState()
+        {
+            if(State.Type == StateType.Play)
+            {
+                State = new EditState();
+            }
+            else if(State.Type == StateType.Edit)
+            {
+                State = new PlayState();
+            }
         }
     }
 }

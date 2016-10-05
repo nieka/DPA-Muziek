@@ -81,6 +81,7 @@
     <Compile Include="classes\NootItem.cs" />
     <Compile Include="classes\Repeater.cs" />
     <Compile Include="classes\RustNode.cs" />
+    <Compile Include="classes\StateType.cs" />
     <Compile Include="classes\Tempo.cs" />
     <Compile Include="classes\TieType.cs" />
     <Compile Include="classes\Note.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="interfaces\ICommand.cs" />
     <Compile Include="interfaces\IMusicSymbol.cs" />
     <Compile Include="interfaces\InputReader.cs" />
+    <Compile Include="interfaces\IState.cs" />
     <Compile Include="interfaces\IVisotor.cs" />
     <Compile Include="interfaces\NoteObserver.cs" />
     <Compile Include="Interperter\Context.cs" />
@@ -117,6 +119,8 @@
     <Compile Include="Interperter\LyInterperter.cs" />
     <Compile Include="Interperter\expresions\TimeSignatureExpresion.cs" />
     <Compile Include="MidiTrack.cs" />
+    <Compile Include="States\EditState.cs" />
+    <Compile Include="States\PlayState.cs" />
     <Compile Include="Tokenizer\LilypondTokenizer.cs" />
     <Compile Include="Tokenizer\Token.cs" />
     <Compile Include="Tokenizer\TokenType.cs" />
