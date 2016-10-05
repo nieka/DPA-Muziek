@@ -78,7 +78,9 @@ namespace DPA_Musicsheets
 
         private void btn_ShowContent_Click(object sender, RoutedEventArgs e)
         {
-            ShowMidiTracks(MidiReader.ReadMidi(txt_MidiFilePath.Text));
+            //ShowMidiTracks(MidiReader.ReadMidi(txt_MidiFilePath.Text));
+
+            EditBox.Text = controller.GetLilypond();
         }
 
         private void ShowMidiTracks(IEnumerable<MidiTrack> midiTracks)
@@ -88,7 +90,22 @@ namespace DPA_Musicsheets
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            
+            if(!controller.HasSaved)
+            {
+                string msg = "Do you want to quit without saving?";
+                MessageBoxResult result = MessageBox.Show(msg, "Session Ending", MessageBoxButton.YesNo);
+
+                // End session, if specified
+                if (result == MessageBoxResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void EditBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            controller.HasSaved = false;
         }
     }
 }
