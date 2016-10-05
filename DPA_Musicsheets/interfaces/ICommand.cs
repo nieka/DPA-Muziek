@@ -8,6 +8,6 @@ namespace DPA_Musicsheets.interfaces
 {
     interface ICommand
     {
-        public void execute();
+        void execute();
     }
 }
