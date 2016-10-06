@@ -45,7 +45,6 @@ namespace DPA_Musicsheets.MidiReader
                             {
                                 procesNote(midiEvent);
                             }
-                            nextEvent = midiEvent;
                             break;
                         // Meta zegt iets over de track zelf.
                         case MessageType.Meta:
@@ -66,11 +65,12 @@ namespace DPA_Musicsheets.MidiReader
                                     break;
                                 case MetaType.Tempo:
                                     bytes = metaMessage.GetBytes();
-                                    int tempo = (bytes[0] & 0xff) << 16 | (bytes[1] & 0xff) << 8 | (bytes[2] & 0xff);
-                                    int bpm = 60000000 / tempo;
-                                    Tempo tempoObj = new Tempo(tempo, 1);// Midi kent bij het tempo niet een noot en daarom is de noot lengte standaart 1
+                                    int microSecondsPerNote = (bytes[0] & 0xff) << 16 | (bytes[1] & 0xff) << 8 | (bytes[2] & 0xff);
+                                    int bpm = 60000000 / microSecondsPerNote;
+                                    Tempo tempoObj = new Tempo(bpm, 1);// Midi kent bij het tempo niet een noot en daarom is de noot lengte standaart 1
                                     musicSheet.addmusicSymbol(tempoObj);
                                     break;
+
                             }
                             break;
                     }
@@ -97,20 +97,23 @@ namespace DPA_Musicsheets.MidiReader
         private void procesNote(MidiEvent currentEvent)
         {
             var channelMessage = currentEvent.MidiMessage as ChannelMessage;
-
-            int octaaf = (int)Math.Floor((Double)channelMessage.Data1 / 12);
-            String toonHoogte = noteLookup[channelMessage.Data1 - (octaaf * 12)];
-            NootItem item = NootItem.Geen;
-            if (toonHoogte.Contains("#"))
+            //de noot is afgelopen dus kan die nu toegevoegd worden aan de music sheet
+            if(channelMessage.Data2 == 0 && nextEvent.AbsoluteTicks != 0)
             {
-                item = NootItem.Kruis;
-                toonHoogte = toonHoogte.Replace("#", "");
+                int octaaf = (int)Math.Floor((Double)channelMessage.Data1 / 12);
+                String toonHoogte = noteLookup[channelMessage.Data1 - (octaaf * 12)];
+                NootItem item = NootItem.Geen;
+                if (toonHoogte.Contains("#"))
+                {
+                    item = NootItem.Kruis;
+                    toonHoogte = toonHoogte.Replace("#", "");
+                }
+                double deltaTicks = Math.Abs(nextEvent.AbsoluteTicks - currentEvent.AbsoluteTicks);
+                double percentageOfBeatNote = deltaTicks / _sequence.Division;
+                double percentageOfWholeNote = (1.0 / currentTimesignature.timeSignature[1]) * percentageOfBeatNote;
+                Note note = new Note(octaaf -1, toonHoogte, berekenDuur(percentageOfWholeNote), item, TieType.None);
+                musicSheet.addmusicSymbol(note);
             }
-            double deltaTicks = nextEvent.AbsoluteTicks - currentEvent.AbsoluteTicks;
-            double percentageOfBeatNote = deltaTicks / _sequence.Division;
-            double percentageOfWholeNote = (1.0 / currentTimesignature.timeSignature[1]) * percentageOfBeatNote;
-            Note note = new Note(octaaf -1, toonHoogte, berekenDuur(percentageOfWholeNote), item, TieType.None);
-            musicSheet.addmusicSymbol(note);
         }
 
         private void loadMidiFile(String fileLocation)

@@ -51,12 +51,12 @@ namespace DPA_Musicsheets.writers.ToLilypont
 
         public void visit(Tempo tempo)
         {
-            data += "\tempo " + tempo.nootLength + "=" + tempo.tempo + " ";
+            data += "\\tempo " + tempo.nootLength + "=" + tempo.tempo + " ";
         }
 
         public void visit(TimeSignature timeSignature)
         {
-            data += "\time " + timeSignature.timeSignature[0] + "/" + timeSignature.timeSignature[1] + " ";
+            data += "\\time " + timeSignature.timeSignature[0] + "/" + timeSignature.timeSignature[1] + " ";
         }
 
         public void visit(RustNode rustNode)
