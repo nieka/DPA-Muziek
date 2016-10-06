@@ -15,10 +15,15 @@ namespace DPA_Musicsheets.classes
         private MusicSheet musicSheet;
         private List<NoteObserver> noteObservers;
 
+        private ToLilypontConverter LilypondConverter;
+        public bool HasSaved { get; set; }
+
         public ApplicationController()
         {
             musicSheet = new MusicSheet();
             noteObservers = new List<NoteObserver>();
+            LilypondConverter = new ToLilypontConverter();
+            HasSaved = true;
         }
 
         public void convertFile(String location)
@@ -48,6 +53,11 @@ namespace DPA_Musicsheets.classes
             {
                 noteObservers[i].update(musicSheet);
             }
+        }
+
+        public string GetLilypond()
+        {
+            return LilypondConverter.ToLilypoint(musicSheet);
         }
     }
 }
