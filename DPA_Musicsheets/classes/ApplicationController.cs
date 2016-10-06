@@ -24,7 +24,7 @@ namespace DPA_Musicsheets.classes
         public void convertFile(String location)
         {
             inputReader = ReaderFactory.getReader(System.IO.Path.GetExtension(location));
-            musicSheet = inputReader.readNotes(System.IO.File.ReadAllText(location));
+            musicSheet = inputReader.readNotes(location);
             notifyAll();
         }
 

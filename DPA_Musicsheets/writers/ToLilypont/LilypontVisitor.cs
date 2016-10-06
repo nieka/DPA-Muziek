@@ -79,7 +79,17 @@ namespace DPA_Musicsheets.writers.ToLilypont
 
         public void visit(Repeater repeater)
         {
-            throw new NotImplementedException();
+            data += "\\repeat volta " + repeater.repeats + " { ";
+            LinkedListNode<IMusicSymbol> currentNote = repeater.items.First;
+
+            while (currentNote != null)
+            {
+                IMusicSymbol symbol = currentNote.Value;
+                symbol.accept(this);
+                currentNote = currentNote.Next;
+            }
+
+            data += " }";
         }
     }
 }
