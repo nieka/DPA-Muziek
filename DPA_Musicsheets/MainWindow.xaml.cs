@@ -35,12 +35,16 @@ namespace DPA_Musicsheets
         private OutputDevice _outputDevice = new OutputDevice(0);
 
         private ApplicationController controller;
+        private KeyEventArgs Lastkey;
 
         public MainWindow()
         {
             InitializeComponent();
+            this.KeyDown += new KeyEventHandler(OnButtonKeyDown);
             controller = new ApplicationController();
             controller.attach(new StafDrawer(staff));
+
+            Lastkey = null;
 
         }
 
@@ -124,6 +128,26 @@ namespace DPA_Musicsheets
         private void EditBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             controller.HasSaved = false;
+        }
+
+        private void OnButtonKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key.ToString() == "LeftCtrl")
+            {
+                if(Lastkey != e)
+                {
+                    Lastkey = e;
+                }
+                //MessageBox.Show(e.Key.ToString());
+            }
+            else
+            {
+                if(Lastkey != null)
+                {
+                    MessageBox.Show(Lastkey.Key.ToString() + " + " + e.Key.ToString());
+                    Lastkey = null;
+                }      
+            }         
         }
     }
 }
