@@ -9,6 +9,14 @@ namespace DPA_Musicsheets.Command.Commands
 {
     class InsertTempoCommand : ICommand
     {
+        public string pattern
+        {
+            get
+            {
+                return "LeftAlt S";
+            }
+        }
+
         public void execute()
         {
 

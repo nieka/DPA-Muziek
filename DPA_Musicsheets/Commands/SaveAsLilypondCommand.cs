@@ -9,6 +9,14 @@ namespace DPA_Musicsheets.Command.Commands
 {
     class SaveAsLilypondCommand : ICommand
     {
+        public string pattern
+        {
+            get
+            {
+                return "LeftCtrl S";
+            }
+        }
+
         public void execute()
         {
 

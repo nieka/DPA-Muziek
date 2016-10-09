@@ -74,6 +74,7 @@
     <Compile Include="classes\ApplicationController.cs" />
     <Compile Include="classes\Clef.cs" />
     <Compile Include="classes\ClefType.cs" />
+    <Compile Include="classes\KeyType.cs" />
     <Compile Include="classes\LilypondReader.cs" />
     <Compile Include="classes\MaatStreep.cs" />
     <Compile Include="classes\MusicSheet.cs" />

@@ -9,6 +9,14 @@ namespace DPA_Musicsheets.Command.Commands
 {
     class InsertClefCommand : ICommand
     {
+        public string pattern
+        {
+            get
+            {
+                return "LeftAlt C";
+            }
+        }
+
         public void execute()
         {
 

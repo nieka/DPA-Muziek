@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -35,17 +36,17 @@ namespace DPA_Musicsheets
         private OutputDevice _outputDevice = new OutputDevice(0);
 
         private ApplicationController controller;
-        private KeyEventArgs Lastkey;
+
+        private List<string> keys;
+        
 
         public MainWindow()
         {
             InitializeComponent();
-            this.KeyDown += new KeyEventHandler(OnButtonKeyDown);
             controller = new ApplicationController();
             controller.attach(new StafDrawer(staff));
 
-            Lastkey = null;
-
+            this.KeyDown += new KeyEventHandler(OnButtonKeyDown);
         }
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
@@ -77,6 +78,7 @@ namespace DPA_Musicsheets
             if (saveFileDialog1.FileName != "")
             {
                 controller.save(type, saveFileDialog1.FileName);
+                controller.HasSaved = true;
             }
         }
 
@@ -129,25 +131,46 @@ namespace DPA_Musicsheets
         {
             controller.HasSaved = false;
         }
-
+        
         private void OnButtonKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key.ToString() == "LeftCtrl")
+            if(keys == null)
             {
-                if(Lastkey != e)
+                if (e.Key.ToString() == "LeftCtrl" || e.Key.ToString() == "RightCtrl" || e.Key.ToString() == "System")
                 {
-                    Lastkey = e;
+                    keys = new List<string>();
+
+                    if (e.Key.ToString() == "RightCtrl" || e.Key.ToString() == "LeftCtrl")
+                    {
+                        keys.Add("LeftCtrl");
+                    }
+                    else if (e.Key.ToString() == "System")
+                    {
+                        keys.Add("System");
+                    }
                 }
-                //MessageBox.Show(e.Key.ToString());
-            }
+            }           
             else
             {
-                if(Lastkey != null)
+                if (keys.Count > 0)
                 {
-                    MessageBox.Show(Lastkey.Key.ToString() + " + " + e.Key.ToString());
-                    Lastkey = null;
-                }      
-            }         
+                    if (e.Key.ToString() != "LeftCtrl" || e.Key.ToString() != "RightCtrl" || e.Key.ToString() != "System")
+                    {
+                        keys.Add(e.Key.ToString());
+                    }
+                    
+                }
+                
+                if(keys.Count == 3)
+                {
+                    string keycode = keys[0] + " " + keys[1] + " " + keys[2];
+                    //EditBox.Text = keycode;
+
+                    controller.State.ActivateCommand(keycode);
+
+                    keys = null;
+                }
+            }
         }
     }
 }

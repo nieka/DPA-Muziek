@@ -9,6 +9,14 @@ namespace DPA_Musicsheets.Command.Commands
 {
     class OpenFileCommand : ICommand
     {
+        public string pattern
+        {
+            get
+            {
+                return "LeftCtrl O";
+            }
+        }
+
         public void execute()
         {
 

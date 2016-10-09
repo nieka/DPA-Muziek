@@ -9,6 +9,14 @@ namespace DPA_Musicsheets.Command.Commands
 {
     class PlayMidiCommand :  ICommand
     {
+        public string pattern
+        {
+            get
+            {
+                return "LeftCtrl M";
+            }
+        }
+
         public void execute()
         {
 

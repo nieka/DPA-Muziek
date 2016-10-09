@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace DPA_Musicsheets.interfaces
 {
@@ -11,5 +12,7 @@ namespace DPA_Musicsheets.interfaces
     {
         List<ICommand> Commands { get; set; }
         StateType Type { get; set; }
+
+        void ActivateCommand(string keys);
     }
 }

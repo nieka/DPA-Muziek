@@ -9,6 +9,14 @@ namespace DPA_Musicsheets.Command.Commands
 {
     class SaveAsPDFCommand : ICommand
     {
+        public string pattern
+        {
+            get
+            {
+                return "LeftCtrl S P";
+            }
+        }
+
         public void execute()
         {
 

@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DPA_Musicsheets.interfaces
+namespace DPA_Musicsheets.classes
 {
-    interface ICommand
+    enum KeyType
     {
-        string pattern { get; }
-        void execute();
+        LeftCtrl,
+        RightCtrl,
+        LeftAlt,
+        RightAlt
     }
 }

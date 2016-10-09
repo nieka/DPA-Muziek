@@ -9,6 +9,14 @@ namespace DPA_Musicsheets.Command.Commands
 {
     class InsertBarLinesCommand : ICommand
     {
+        public string pattern
+        {
+            get
+            {
+                return "LeftAlt B";
+            }
+        }
+
         public void execute()
         {
 
