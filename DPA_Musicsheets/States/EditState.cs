@@ -15,21 +15,24 @@ namespace DPA_Musicsheets.States
         public StateType Type { get; set; }
         public List<ICommand> Commands { get; set; }
 
-        public EditState()
+        private ApplicationController controller;
+
+        public EditState(ApplicationController controller)
         {
             Type = StateType.Edit;
+            this.controller = controller;
 
             Commands = new List<ICommand>();
 
-            Commands.Add(new InsertBarLinesCommand());
-            Commands.Add(new InsertClefCommand());
-            Commands.Add(new InsertTempoCommand());
-            Commands.Add(new InsertTimeCommand());
-            Commands.Add(new InsertTime3_4Command());
-            Commands.Add(new InsertTime6_8Command());
-            Commands.Add(new OpenFileCommand());
-            Commands.Add(new SaveAsPDFCommand());
-            Commands.Add(new SaveAsLilypondCommand());
+            Commands.Add(new InsertBarLinesCommand(controller));
+            Commands.Add(new InsertClefCommand(controller));
+            Commands.Add(new InsertTempoCommand(controller));
+            Commands.Add(new InsertTimeCommand(controller));
+            Commands.Add(new InsertTime3_4Command(controller));
+            Commands.Add(new InsertTime6_8Command(controller));
+            Commands.Add(new OpenFileCommand(controller));
+            Commands.Add(new SaveAsPDFCommand(controller));
+            Commands.Add(new SaveAsLilypondCommand(controller));
             
         }
 

@@ -4,11 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DPA_Musicsheets.interfaces;
+using DPA_Musicsheets.classes;
 
 namespace DPA_Musicsheets.Command.Commands
 {
     class InsertBarLinesCommand : ICommand
     {
+        private ApplicationController controller;
+
+        public InsertBarLinesCommand(ApplicationController controller)
+        {
+            this.controller = controller;
+        }
+
+
         public string pattern
         {
             get

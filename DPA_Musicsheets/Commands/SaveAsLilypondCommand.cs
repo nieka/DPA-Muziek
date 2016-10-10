@@ -1,4 +1,5 @@
-﻿using DPA_Musicsheets.interfaces;
+﻿using DPA_Musicsheets.classes;
+using DPA_Musicsheets.interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,13 @@ namespace DPA_Musicsheets.Command.Commands
 {
     class SaveAsLilypondCommand : ICommand
     {
+        private ApplicationController controller;
+
+        public SaveAsLilypondCommand(ApplicationController controller)
+        {
+            this.controller = controller;
+        }
+
         public string pattern
         {
             get
@@ -19,7 +27,7 @@ namespace DPA_Musicsheets.Command.Commands
 
         public void execute()
         {
-
+            controller.SaveFile();
         }
     }
 }

@@ -15,15 +15,18 @@ namespace DPA_Musicsheets.States
         public StateType Type { get; set; }
         public List<ICommand> Commands { get; set; }
 
-        public PlayState()
+        private ApplicationController controller;
+
+        public PlayState(ApplicationController controller)
         {
             Type = StateType.Play;
+            this.controller = controller;
 
             Commands = new List<ICommand>();
 
-            Commands.Add(new OpenFileCommand());
-            Commands.Add(new SaveAsPDFCommand());
-            Commands.Add(new SaveAsLilypondCommand());
+            Commands.Add(new OpenFileCommand(controller));
+            Commands.Add(new SaveAsPDFCommand(controller));
+            Commands.Add(new SaveAsLilypondCommand(controller));
             
         }
 

@@ -42,7 +42,7 @@ namespace DPA_Musicsheets
         public MainWindow()
         {
             InitializeComponent();
-            controller = new ApplicationController();
+            controller = new ApplicationController(this);
             controller.attach(new StafDrawer(staff));
 
             this.KeyDown += new KeyEventHandler(OnButtonKeyDown);
@@ -59,12 +59,17 @@ namespace DPA_Musicsheets
 
         private void btnOpen_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
-            {
-                txt_MidiFilePath.Text = openFileDialog.FileName;
-                controller.convertFile(openFileDialog.FileName);
-            }
+            controller.OpenFile();           
+        }
+        
+        public void SetMidiFilePath(string path)
+        {
+            txt_MidiFilePath.Text = path;
+        }
+
+        public string GetSaveState()
+        {
+            return saveState.Text;
         }
 
         
@@ -74,15 +79,7 @@ namespace DPA_Musicsheets
         }
         private void btn_Save(object sender, RoutedEventArgs e)
         {
-            String type = saveState.Text;
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Title = "Sla je muziek op";
-            saveFileDialog1.ShowDialog();
-            if (saveFileDialog1.FileName != "")
-            {
-                controller.save(type, saveFileDialog1.FileName);
-                controller.HasSaved = true;
-            }
+            controller.SaveFile();
         }
 
         private void btn_Edit_Click(object sender, RoutedEventArgs e)
