@@ -130,6 +130,19 @@ namespace DPA_Musicsheets.MidiReader
                     note.duur = duur * 2;
                 }
                 musicSheet.addmusicSymbol(note);
+            } else
+            {
+                //check of er rusts zijn
+                if(nextEvent.AbsoluteTicks != currentEvent.AbsoluteTicks)
+                {
+                    // er is een rust
+                    double deltaTicks = Math.Abs(nextEvent.AbsoluteTicks - currentEvent.AbsoluteTicks);
+                    double percentageOfBeatNote = deltaTicks / _sequence.Division;
+                    double percentageOfWholeNote = (1.0 / currentTimesignature.timeSignature[1]) * percentageOfBeatNote;
+                    RustNode rust = new RustNode();
+                    rust.duur = berekenDuur(percentageOfWholeNote);
+                    musicSheet.addmusicSymbol(rust);
+                }
             }
         }
 

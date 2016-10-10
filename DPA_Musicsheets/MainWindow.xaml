@@ -15,7 +15,6 @@
         <ComboBox x:Name="saveState" Text="Save to" Width="233" Height="19" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,38,0,0">
             <ComboBoxItem Name="Lilypont">Lilypont</ComboBoxItem>
             <ComboBoxItem Name="Pdf">Pdf</ComboBoxItem>
-            <ComboBoxItem Name="Midi">Midi</ComboBoxItem>
         </ComboBox>
         <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="248,38,0,0" VerticalAlignment="Top" Width="75" Click="btn_Save"/>
 

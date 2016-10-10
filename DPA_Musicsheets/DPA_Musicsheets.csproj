@@ -109,6 +109,11 @@
     <Compile Include="MidiFileReader\MidiAdapter.cs" />
     <Compile Include="MidiFileReader\MidiFileReader.cs" />
     <Compile Include="MidiTrack.cs" />
+    <Compile Include="Tokenizer\checkers\NoteChecker.cs" />
+    <Compile Include="Tokenizer\checkers\RustChecker.cs" />
+    <Compile Include="Tokenizer\checkers\TempoChecker.cs" />
+    <Compile Include="Tokenizer\checkers\TimeSignatureChecker.cs" />
+    <Compile Include="Tokenizer\ITokenChecker.cs" />
     <Compile Include="Tokenizer\LilypondTokenizer.cs" />
     <Compile Include="Tokenizer\Token.cs" />
     <Compile Include="Tokenizer\TokenType.cs" />
