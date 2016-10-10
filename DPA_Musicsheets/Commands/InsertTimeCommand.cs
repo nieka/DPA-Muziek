@@ -21,7 +21,7 @@ namespace DPA_Musicsheets.Command.Commands
         {
             get
             {
-                return "LeftAlt T D4";
+                return "LeftAlt T D4 ";
             }
         }
 

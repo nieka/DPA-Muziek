@@ -57,6 +57,11 @@ namespace DPA_Musicsheets
             
         }
 
+        private void btn_Stop_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void btnOpen_Click(object sender, RoutedEventArgs e)
         {
             controller.OpenFile();           
@@ -70,13 +75,8 @@ namespace DPA_Musicsheets
         public string GetSaveState()
         {
             return saveState.Text;
-        }
-
+        }       
         
-        private void btn_Stop_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
         private void btn_Save(object sender, RoutedEventArgs e)
         {
             controller.SaveFile();
@@ -84,8 +84,6 @@ namespace DPA_Musicsheets
 
         private void btn_Edit_Click(object sender, RoutedEventArgs e)
         {
-            //ShowMidiTracks(MidiReader.ReadMidi(txt_MidiFilePath.Text));
-
             if(controller.State.Type == StateType.Play)
             {
                 EditBox.IsEnabled = true;
@@ -130,12 +128,18 @@ namespace DPA_Musicsheets
         private void EditBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             controller.HasSaved = false;
+            controller.EditString = EditBox.Text;
 
             if(controller.State.Type == StateType.Edit)
             {
                 SaveTimer.Stop();
                 SaveTimer.Start();
             }    
+        }
+
+        public void SetEditBox(string EditText)
+        {
+            EditBox.Text = EditText;
         }
         
         private void OnButtonKeyDown(object sender, KeyEventArgs e)
@@ -166,7 +170,7 @@ namespace DPA_Musicsheets
 
         private void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
-            MessageBox.Show("saved");
+            //MessageBox.Show("saved");
         }
     }
 }

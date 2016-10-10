@@ -32,6 +32,7 @@ namespace DPA_Musicsheets.classes
             this.window = window;
             HasSaved = true;
             CommandKeys = "";
+            EditString = "";
             State = new PlayState(this);
         }
 
@@ -104,6 +105,12 @@ namespace DPA_Musicsheets.classes
                 save(type, saveFileDialog1.FileName);
                 HasSaved = true;
             }
+        }
+
+        public void SetEditText(string txt)
+        {
+            EditString = txt;
+            window.SetEditBox(txt);
         }
     }
 }
