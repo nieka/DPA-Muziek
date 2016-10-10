@@ -13,6 +13,6 @@ namespace DPA_Musicsheets.interfaces
         List<ICommand> Commands { get; set; }
         StateType Type { get; set; }
 
-        void ActivateCommand(string keys);
+        bool ActivateCommand(string keys);
     }
 }

@@ -17,6 +17,8 @@ namespace DPA_Musicsheets.classes
         private List<NoteObserver> noteObservers;
         private ToLilypontConverter LilypondConverter;
         public bool HasSaved { get; set; }
+        public string CommandKeys { get; set; }
+        public string EditString { get; set; }
         public IState State { get; private set; }
 
         public ApplicationController()
@@ -25,6 +27,7 @@ namespace DPA_Musicsheets.classes
             noteObservers = new List<NoteObserver>();
             LilypondConverter = new ToLilypontConverter();
             HasSaved = true;
+            CommandKeys = "";
             State = new PlayState();
         }
 

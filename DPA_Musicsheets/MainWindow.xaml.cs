@@ -36,8 +36,6 @@ namespace DPA_Musicsheets
         // DeviceID 0 is je audio van je PC zelf.
         private OutputDevice _outputDevice = new OutputDevice(0);
         private ApplicationController controller;
-        
-        private List<string> keys;
 
         private Timer SaveTimer;
 
@@ -145,43 +143,28 @@ namespace DPA_Musicsheets
         
         private void OnButtonKeyDown(object sender, KeyEventArgs e)
         {
-            if(keys == null)
+            if (e.Key.ToString() == "LeftCtrl" || e.Key.ToString() == "RightCtrl" || e.Key.ToString() == "System")
             {
-                if (e.Key.ToString() == "LeftCtrl" || e.Key.ToString() == "RightCtrl" || e.Key.ToString() == "System")
+                if (e.Key.ToString() == "RightCtrl" || e.Key.ToString() == "LeftCtrl")
                 {
-                    keys = new List<string>();
-
-                    if (e.Key.ToString() == "RightCtrl" || e.Key.ToString() == "LeftCtrl")
-                    {
-                        keys.Add("LeftCtrl");
-                    }
-                    else if (e.Key.ToString() == "System")
-                    {
-                        keys.Add("System");
-                    }
+                    controller.CommandKeys += "LeftCtrl ";
                 }
-            }           
-            else
-            {
-                if (keys.Count > 0)
+                else if (e.Key.ToString() == "System")
                 {
-                    if (e.Key.ToString() != "LeftCtrl" || e.Key.ToString() != "RightCtrl" || e.Key.ToString() != "System")
-                    {
-                        keys.Add(e.Key.ToString());
-                    }
-                    
-                }
-                
-                if(keys.Count == 3)
-                {
-                    string keycode = keys[0] + " " + keys[1] + " " + keys[2];
-                    //EditBox.Text = keycode;
-
-                    controller.State.ActivateCommand(keycode);
-
-                    keys = null;
+                    controller.CommandKeys += "System ";
                 }
             }
+            else
+            {
+                controller.CommandKeys += e.Key.ToString() + " ";
+            }
+
+            if(controller.State.ActivateCommand(controller.CommandKeys))
+            {
+                MessageBox.Show(controller.CommandKeys);
+                controller.CommandKeys = "";
+            }
+
         }
 
         private void OnTimedEvent(Object source, ElapsedEventArgs e)

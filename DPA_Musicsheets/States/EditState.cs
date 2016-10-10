@@ -33,15 +33,18 @@ namespace DPA_Musicsheets.States
             
         }
 
-        public void ActivateCommand(string keys)
+        public bool ActivateCommand(string keys)
         {
             foreach (ICommand command in Commands)
             {
                 if (keys.Contains(command.pattern))
                 {
                     command.execute();
+                    return true;
                 }
             }
+
+            return false;
         }
     }
 }
