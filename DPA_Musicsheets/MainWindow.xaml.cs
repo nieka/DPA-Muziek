@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+//using System.Windows.Forms.Timer;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -34,11 +35,11 @@ namespace DPA_Musicsheets
         // Hierop gaan we audio streamen.
         // DeviceID 0 is je audio van je PC zelf.
         private OutputDevice _outputDevice = new OutputDevice(0);
-
         private ApplicationController controller;
-
-        private List<string> keys;
         
+        private List<string> keys;
+
+        private Timer SaveTimer;
 
         public MainWindow()
         {
@@ -47,6 +48,10 @@ namespace DPA_Musicsheets
             controller.attach(new StafDrawer(staff));
 
             this.KeyDown += new KeyEventHandler(OnButtonKeyDown);
+
+            SaveTimer = new Timer(1500);
+            SaveTimer.Elapsed += OnTimedEvent;
+            SaveTimer.AutoReset = false;
         }
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
@@ -130,6 +135,12 @@ namespace DPA_Musicsheets
         private void EditBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             controller.HasSaved = false;
+
+            if(controller.State.Type == StateType.Edit)
+            {
+                SaveTimer.Stop();
+                SaveTimer.Start();
+            }    
         }
         
         private void OnButtonKeyDown(object sender, KeyEventArgs e)
@@ -171,6 +182,11 @@ namespace DPA_Musicsheets
                     keys = null;
                 }
             }
+        }
+
+        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            MessageBox.Show("saved");
         }
     }
 }

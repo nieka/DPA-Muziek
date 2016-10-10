@@ -17,7 +17,7 @@ namespace DPA_Musicsheets.States
 
         public EditState()
         {
-            Type = StateType.Play;
+            Type = StateType.Edit;
 
             Commands = new List<ICommand>();
 
