@@ -110,6 +110,7 @@
     <Compile Include="MidiFileReader\MidiFileReader.cs" />
     <Compile Include="MidiTrack.cs" />
     <Compile Include="Tokenizer\checkers\NoteChecker.cs" />
+    <Compile Include="Tokenizer\checkers\NumberChecker.cs" />
     <Compile Include="Tokenizer\checkers\RustChecker.cs" />
     <Compile Include="Tokenizer\checkers\TempoChecker.cs" />
     <Compile Include="Tokenizer\checkers\TimeSignatureChecker.cs" />

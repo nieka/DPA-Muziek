@@ -35,6 +35,7 @@ namespace DPA_Musicsheets.Tokenizer
             TokenChecks.Add(new RustChecker());
             TokenChecks.Add(new TempoChecker());
             TokenChecks.Add(new TimeSignatureChecker());
+            TokenChecks.Add(new NumberChecker());
         }
 
         public void proces(String music)

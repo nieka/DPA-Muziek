@@ -8,27 +8,27 @@ namespace DPA_Musicsheets.Tokenizer.checkers
 {
     class NoteChecker : ITokenChecker
     {
-        private char[] noteLookup = { 'c', 'd', 'e', 'f', 'g', 'a', 'b' };
+        private char[] noteLookup = { 'c', 'd', 'e', 'f', 'g', 'a', 'b','\'',',','~','.','i','s' };
         public bool canhandle(string input)
         {
             if(input.Length >= 2)
             {
-                Boolean containsNumber = false;
-                Boolean containsNote = false;
-
+                int counter = 0;
                 for(int i=0; i< input.Length; i++)
                 {
-                    if (!containsNumber)
+                    if (isNumber(input[i].ToString()))
                     {
-                        containsNumber = isNumber(input[i].ToString());
-                    }
-                    if (!containsNote)
+                        counter++;
+                    } else if(noteLookup.Contains(input[i]))
                     {
-                        containsNote = noteLookup.Contains(input[i]);
+                        counter++;
+                    } else
+                    {
+                        break;
                     }
                 }
 
-                if(containsNote || containsNumber)
+                if(counter >= 2)
                 {
                     return true;
                 }
