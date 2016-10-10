@@ -11,6 +11,7 @@ namespace DPA_Musicsheets.MidiReader
     class MidiAdapter
     {
         private String[] noteLookup = { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B" };
+        private Dictionary<double, double> nootLengtLookup;
         private Sequence _sequence;
         private MusicSheet musicSheet;
         private MidiEvent nextEvent;
@@ -19,7 +20,15 @@ namespace DPA_Musicsheets.MidiReader
         public MidiAdapter()
         {
             musicSheet = new MusicSheet();
+            nootLengtLookup = new Dictionary<double, double>();
+            nootLengtLookup.Add(1, 1);
+            nootLengtLookup.Add(2, 0.5);
+            nootLengtLookup.Add(4, 0.25);
+            nootLengtLookup.Add(8, 0.125);
+            nootLengtLookup.Add(16, 0.0625);
+            nootLengtLookup.Add(32, 0.03125);
         }
+
 
         public MusicSheet procesMidi(String fileLocation)
         {
@@ -45,6 +54,7 @@ namespace DPA_Musicsheets.MidiReader
                             {
                                 procesNote(midiEvent);
                             }
+                            nextEvent = midiEvent;
                             break;
                         // Meta zegt iets over de track zelf.
                         case MessageType.Meta:
@@ -98,7 +108,7 @@ namespace DPA_Musicsheets.MidiReader
         {
             var channelMessage = currentEvent.MidiMessage as ChannelMessage;
             //de noot is afgelopen dus kan die nu toegevoegd worden aan de music sheet
-            if(channelMessage.Data2 == 0 && nextEvent.AbsoluteTicks != 0)
+            if(channelMessage.Data2 == 0)
             {
                 int octaaf = (int)Math.Floor((Double)channelMessage.Data1 / 12);
                 String toonHoogte = noteLookup[channelMessage.Data1 - (octaaf * 12)];
@@ -111,7 +121,14 @@ namespace DPA_Musicsheets.MidiReader
                 double deltaTicks = Math.Abs(nextEvent.AbsoluteTicks - currentEvent.AbsoluteTicks);
                 double percentageOfBeatNote = deltaTicks / _sequence.Division;
                 double percentageOfWholeNote = (1.0 / currentTimesignature.timeSignature[1]) * percentageOfBeatNote;
-                Note note = new Note(octaaf -1, toonHoogte, berekenDuur(percentageOfWholeNote), item, TieType.None);
+                double duur = berekenDuur(percentageOfWholeNote);
+                Note note = new Note(octaaf -1, toonHoogte, duur, item, TieType.None);
+                if(percentageOfWholeNote != nootLengtLookup[duur])
+                {
+                    //er is een punt
+                    note.punten++;
+                    note.duur = duur * 2;
+                }
                 musicSheet.addmusicSymbol(note);
             }
         }
@@ -140,4 +157,18 @@ namespace DPA_Musicsheets.MidiReader
 
         }
     }
+    //data voor om te bepalen of er ene punt in zit
+//    noot met punt een g noot
+//toonhoogte = g
+//percentageOfBeatNote = 1.5
+//percentageOfWholeNote = 0.375
+//noteLength = 2
+//absoluteNoteLength = 0.5
+
+//normale noot
+//toonhoogte = g
+//percentageOfBeatNote = 1
+//percentageOfWholeNote = 0.25
+//noteLength = 4
+//absoluteNoteLength = 0.25
 }
