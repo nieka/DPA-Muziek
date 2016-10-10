@@ -126,31 +126,35 @@ namespace DPA_Musicsheets.Interperter.expresions
                 {
                     int defaultOctaaf = context.musicSheet.startOctaaf;
                     AbstractNode noten = getLastNote(context.musicSheet);
-                    if(noten != null)
+                    if(noten == null)
                     {
-                        int waardenoot = defaultOctaaf * 12 + Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
-                        int waardeEersteNoot = noten.getOctaaf() * 12 + Array.IndexOf(noteLookup, Convert.ToChar(noten.toonHoogte));
-                        int diffrents = Math.Abs(waardeEersteNoot - waardenoot);
-                        if (diffrents >= 6 && down == 0 || (down > 0 && (diffrents >=5 || diffrents == 0)) || (diffrents == 0 && up > 0) || (down > 0 && waardeEersteNoot < waardenoot))
+                        noten = new Note();
+                        noten.octaaf = context.musicSheet.startOctaaf;
+                        noten.toonHoogte = "c";
+                    }
+                    int waardenoot = defaultOctaaf * 12 + Array.IndexOf(noteLookup, Convert.ToChar(note.toonHoogte));
+                    int waardeEersteNoot = noten.getOctaaf() * 12 + Array.IndexOf(noteLookup, Convert.ToChar(noten.toonHoogte));
+                    int diffrents = Math.Abs(waardeEersteNoot - waardenoot);
+                    if (diffrents >= 4 && down == 0 || (down > 0 && (diffrents >= 5 || diffrents == 0)) || (diffrents == 0 && up > 0) || (down > 0 && waardeEersteNoot < waardenoot))
+                    {
+                        if (noten.getOctaaf() == defaultOctaaf)
                         {
-                            if (noten.getOctaaf() == defaultOctaaf)
+                            int multyplayer = down + up;
+                            if (multyplayer < 1)
                             {
-                                int multyplayer = down + up;
-                                if(multyplayer < 1)
-                                {
-                                    multyplayer = 1;
-                                }
-                                if((waardeEersteNoot > waardenoot && down == 0) /*|| up > 0*/)
-                                {
-                                    note.setOctaaf(defaultOctaaf + multyplayer);
-                                    context.musicSheet.startOctaaf = defaultOctaaf + multyplayer;
-                                } else if (up == 0)
-                                {
-                                    note.setOctaaf(defaultOctaaf - multyplayer);
-                                    context.musicSheet.startOctaaf = defaultOctaaf - multyplayer;
-                                }
-                            } 
-                        } 
+                                multyplayer = 1;
+                            }
+                            if ((waardeEersteNoot > waardenoot && down == 0) /*|| up > 0*/)
+                            {
+                                note.setOctaaf(defaultOctaaf + multyplayer);
+                                context.musicSheet.startOctaaf = defaultOctaaf + multyplayer;
+                            }
+                            else if (up == 0)
+                            {
+                                note.setOctaaf(defaultOctaaf - multyplayer);
+                                context.musicSheet.startOctaaf = defaultOctaaf - multyplayer;
+                            }
+                        }
                     }
                 } 
 
@@ -172,15 +176,7 @@ namespace DPA_Musicsheets.Interperter.expresions
 
         private void addNote()
         {
-            if (context["repeat"])
-            {
-                Repeater repeater = (Repeater) context.musicSheet.items.Last.Value;
-                repeater.addmusicSymbol(note);
-            } else
-            {
-                context.musicSheet.addmusicSymbol(note);
-            }
-            
+            context.musicSheet.addmusicSymbol(note);
         }
 
         private Note getLastNote(MusicSheet musicSheet)

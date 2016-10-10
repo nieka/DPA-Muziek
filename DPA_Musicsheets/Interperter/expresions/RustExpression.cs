@@ -18,8 +18,12 @@ namespace DPA_Musicsheets.Interperter.expresions
         public void evaluat(LinkedListNode<Token> token, Context context)
         {
             RustNode note = new RustNode();
-            String input = token.Value.value;
+            string input = token.Value.value;
             note.octaaf = context.musicSheet.startOctaaf;
+            if(input[input.Length -1] == '}')
+            {
+                input = input.Remove(input.Length - 1);
+            }
             note.duur = Convert.ToInt16(input.Substring(1));
             context.musicSheet.addmusicSymbol(note);
         }

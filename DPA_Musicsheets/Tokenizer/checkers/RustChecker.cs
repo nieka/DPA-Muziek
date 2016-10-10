@@ -10,7 +10,7 @@ namespace DPA_Musicsheets.Tokenizer.checkers
     {
         public bool canhandle(string input)
         {
-            return input.Contains('r');
+            return input.Contains('r') && input.Length == 2;
         }
 
         public Token handle(string input)

@@ -22,6 +22,7 @@ namespace DPA_Musicsheets.Interperter
             expressions.Add(TokenType.TempoValue, new TempoExpresioncs());
             expressions.Add(TokenType.EndBlok, new EndblokExpresion());
             expressions.Add(TokenType.Repeat, new RepeatExpression());
+            expressions.Add(TokenType.ClefType, new ClefExpresion());
         }
 
         public static Expresion getExpresionHandler(TokenType type)
