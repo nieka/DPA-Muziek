@@ -55,7 +55,7 @@ namespace DPA_Musicsheets
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show("" + GetEditBoxCursorLocation());
+            
         }
 
         private void btn_Stop_Click(object sender, RoutedEventArgs e)
@@ -109,6 +109,16 @@ namespace DPA_Musicsheets
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void btn_Undo_Click(object sender, RoutedEventArgs e)
+        {
+            controller.memento.Back();
+        }
+
+        private void btn_Redo_Click(object sender, RoutedEventArgs e)
+        {
+            controller.memento.Forward();
         }
 
         public void SetMidiFilePath(string path)
@@ -174,7 +184,7 @@ namespace DPA_Musicsheets
 
         private void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
-            //MessageBox.Show("saved");
+            controller.memento.NewNode(controller.EditString);
         }
     }
 }

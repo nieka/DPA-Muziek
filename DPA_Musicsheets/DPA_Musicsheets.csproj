@@ -119,6 +119,8 @@
     <Compile Include="Interperter\ExpressionFactory.cs" />
     <Compile Include="Interperter\LyInterperter.cs" />
     <Compile Include="Interperter\expresions\TimeSignatureExpresion.cs" />
+    <Compile Include="memento\Memento.cs" />
+    <Compile Include="memento\Node.cs" />
     <Compile Include="MidiTrack.cs" />
     <Compile Include="States\EditState.cs" />
     <Compile Include="States\PlayState.cs" />

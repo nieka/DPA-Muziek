@@ -5,6 +5,7 @@ using DPA_Musicsheets.writers;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using DPA_Musicsheets.memento;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace DPA_Musicsheets.classes
         private List<NoteObserver> noteObservers;
         private ToLilypontConverter LilypondConverter;
         public MainWindow window { get; set; }
+        public Memento memento { get; set; }
         public bool HasSaved { get; set; }
         public string CommandKeys { get; set; }
         public string EditString { get; set; }
@@ -34,6 +36,7 @@ namespace DPA_Musicsheets.classes
             CommandKeys = "";
             EditString = "";
             State = new PlayState(this);
+            memento = new Memento(this);
         }
 
         public void convertFile(String location)
