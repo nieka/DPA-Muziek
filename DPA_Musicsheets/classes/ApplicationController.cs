@@ -18,7 +18,7 @@ namespace DPA_Musicsheets.classes
         private MusicSheet musicSheet;
         private List<NoteObserver> noteObservers;
         private ToLilypontConverter LilypondConverter;
-        private MainWindow window;
+        public MainWindow window { get; set; }
         public bool HasSaved { get; set; }
         public string CommandKeys { get; set; }
         public string EditString { get; set; }

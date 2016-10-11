@@ -27,12 +27,8 @@ namespace DPA_Musicsheets.Command.Commands
 
         public void execute()
         {
-            if(!controller.EditString.Contains("\\clef"))
-            {
-                string[] m = controller.EditString.Split('{');
-                m[0] = m[0] += "{ \\clef treble";
-                controller.SetEditText(m[0] + m[1]);
-            }
+            int location = controller.window.GetEditBoxCursorLocation();
+            controller.SetEditText(controller.EditString.Insert(location, "\\clef"));
         }
     }
 }

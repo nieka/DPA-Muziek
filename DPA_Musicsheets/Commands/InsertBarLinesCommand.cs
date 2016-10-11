@@ -28,7 +28,24 @@ namespace DPA_Musicsheets.Command.Commands
 
         public void execute()
         {
+            int bpn = 4;
 
+            if(controller.EditString.Contains("\\time 3/4"))
+            {
+                bpn = 3;
+            }
+            else if(controller.EditString.Contains("\\time 4/4"))
+            {
+                bpn = 4;
+            }
+            else
+            {
+                bpn = 8;
+            }
+
+
+            //int location = controller.window.GetEditBoxCursorLocation();
+            //controller.SetEditText(controller.EditString.Insert(location, "\\bar"));
         }
     }
 }

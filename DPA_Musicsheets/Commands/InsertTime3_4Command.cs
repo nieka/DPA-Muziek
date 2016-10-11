@@ -21,13 +21,14 @@ namespace DPA_Musicsheets.Command.Commands
         {
             get
             {
-                return "LeftAlt + T + D3 ";
+                return "LeftAlt T D3 ";
             }
         }
 
         public void execute()
         {
-
+            int location = controller.window.GetEditBoxCursorLocation();
+            controller.SetEditText(controller.EditString.Insert(location, "\\time 3/4"));
         }
     }
 }

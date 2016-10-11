@@ -28,7 +28,8 @@ namespace DPA_Musicsheets.Command.Commands
 
         public void execute()
         {
-
+            int location = controller.window.GetEditBoxCursorLocation();
+            controller.SetEditText(controller.EditString.Insert(location, "\\tempo 4 = 120"));
         }
     }
 }

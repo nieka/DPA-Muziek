@@ -37,6 +37,7 @@ namespace DPA_Musicsheets
         private OutputDevice _outputDevice = new OutputDevice(0);
         private ApplicationController controller;
 
+        public int SelectionStart { get; set; }
         private Timer SaveTimer;
 
         public MainWindow()
@@ -54,7 +55,7 @@ namespace DPA_Musicsheets
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            
+            //MessageBox.Show("" + GetEditBoxCursorLocation());
         }
 
         private void btn_Stop_Click(object sender, RoutedEventArgs e)
@@ -66,17 +67,7 @@ namespace DPA_Musicsheets
         {
             controller.OpenFile();           
         }
-        
-        public void SetMidiFilePath(string path)
-        {
-            txt_MidiFilePath.Text = path;
-        }
-
-        public string GetSaveState()
-        {
-            return saveState.Text;
-        }       
-        
+    
         private void btn_Save(object sender, RoutedEventArgs e)
         {
             controller.SaveFile();
@@ -84,17 +75,17 @@ namespace DPA_Musicsheets
 
         private void btn_Edit_Click(object sender, RoutedEventArgs e)
         {
-            if(controller.State.Type == StateType.Play)
+            if (controller.State.Type == StateType.Play)
             {
                 EditBox.IsEnabled = true;
-                btn_Edit.Content = "Play mode";               
+                btn_Edit.Content = "Play mode";
 
                 btnPlay.IsEnabled = false;
                 btn_Stop.IsEnabled = false;
 
                 EditBox.Text = controller.GetLilypond();
             }
-            else if(controller.State.Type == StateType.Edit)
+            else if (controller.State.Type == StateType.Edit)
             {
                 EditBox.IsEnabled = false;
                 btn_Edit.Content = "Edit mode";
@@ -105,14 +96,9 @@ namespace DPA_Musicsheets
             controller.SwitchState();
         }
 
-        private void ShowMidiTracks(IEnumerable<MidiTrack> midiTracks)
-        {
-            
-        }
-
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if(!controller.HasSaved)
+            if (!controller.HasSaved)
             {
                 string msg = "Do you want to quit without saving?";
                 MessageBoxResult result = MessageBox.Show(msg, "Session Ending", MessageBoxButton.YesNo);
@@ -125,6 +111,16 @@ namespace DPA_Musicsheets
             }
         }
 
+        public void SetMidiFilePath(string path)
+        {
+            txt_MidiFilePath.Text = path;
+        }
+
+        public string GetSaveState()
+        {
+            return saveState.Text;
+        }       
+
         private void EditBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             controller.HasSaved = false;
@@ -135,6 +131,11 @@ namespace DPA_Musicsheets
                 SaveTimer.Stop();
                 SaveTimer.Start();
             }    
+        }
+
+        public int GetEditBoxCursorLocation()
+        {
+            return EditBox.SelectionStart; 
         }
 
         public void SetEditBox(string EditText)
@@ -157,7 +158,10 @@ namespace DPA_Musicsheets
             }
             else
             {
-                controller.CommandKeys += e.Key.ToString() + " ";
+                if(controller.CommandKeys.Contains("LeftCtrl") || controller.CommandKeys.Contains("System"))
+                {
+                    controller.CommandKeys += e.Key.ToString() + " ";
+                }               
             }
 
             if(controller.State.ActivateCommand(controller.CommandKeys))
