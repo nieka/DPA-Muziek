@@ -115,5 +115,12 @@ namespace DPA_Musicsheets.classes
             EditString = txt;
             window.SetEditBox(txt);
         }
+
+        public void RedrawStaf()
+        {
+            inputReader = ReaderFactory.getReader("lilypond");
+            musicSheet = inputReader.readNotes(EditString);
+            notifyAll();
+        }
     }
 }

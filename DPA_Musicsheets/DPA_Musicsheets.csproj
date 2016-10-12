@@ -70,11 +70,13 @@
     </ApplicationDefinition>
     <Compile Include="Adapter\ClefAdapter.cs" />
     <Compile Include="Adapter\NootAdapter.cs" />
+    <Compile Include="Adapter\OldMidiAdapter.cs" />
     <Compile Include="classes\AbstractNode.cs" />
     <Compile Include="classes\ApplicationController.cs" />
     <Compile Include="classes\Clef.cs" />
     <Compile Include="classes\ClefType.cs" />
     <Compile Include="classes\KeyType.cs" />
+    <Compile Include="classes\LilypondFilereader.cs" />
     <Compile Include="classes\LilypondReader.cs" />
     <Compile Include="classes\MaatStreep.cs" />
     <Compile Include="classes\MusicSheet.cs" />
@@ -87,7 +89,6 @@
     <Compile Include="classes\TieType.cs" />
     <Compile Include="classes\Note.cs" />
     <Compile Include="classes\StafDrawer.cs" />
-    <Compile Include="Adapter\MidiAdapter.cs" />
     <Compile Include="classes\TimeSignature.cs" />
     <Compile Include="Commands\InsertBarLinesCommand.cs" />
     <Compile Include="Commands\InsertClefCommand.cs" />
@@ -121,9 +122,17 @@
     <Compile Include="Interperter\expresions\TimeSignatureExpresion.cs" />
     <Compile Include="memento\Memento.cs" />
     <Compile Include="memento\Node.cs" />
+    <Compile Include="MidiFileReader\MidiAdapter.cs" />
+    <Compile Include="MidiFileReader\MidiFileReader.cs" />
     <Compile Include="MidiTrack.cs" />
     <Compile Include="States\EditState.cs" />
     <Compile Include="States\PlayState.cs" />
+    <Compile Include="Tokenizer\checkers\NoteChecker.cs" />
+    <Compile Include="Tokenizer\checkers\NumberChecker.cs" />
+    <Compile Include="Tokenizer\checkers\RustChecker.cs" />
+    <Compile Include="Tokenizer\checkers\TempoChecker.cs" />
+    <Compile Include="Tokenizer\checkers\TimeSignatureChecker.cs" />
+    <Compile Include="Tokenizer\ITokenChecker.cs" />
     <Compile Include="Tokenizer\LilypondTokenizer.cs" />
     <Compile Include="Tokenizer\Token.cs" />
     <Compile Include="Tokenizer\TokenType.cs" />

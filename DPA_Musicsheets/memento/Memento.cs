@@ -32,6 +32,7 @@ namespace DPA_Musicsheets.memento
                 Current.Next.Last = Current;
                 Current = Current.Next;
                 Last = Current;
+                controller.RedrawStaf();
             }           
         }
 
@@ -41,6 +42,7 @@ namespace DPA_Musicsheets.memento
             {
                 Current = Current.Last;
                 controller.SetEditText(Current.EditString);
+                controller.RedrawStaf();
             }           
         }
 
@@ -50,6 +52,7 @@ namespace DPA_Musicsheets.memento
             {
                 Current = Current.Next;
                 controller.SetEditText(Current.EditString);
+                controller.RedrawStaf();
             }
         }
 

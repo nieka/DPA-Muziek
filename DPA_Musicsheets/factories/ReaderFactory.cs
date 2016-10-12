@@ -18,6 +18,7 @@ namespace DPA_Musicsheets.factories
             readers = new Dictionary<String, InputReader>();
             readers.Add(".mid", new MidiFileReader());
             readers.Add(".ly", new LilypondFilereader());
+            readers.Add("lilypond", new LilypondReader());
         }
 
         public static InputReader getReader(string readerName)
