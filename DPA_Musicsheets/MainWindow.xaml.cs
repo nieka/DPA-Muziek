@@ -155,29 +155,30 @@ namespace DPA_Musicsheets
         
         private void OnButtonKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key.ToString() == "LeftCtrl" || e.Key.ToString() == "RightCtrl" || e.Key.ToString() == "System")
+            if (e.Key.ToString() == "LeftCtrl" || e.Key.ToString() == "System")
             {
-                if (e.Key.ToString() == "RightCtrl" || e.Key.ToString() == "LeftCtrl")
-                {
-                    controller.CommandKeys += "LeftCtrl ";
-                }
-                else if (e.Key.ToString() == "System")
-                {
-                    controller.CommandKeys += "System ";
-                }
+                controller.CommandKeys += "LeftCtrl ";
             }
-            else
+            else if(e.Key.ToString() == "System" || e.Key.ToString() == "LeftAlt")
             {
-                if(controller.CommandKeys.Contains("LeftCtrl") || controller.CommandKeys.Contains("System"))
-                {
-                    controller.CommandKeys += e.Key.ToString() + " ";
-                }               
+                controller.CommandKeys += "LeftAlt ";
+            }
+            else if (controller.CommandKeys.Contains("LeftCtrl") || controller.CommandKeys.Contains("LeftAlt"))
+            {
+                controller.CommandKeys += e.Key.ToString() + " ";            
             }
 
-            if(controller.State.ActivateCommand(controller.CommandKeys))
+            if (controller.State.ActivateCommand(controller.CommandKeys))
             {
                 MessageBox.Show(controller.CommandKeys);
                 controller.CommandKeys = "";
+                e.Handled = true;
+            }
+
+            if (Keyboard.IsKeyDown(System.Windows.Input.Key.LeftCtrl))
+            {
+                
+                e.Handled = true;
             }
 
         }
