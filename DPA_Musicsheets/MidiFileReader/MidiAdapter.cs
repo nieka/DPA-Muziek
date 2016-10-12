@@ -170,18 +170,4 @@ namespace DPA_Musicsheets.MidiReader
 
         }
     }
-    //data voor om te bepalen of er ene punt in zit
-//    noot met punt een g noot
-//toonhoogte = g
-//percentageOfBeatNote = 1.5
-//percentageOfWholeNote = 0.375
-//noteLength = 2
-//absoluteNoteLength = 0.5
-
-//normale noot
-//toonhoogte = g
-//percentageOfBeatNote = 1
-//percentageOfWholeNote = 0.25
-//noteLength = 4
-//absoluteNoteLength = 0.25
 }
