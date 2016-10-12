@@ -32,8 +32,9 @@ namespace DPA_Musicsheets.memento
                 Current.Next.Last = Current;
                 Current = Current.Next;
                 Last = Current;
-                controller.RedrawStaf();
-            }           
+            }
+
+            controller.RedrawStaf();
         }
 
         public void Back()

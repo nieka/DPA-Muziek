@@ -28,24 +28,28 @@ namespace DPA_Musicsheets.Command.Commands
 
         public void execute()
         {
-            int bpn = 4;
+            int location = controller.window.GetEditBoxCursorLocation();
+            int SelectedLenght = controller.window.GetSelectedArea();
+            int e = controller.EditString.Length;
+            string selectedpart = controller.EditString.Substring(location, SelectedLenght);
+            int counter = 0;
+            string[] notes = selectedpart.Split(' ');
+            string result = "";
 
-            if(controller.EditString.Contains("\\time 3/4"))
+            foreach (string note in notes)
             {
-                bpn = 3;
-            }
-            else if(controller.EditString.Contains("\\time 4/4"))
-            {
-                bpn = 4;
-            }
-            else
-            {
-                bpn = 8;
+                result += note + " ";
+                counter++;
+
+                if (counter == 3)
+                {
+                    result += "| ";
+                    counter = 0;
+                }
             }
 
-
-            //int location = controller.window.GetEditBoxCursorLocation();
-            //controller.SetEditText(controller.EditString.Insert(location, "\\bar"));
+            result = controller.EditString.Replace(selectedpart, result);
+            controller.SetEditText(result);
         }
     }
 }

@@ -84,6 +84,7 @@ namespace DPA_Musicsheets
                 btn_Stop.IsEnabled = false;
 
                 EditBox.Text = controller.GetLilypond();
+                controller.EditString = EditBox.Text;
             }
             else if (controller.State.Type == StateType.Edit)
             {
@@ -133,19 +134,27 @@ namespace DPA_Musicsheets
 
         private void EditBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            controller.HasSaved = false;
-            controller.EditString = EditBox.Text;
-
-            if(controller.State.Type == StateType.Edit)
+            if(EditBox.IsFocused == true)
             {
-                SaveTimer.Stop();
-                SaveTimer.Start();
-            }    
+                controller.HasSaved = false;
+                controller.EditString = EditBox.Text;
+
+                if (controller.State.Type == StateType.Edit)
+                {
+                    SaveTimer.Stop();
+                    SaveTimer.Start();
+                }    
+            } 
         }
 
         public int GetEditBoxCursorLocation()
         {
             return EditBox.SelectionStart; 
+        }
+
+        public int GetSelectedArea()
+        {
+            return EditBox.SelectionLength;
         }
 
         public void SetEditBox(string EditText)
