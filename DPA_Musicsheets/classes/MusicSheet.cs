@@ -10,6 +10,7 @@ namespace DPA_Musicsheets.classes
     class MusicSheet
     {
         public LinkedList<IMusicSymbol> items { get; set; }
+        public string naam { get; set; }
         public int startOctaaf { get; set; }
 
         public MusicSheet()
@@ -19,7 +20,21 @@ namespace DPA_Musicsheets.classes
 
         public void addmusicSymbol(IMusicSymbol symbol)
         {
-            items.AddLast(symbol);
+            try
+            {
+                if(items.Last != null)
+                {
+                    Repeater repeater = (Repeater)items.Last.Value;
+                    repeater.addmusicSymbol(symbol);
+                } else
+                {
+                    items.AddLast(symbol);
+                }
+            }
+            catch (InvalidCastException)
+            {
+                items.AddLast(symbol);
+            }
         }
 
     }

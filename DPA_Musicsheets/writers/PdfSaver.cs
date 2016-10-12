@@ -18,12 +18,16 @@ namespace DPA_Musicsheets.writers
         public void save(MusicSheet musicsheet, string fileLocation)
         {
             LilypondSaver lilypondSaver = new LilypondSaver();
-            lilypondSaver.save(musicsheet, @"c:\temp\Twee-emmertjes-water-halen");
-            //fileLocation += ".pdf";
+            lilypondSaver.save(musicsheet, fileLocation);
+            fileLocation += ".ly";
             String[] tempArr = fileLocation.Split('\\');
-            //  LilypondToPdfExample.SaveLilypondToPdf(fileLocation, tempArr[tempArr.Length - 1]);
-            LilypondToPdfExample.SaveLilypondToPdf();
-            //File.Delete(@"c:\temp\Twee-emmertjes-water-halen.ly");
+            string sourcefile = "";
+            for(int i=0; i < tempArr.Length -1; i++)
+            {
+                sourcefile += tempArr[i] + "\\";
+            }
+            LilypondToPdfExample.SaveLilypondToPdf(sourcefile, tempArr[tempArr.Length - 1]);
+            //File.Delete(fileLocation);
         }
     }
 }

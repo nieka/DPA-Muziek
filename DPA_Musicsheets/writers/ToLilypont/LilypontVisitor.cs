@@ -51,12 +51,12 @@ namespace DPA_Musicsheets.writers.ToLilypont
 
         public void visit(Tempo tempo)
         {
-            data += "\tempo " + tempo.nootLength + "=" + tempo.tempo + " ";
+            data += "\\tempo " + tempo.nootLength + "=" + tempo.tempo + " ";
         }
 
         public void visit(TimeSignature timeSignature)
         {
-            data += "\time " + timeSignature.timeSignature[0] + "/" + timeSignature.timeSignature[1] + " ";
+            data += "\\time " + timeSignature.timeSignature[0] + "/" + timeSignature.timeSignature[1] + " ";
         }
 
         public void visit(RustNode rustNode)
@@ -79,7 +79,17 @@ namespace DPA_Musicsheets.writers.ToLilypont
 
         public void visit(Repeater repeater)
         {
-            throw new NotImplementedException();
+            data += "\\repeat volta " + repeater.repeats + " { ";
+            LinkedListNode<IMusicSymbol> currentNote = repeater.items.First;
+
+            while (currentNote != null)
+            {
+                IMusicSymbol symbol = currentNote.Value;
+                symbol.accept(this);
+                currentNote = currentNote.Next;
+            }
+
+            data += " }";
         }
     }
 }

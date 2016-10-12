@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DPA_Musicsheets.Tokenizer.checkers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace DPA_Musicsheets.Tokenizer
         private LinkedList<Token> tokens;
         private String[] inputList;
         private Dictionary<String, TokenType> keyWords;
-
+        private List<ITokenChecker> TokenChecks;
 
         public LilypondTokenizer()
         {
@@ -29,6 +30,12 @@ namespace DPA_Musicsheets.Tokenizer
             keyWords.Add("\\header", TokenType.Header);
             keyWords.Add("\\repeat", TokenType.Repeat);
             keyWords.Add("volta", TokenType.Nothing);
+            TokenChecks = new List<ITokenChecker>();
+            TokenChecks.Add(new NoteChecker());
+            TokenChecks.Add(new RustChecker());
+            TokenChecks.Add(new TempoChecker());
+            TokenChecks.Add(new TimeSignatureChecker());
+            TokenChecks.Add(new NumberChecker());
         }
 
         public void proces(String music)
@@ -44,26 +51,13 @@ namespace DPA_Musicsheets.Tokenizer
                 }
                 else
                 {
-                    //todo chain of responsebilitie toevoegen inplaats van if else
-                    if (input.Contains("/"))
+                    for(int y=0; y< TokenChecks.Count; y++)
                     {
-                        Token token = new Token(TokenType.timeSignaturedata, input);
-                        tokens.AddLast(token);
-                    } else if (isNumber(input)) {
-                        Token token = new Token(TokenType.Number, input);
-                        tokens.AddLast(token);
-                    }
-                    else if (input.Contains("r")) {
-                        Token token = new Token(TokenType.Rust, input);
-                        tokens.AddLast(token);
-                    } else if (input.Contains("=")) {
-                        Token token = new Token(TokenType.TempoValue, input);
-                        tokens.AddLast(token);
-                    }
-                    else if (input.Length > 0 && !input.Contains("\""))
-                    {
-                        Token token = new Token(TokenType.Note, input);
-                        tokens.AddLast(token);
+                        if (TokenChecks[y].canhandle(input))
+                        {
+                            tokens.AddLast(TokenChecks[y].handle(input));
+                            break;
+                        }
                     }
                 }
             }
@@ -74,11 +68,7 @@ namespace DPA_Musicsheets.Tokenizer
             return tokens;
         }
 
-        private Boolean isNumber(String input)
-        {
-            int n;
-            return int.TryParse(input, out n);
-        }
+        
 
         private void setKeyWord(String keyword){
             Token token = new Token(keyWords[keyword], keyword);
