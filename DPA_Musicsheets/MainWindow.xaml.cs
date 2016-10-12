@@ -185,7 +185,10 @@ namespace DPA_Musicsheets
 
         private void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
-            controller.memento.NewNode(controller.EditString);
+            Application.Current.Dispatcher.Invoke(new Action(() => { 
+                controller.memento.NewNode(controller.EditString);
+                }));
+            
         }
     }
 }
