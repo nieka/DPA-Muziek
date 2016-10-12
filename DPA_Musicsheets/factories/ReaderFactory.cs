@@ -1,12 +1,9 @@
-﻿using DPA_Musicsheets.classes;
-using DPA_Musicsheets.Facade;
+﻿
+using DPA_Musicsheets.classes;
 using DPA_Musicsheets.interfaces;
 using DPA_Musicsheets.MidiReader;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DPA_Musicsheets.factories
 {
