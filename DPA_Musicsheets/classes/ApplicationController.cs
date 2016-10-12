@@ -24,7 +24,7 @@ namespace DPA_Musicsheets.classes
         public bool HasSaved { get; set; }
         public string CommandKeys { get; set; }
         public string EditString { get; set; }
-        public IState State { get; private set; }
+        public IState State { get; set; }
 
         public ApplicationController(MainWindow window)
         {
@@ -71,18 +71,6 @@ namespace DPA_Musicsheets.classes
         public string GetLilypond()
         {
             return LilypondConverter.ToLilypoint(musicSheet);
-        }
-
-        public void SwitchState()
-        {
-            if(State.Type == StateType.Play)
-            {
-                State = new EditState(this);
-            }
-            else if(State.Type == StateType.Edit)
-            {
-                State = new PlayState(this);
-            }
         }
 
         public void OpenFile()

@@ -22,6 +22,9 @@ namespace DPA_Musicsheets.States
             Type = StateType.Edit;
             this.controller = controller;
 
+            controller.window.ButtonFactory("Edit");
+            controller.SetEditText(controller.GetLilypond());
+
             Commands = new List<ICommand>();
 
             Commands.Add(new InsertBarLinesCommand(controller));
@@ -48,6 +51,11 @@ namespace DPA_Musicsheets.States
             }
 
             return false;
+        }
+
+        public void SwitchState()
+        {
+            controller.State = new PlayState(controller);
         }
     }
 }

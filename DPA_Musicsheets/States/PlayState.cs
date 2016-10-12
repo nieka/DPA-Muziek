@@ -21,7 +21,7 @@ namespace DPA_Musicsheets.States
         {
             Type = StateType.Play;
             this.controller = controller;
-
+            controller.window.ButtonFactory("Play");
             Commands = new List<ICommand>();
 
             Commands.Add(new OpenFileCommand(controller));
@@ -42,6 +42,11 @@ namespace DPA_Musicsheets.States
             }
 
             return false;
+        }
+
+        public void SwitchState()
+        {
+            controller.State = new EditState(controller);
         }
     }
 }

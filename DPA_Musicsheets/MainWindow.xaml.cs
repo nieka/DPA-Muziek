@@ -75,26 +75,34 @@ namespace DPA_Musicsheets
 
         private void btn_Edit_Click(object sender, RoutedEventArgs e)
         {
-            if (controller.State.Type == StateType.Play)
+            controller.State.SwitchState();
+        }
+
+        public void ButtonFactory(string state)
+        {
+            switch (state)
             {
-                EditBox.IsEnabled = true;
-                btn_Edit.Content = "Play mode";
+                case "Play":
+                    EditBox.IsEnabled = false;
+                    btn_Edit.Content = "Edit mode";
+                    btnPlay.IsEnabled = true;
+                    btn_Stop.IsEnabled = true;
+                    break;
+                case "Edit":
 
-                btnPlay.IsEnabled = false;
-                btn_Stop.IsEnabled = false;
+                    EditBox.IsEnabled = true;
+                    btn_Edit.Content = "Play mode";
+                    btnPlay.IsEnabled = false;
+                    btn_Stop.IsEnabled = false;
+                    break;
 
-                EditBox.Text = controller.GetLilypond();
-                controller.EditString = EditBox.Text;
+                default:
+                    EditBox.IsEnabled = false;
+                    btn_Edit.Content = "Edit mode";
+                    btnPlay.IsEnabled = true;
+                    btn_Stop.IsEnabled = true;
+                    break;
             }
-            else if (controller.State.Type == StateType.Edit)
-            {
-                EditBox.IsEnabled = false;
-                btn_Edit.Content = "Edit mode";
-                btnPlay.IsEnabled = true;
-                btn_Stop.IsEnabled = true;
-            }
-
-            controller.SwitchState();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

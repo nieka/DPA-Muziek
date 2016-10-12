@@ -14,5 +14,7 @@ namespace DPA_Musicsheets.interfaces
         StateType Type { get; set; }
 
         bool ActivateCommand(string keys);
+
+        void SwitchState();
     }
 }
