@@ -87,7 +87,12 @@ namespace DPA_Musicsheets.classes
 
         public void SaveFile()
         {
-            String type = window.GetSaveState();
+           SaveFile(window.GetSaveState());
+           
+        }
+
+        public void SaveFile(string type)
+        {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Title = "Sla je muziek op";
             saveFileDialog1.ShowDialog();

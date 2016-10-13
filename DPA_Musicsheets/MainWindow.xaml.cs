@@ -187,7 +187,6 @@ namespace DPA_Musicsheets
 
             if (controller.State.ActivateCommand(controller.CommandKeys))
             {
-                MessageBox.Show(controller.CommandKeys);
                 controller.CommandKeys = "";
                 e.Handled = true;
             }

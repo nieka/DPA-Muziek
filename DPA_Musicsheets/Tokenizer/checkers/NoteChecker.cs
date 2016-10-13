@@ -11,7 +11,7 @@ namespace DPA_Musicsheets.Tokenizer.checkers
         private char[] noteLookup = { 'c', 'd', 'e', 'f', 'g', 'a', 'b','\'',',','~','.','i','s' };
         public bool canhandle(string input)
         {
-            if(input.Length >= 2)
+            if(input.Length >= 2 && !input.Contains("="))
             {
                 int counter = 0;
                 for(int i=0; i< input.Length; i++)

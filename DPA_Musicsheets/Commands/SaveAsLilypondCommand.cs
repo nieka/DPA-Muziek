@@ -27,7 +27,7 @@ namespace DPA_Musicsheets.Command.Commands
 
         public void execute()
         {
-            controller.SaveFile();
+            controller.SaveFile("Lilypont");
         }
     }
 }

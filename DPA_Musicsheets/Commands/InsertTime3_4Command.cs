@@ -28,7 +28,7 @@ namespace DPA_Musicsheets.Command.Commands
         public void execute()
         {
             int location = controller.window.GetEditBoxCursorLocation();
-            controller.SetEditText(controller.EditString.Insert(location, "\\time 3/4"));
+            controller.SetEditText(controller.EditString.Insert(location, "\\time 3/4 "));
         }
     }
 }

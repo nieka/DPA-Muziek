@@ -91,3 +91,4 @@ C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musics
 C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.exe
 C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.pdb
 C:\Users\Michel\Documents\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.csprojResolveAssemblyReference.cache
+C:\Users\Niekh\OneDrive\Documenten\GitHub\DPA-Muziek\DPA_Musicsheets\obj\Debug\DPA_Musicsheets.csprojResolveAssemblyReference.cache
