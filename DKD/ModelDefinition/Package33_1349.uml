@@ -70,7 +70,7 @@
         </appliedStereotypesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="7e5593a4-4e4e-49ce-9b01-92eab8be6a79"
+            Id="5c3d690c-8625-49e3-96ea-4062987f5a8b"
             name="MidiAdapter"
             isLeaf="false"
             isStatic="false"
@@ -79,54 +79,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="80c931e5-7252-4da2-8bb0-45cf4dbe48b5"
+                Id="0cf9979b-7b98-428e-a3ae-f0c68a9af4c6"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.Facade Type%3DMidiAdapter Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="762eca3b-1878-4215-a6f0-d8189579aebe"
+                Id="c6512878-29ba-4278-8810-a7be71a76a5d"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="61bbf748-836c-4471-97ac-a36d1b028344">
+                    Id="1aaf6580-d89a-4d75-85ab-a48d71298076">
                     <propertyInstance
-                      Id="24372b27-c6f5-45b6-b0a6-81862ae80338"
+                      Id="a5b08069-9434-4aa3-9061-917b851f190f"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f484777e-6b2a-4800-9a3c-f5771cbf9e68">
+                    Id="cf663cb6-b830-417f-bca2-fd5a4f049f12">
                     <propertyInstance
-                      Id="00138a6a-80e2-4672-b3e9-893d5a53c432"
+                      Id="4a3c9854-cbb7-409f-a822-72ea7bdc43dd"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="144c7b28-aadb-474a-b977-4f4b7cdbd95d">
+                    Id="60842ff2-2539-4ba4-b668-dd949f6e12e0">
                     <propertyInstance
-                      Id="49f64612-2d9a-4f49-be46-160cde924c9d"
+                      Id="da12951f-a0f9-4edb-9c7d-268273788660"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2e743dc7-d9e2-43ff-8e2b-7001da0c09fc">
+                    Id="19a9edf0-a955-4cc7-afa4-ffd1e6c87b2a">
                     <propertyInstance
-                      Id="b49e6186-d14d-47e4-a8cc-a7a4994d3b5e"
+                      Id="6afb195a-cc51-4be5-9038-0e79f77d8de6"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="cbfe5bc2-8559-4009-8a31-58a64b0de66e">
+                    Id="8393f3d6-8048-433e-81f6-c8c7dabf430a">
                     <propertyInstance
-                      Id="b6d79343-d2ea-48dc-b0ec-770692f62a55"
+                      Id="516d30d5-6dce-4a4f-8601-2b013dc62dad"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="caa5d33f-04e8-46b2-bdc7-3b2e75c0acbc">
+                    Id="49e64428-0d68-479e-b28c-8c25a164eefd">
                     <propertyInstance
-                      Id="10a6640a-1f64-4f0e-86be-e880b773cc9e"
+                      Id="5b00de65-f129-427d-81af-da57b858c021"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>

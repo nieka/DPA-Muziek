@@ -295,71 +295,6 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="ce0f875c-57cc-4b08-b6b9-b98bb627bf76"
-            name="LilypontVisitor"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="dc8e2ed6-3651-43d8-8d01-0efa472f075c"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont Type%3DLilypontVisitor Member%3D.ctor"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="d58c23c2-184f-4cd5-a646-bfde1aae21c7"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a87b5d59-4129-48cf-a18d-42040efd8022">
-                    <propertyInstance
-                      Id="ff63afb0-265e-465d-838b-c3988e30b199"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="652fb3ad-e445-4e1f-8191-d1974c14f976">
-                    <propertyInstance
-                      Id="7c2393a0-1e45-438c-8bb3-915fa7b59e6e"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ac2b8d01-dab5-48db-9f86-a7369ec1b51f">
-                    <propertyInstance
-                      Id="00457906-e211-43cf-a9e2-1de13c954d1e"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5e994fc8-d813-4cfa-8375-8949f12e5f31">
-                    <propertyInstance
-                      Id="3ec5715d-e646-4c85-952b-3f629e3d9ef5"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3e5dffc1-61c5-4bd4-a454-d9ab58fbed70">
-                    <propertyInstance
-                      Id="fbe256ad-eb8d-4803-8caa-6a0c4baf774c"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="12abfe61-9c06-4ced-b536-7c92eddf93aa">
-                    <propertyInstance
-                      Id="a0d604cc-b29f-4ae3-b3d2-b570919476ac"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-          </operation>
-          <operation
             Id="58c62913-8c0a-489d-89c4-624766a5d81e"
             name="finish"
             isLeaf="false"
@@ -1026,6 +961,71 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="83893294-a571-4e3e-89f1-71d0105674a4"
+            name="LilypontVisitor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="09124577-ac63-43d0-a8a7-1c479f7532c9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont Type%3DLilypontVisitor Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="65c9ec6c-206b-4705-bed9-0a6f2c69cbae"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20f7cb12-339d-43d6-a1c3-afe0e78c49f2">
+                    <propertyInstance
+                      Id="56b73723-f09d-4281-9a79-ac22360acefe"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0af823c8-bc84-4fc4-90e5-6d145e7d0cbd">
+                    <propertyInstance
+                      Id="508923ce-8841-4b6a-b0a4-5bc5fcfd5cd0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efe2b4c3-bbcf-46d4-973b-6ebb7d99d156">
+                    <propertyInstance
+                      Id="cf35c7ce-b5fd-4542-94b5-052ec641c06e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76eb0bef-9255-458d-a9cd-daa88b0928ff">
+                    <propertyInstance
+                      Id="030807c6-0423-4314-9ebc-6b9b54c8b672"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d1696d3-6c06-44ed-9c9a-13c37ad45c3a">
+                    <propertyInstance
+                      Id="59b50d54-0f00-4fe1-8d53-9a38d40fd405"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5c48021-fe74-481d-bb0e-0dd0a636ee74">
+                    <propertyInstance
+                      Id="3996089d-fa2c-405d-9812-b6c8550239ea"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1084,7 +1084,7 @@
             name="Handle"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <referencesInternal>
@@ -1248,71 +1248,6 @@
         </suppliersInternal>
         <ownedOperationsInternal>
           <operation
-            Id="8e43f22f-2c2c-46f4-a616-a86fc41bb642"
-            name="TimeHandler"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="611c41bd-a19d-4500-90b4-7e013a88718b"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont Type%3DTimeHandler Member%3D.ctor"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="695f1ed3-3eb3-47e6-93f4-88a14cf78f46"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="61ee2b53-79a3-4d19-933e-0be7b48bbc11">
-                    <propertyInstance
-                      Id="68b728b0-3818-4bb7-aea8-9e8c54400cff"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9d5b0e95-6a4a-460e-b46d-81dedd502594">
-                    <propertyInstance
-                      Id="85cae3be-bfb8-4d3d-92cc-49be7a175698"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5a76ef18-3715-4565-99bd-ae76b5c439d9">
-                    <propertyInstance
-                      Id="4f72e1b5-54c2-4724-9966-dd62c3c91b7c"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1acfd2ce-93c1-4449-9e56-d32ad0272f6f">
-                    <propertyInstance
-                      Id="ed2a9af7-9e61-40ad-b629-7f649e36c7ad"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="4b292c10-4a02-4a66-940f-64e826086123">
-                    <propertyInstance
-                      Id="7abc226f-3d20-48c2-b27d-bd9a770f8bf5"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2250b9cd-4250-4814-aa41-5398548d3075">
-                    <propertyInstance
-                      Id="e03be8dc-1c8d-4128-aa20-399e6bb9f079"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-          </operation>
-          <operation
             Id="8943e6e5-c915-4bf1-85d7-1ce6860901de"
             name="Handle"
             isLeaf="false"
@@ -1409,6 +1344,71 @@
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
+          </operation>
+          <operation
+            Id="5f3036c9-310f-439d-be94-d5719d3fee31"
+            name="TimeHandler"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="84a4bdc6-370c-4391-97d8-08ba6b5ddf42"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont Type%3DTimeHandler Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e0de16e9-2b64-4350-b6ed-658adf64184b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0c39fe1-ca12-4eec-ba62-f647bce05e3e">
+                    <propertyInstance
+                      Id="213fa702-6530-4b25-8101-ff6ac322e9df"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b79824aa-2809-47b8-86be-818e833be656">
+                    <propertyInstance
+                      Id="e612d3b5-1c2f-4ad6-bbd9-e86234a3a7cc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23352442-1645-4f21-8646-7969b58346b8">
+                    <propertyInstance
+                      Id="003eae72-1ff0-4afa-ac4e-87a10e390bba"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="acb7042b-0c7a-441e-8c37-3f1bd8950484">
+                    <propertyInstance
+                      Id="22b05f85-f6b2-4da5-a568-2998d07782ee"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46f9e33e-c0c5-4576-9dae-f4caa53af546">
+                    <propertyInstance
+                      Id="b8aa20c1-25df-414d-87e5-4f0fd84ffc96"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e333b91-7223-4238-b688-add3a3e22a0e">
+                    <propertyInstance
+                      Id="92c6d97a-8336-4eda-a8ae-1ba0958b78cf"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
           </operation>
         </ownedOperationsInternal>
       </class>
