@@ -1,0 +1,1482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="5432894e-0fb5-4810-83b7-2a9c470d3d31"
+  name="handlers"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="1397518d-1ca2-47cf-8412-c401713774ce"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="35f8b2f4-461a-4166-93d1-e66b424a136d"
+        name="ApostrofHandler"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="27146457-1698-488a-ba5c-721401c1cb9c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DApostrofHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5329e70e-9cd2-4de7-bfee-847b577aac98"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e85dea58-b7a8-45ca-96f6-2849c593d2be">
+                <propertyInstance
+                  Id="4386c957-fad9-4aef-83c7-81131914c14b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="43e0f208-78bc-4533-963c-cc19a64f5801">
+                <propertyInstance
+                  Id="2912b0af-0174-4f76-81ba-cfedd25ecbe4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="df67e01c-23ff-4b5c-84bc-f71a1be100c2">
+                <propertyInstance
+                  Id="87d8f4d4-9dac-4d49-ac5e-5018b09572b1"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f59b4c24-683e-46ef-b528-a895c67c023d">
+                <propertyInstance
+                  Id="b810b6a8-7a6c-4024-8f0e-b8bd610204bb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="787d5f51-2932-431f-adb8-ab57a62fa475">
+                <propertyInstance
+                  Id="38bd56d0-4091-446c-bad1-c87a177d79d7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="e7367d8e-39c0-4f01-ac63-ffaef2e9270e">
+            <interfaceMoniker
+              Id="32b3cdbe-3acd-4a87-9d52-9a392ed4fc05"
+              LastKnownName="NoteHandler"
+              LastKnownLocation="Package24_1349.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="31e9766b-6019-4c47-8e77-8435a9df4f8e"
+            name="ApostrofHandler"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a6b1463a-6dbc-4e91-91bd-e537c6948b70"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DApostrofHandler Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="55b4ed90-93a1-4b25-a81b-ff22b44e9dcc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2b3fd12-a187-4baa-8a93-84fdeaddb959">
+                    <propertyInstance
+                      Id="530fca42-31b9-42ea-8eba-9325dc47889b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd896f5b-982f-48fb-bc91-3ba8cb48d463">
+                    <propertyInstance
+                      Id="74750d1f-f15a-4f93-a65b-0895aa3637ed"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7b40b0e-01ab-41a5-b4c9-bd21a977cc38">
+                    <propertyInstance
+                      Id="a8669fbe-6d6b-4d5b-a451-5b18eec66bb3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f953ac41-acad-4bb8-bc61-a42bb3d392a7">
+                    <propertyInstance
+                      Id="98cf7db9-8ddf-4ff6-a223-aeeb042db226"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d572a80d-774f-41cb-8bd3-408f40dacff6">
+                    <propertyInstance
+                      Id="3107d719-30e1-4556-b4a8-6ae524c8085c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="167ee714-86e4-4f6f-8738-95290fd26fb4">
+                    <propertyInstance
+                      Id="efd5dca7-4b71-4c1c-a1f0-ea3c720a563c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="b6c848da-a0d6-4795-8111-678d3e7b3cba"
+            name="Handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="39790566-2d49-42d0-90dd-05ef4accb1ca"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DApostrofHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="637e97dc-22a2-43f1-b801-943951f939aa"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c28e668-37d9-4b2e-95cd-c5300153826d">
+                    <propertyInstance
+                      Id="7a4e4cef-d905-45d1-b1a8-88e996c97b18"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f05f2903-ab4c-4dd2-b012-1593c32dfb43">
+                    <propertyInstance
+                      Id="2a09856d-8afc-406f-b88f-cf1484daf61a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2493c195-cc20-45ef-bb7f-2e5d82829585">
+                    <propertyInstance
+                      Id="25314581-2ba3-455d-af65-65281d8a6b17"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="032f0ce6-29e2-434e-92ae-ae716e0c126b">
+                    <propertyInstance
+                      Id="ca545e8e-25fe-43da-9da5-484cb018c6f6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0821cefd-0617-41c2-8a24-30fa13b8edec">
+                    <propertyInstance
+                      Id="32e61c5e-2dd3-4071-9d10-ab5a83957f06"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2da242c6-6095-4cfa-9579-66edc4b7b078">
+                    <propertyInstance
+                      Id="5f4b5972-50f0-4bae-9b30-bfefe9cdaf32"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d267282d-de60-459a-9de4-13399159645a"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="DKD.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="83538166-075e-4a02-a086-5c5de3f3ae06"
+                  name="noot"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="254c9acf-47cf-4a0c-972e-e1c1b9659663"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DApostrofHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)]) ParameterIdentifier%3Dnoot"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="70d30eaa-9cd9-4aae-808e-f8a0ac53adaf"
+                      LastKnownName="Note"
+                      LastKnownLocation="Package10_1349.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6091823f-16fb-4dcc-94cc-1677a65bb738"
+        name="KommaHandler"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="875fba63-a135-4e0a-9438-104bfce79673"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DKommaHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="442f2e2c-4cf9-4981-bcab-60cf0c66b3a1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e801b03-fc6f-492b-b51b-1b5baf39042b">
+                <propertyInstance
+                  Id="30783b1c-9b26-4481-9742-a5c3e905b0c4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="936ee789-40ef-476b-8f6c-be8a4ad50363">
+                <propertyInstance
+                  Id="ff912a9f-c836-4ead-a123-aad7cce2bcec"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8379d408-7273-4021-aed5-bae6cce608d0">
+                <propertyInstance
+                  Id="ca58de1b-65eb-4a52-962f-2a49c03e7fd6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="beb70802-de4c-4768-bf1c-a2ce19e6225d">
+                <propertyInstance
+                  Id="cd379b51-481f-4cf5-ba7f-9eeaeb4aa764"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a0a0c250-60aa-4472-b4c3-87687ed9d5b1">
+                <propertyInstance
+                  Id="4e1e73ed-cc4c-4d40-bc2c-2f650688016b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="79e9ec73-077c-4732-bce9-c0c16304072e">
+            <interfaceMoniker
+              Id="32b3cdbe-3acd-4a87-9d52-9a392ed4fc05"
+              LastKnownName="NoteHandler"
+              LastKnownLocation="Package24_1349.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b54b3811-2e39-420b-97fa-136b72803eb9"
+            name="KommaHandler"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ed6cc6ac-807c-4594-8cf3-b6699a3dca76"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DKommaHandler Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="11df01a5-de41-41e5-9154-c14c5cf7fc24"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e667ae8e-991d-4ece-8806-390dca91d519">
+                    <propertyInstance
+                      Id="27967be2-584d-48a2-a5eb-1cd8deeb74cf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="15da2555-71f2-4a2b-9785-3cbfd0179f1b">
+                    <propertyInstance
+                      Id="e3edf4d3-648d-4699-aca7-44493f2ad5dd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0848d480-f2ef-40f1-8b4a-dfd24df3ab45">
+                    <propertyInstance
+                      Id="06fcc34d-3f51-4205-8aaa-25b77928bcba"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88e89edf-4484-426a-8e8a-282a69ed5e84">
+                    <propertyInstance
+                      Id="134b53af-4cdb-4af3-b615-0c0da43c36fb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b7345034-95a2-4c11-854b-e216cbc4c7d5">
+                    <propertyInstance
+                      Id="bf04d9ce-2684-42d1-8cb7-f36940484334"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4415eca4-473a-47cd-baca-b13d27fa7ff4">
+                    <propertyInstance
+                      Id="8ebb670f-763d-43f8-befc-344d7a39247b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="bf5d37e6-c2b1-4e14-920f-50285288608b"
+            name="Handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1b531bb6-fd67-4404-b396-8f9c3b8d2463"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DKommaHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6a7ec70b-b318-407c-bbe9-503d199b424f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1682d453-9908-4dde-90b7-de6e42ab6641">
+                    <propertyInstance
+                      Id="72053a5d-58f6-4c39-b0cd-fadcc1122705"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aecc2325-c763-42b3-9333-5714183cd5ec">
+                    <propertyInstance
+                      Id="871c682f-4608-438e-9ae2-673364b919b9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee43be21-57cf-4bc4-844c-6d47ea592fdc">
+                    <propertyInstance
+                      Id="cb9a01b4-7cfb-469d-bfff-e26d8a82e981"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a465d662-0a57-4592-bbcc-df201f4f7cb9">
+                    <propertyInstance
+                      Id="af6d318c-b6b5-486c-8349-62b6838908c5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01a3512d-f431-4a40-a95d-6797cff1b7fa">
+                    <propertyInstance
+                      Id="de8ef877-0b2c-4d0c-af4c-794005e20c6d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b1e4b1b-756e-4b7c-ae87-204c3f0cba82">
+                    <propertyInstance
+                      Id="a8775e65-02a6-4412-a81e-234110d05eb7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="05825d7b-72b6-4f01-b167-51b6c1849d63"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="DKD.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="899babd2-ce87-4715-be9e-f95bd1c08f95"
+                  name="noot"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="81e9c980-9c8c-486c-a863-344323f324ed"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DKommaHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)]) ParameterIdentifier%3Dnoot"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="70d30eaa-9cd9-4aae-808e-f8a0ac53adaf"
+                      LastKnownName="Note"
+                      LastKnownLocation="Package10_1349.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="02f204c9-83c8-4f64-bf47-b9612b3d3241"
+        name="LinkHandler"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="300ca336-2944-4446-a0dd-3058af95f40f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DLinkHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ddf67566-7b27-49ba-acb9-59344da5f7e8"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a81655e5-11ca-489f-904a-2e3b8f7d03ef">
+                <propertyInstance
+                  Id="57768951-ef88-41f2-970f-7a95fe562ca4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b4d4591b-d2f7-46c4-967d-b16ffd4657d2">
+                <propertyInstance
+                  Id="0249f02e-c5e4-4ec3-92f0-9172c88330ff"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="72cc4d5d-0a8b-4835-ba6c-194a425c7ce3">
+                <propertyInstance
+                  Id="6c09fd9e-348c-40bc-a048-4c0e248b85da"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c0aa7a1c-ab1a-41e7-821e-dac07082ddaf">
+                <propertyInstance
+                  Id="83aad013-25f7-4664-af35-1f4f18565665"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="42433558-3562-4d82-bd34-9e0899c7f65d">
+                <propertyInstance
+                  Id="ce033899-6034-4b46-bd55-5c6cbd64d9f0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="f4925870-6801-4874-b851-516522f7d790">
+            <interfaceMoniker
+              Id="32b3cdbe-3acd-4a87-9d52-9a392ed4fc05"
+              LastKnownName="NoteHandler"
+              LastKnownLocation="Package24_1349.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="691f1ee3-3135-4ceb-8fd0-2a981d2d3f3f"
+            name="LinkHandler"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f9e13159-0b54-45d1-8236-095887194ff5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DLinkHandler Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5ac1a88e-3c2d-402b-b974-603f2f2e43db"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e836d56-49ad-4dbd-8180-7aad2bfed7af">
+                    <propertyInstance
+                      Id="9aa39f67-dc1e-4752-acba-d83da9ef4e1b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa3b3c79-1a06-45c1-a56f-7a1a5681c13e">
+                    <propertyInstance
+                      Id="c0d72a00-9a1c-44b7-9305-00fe08bf6332"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cb448f8-367c-4ce6-a1a4-9348856c6fae">
+                    <propertyInstance
+                      Id="c99fb9ca-9485-447b-952a-20d394a59be2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7b2a1a3-22a4-4309-99b5-f61327d76159">
+                    <propertyInstance
+                      Id="2d9ebc06-9b4b-4183-be63-f43274177bd8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3a82f20-d6a1-4a63-81c0-7dd058c2c107">
+                    <propertyInstance
+                      Id="4cf47b85-f7c7-4d5a-82e6-3b5c7a4f4da2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="565e350e-7511-42cd-a6a1-e5fc97a31098">
+                    <propertyInstance
+                      Id="4cf52830-1fc3-4975-bf04-218a0e33b974"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="6e914341-f409-4a5f-a797-aafffc1c5113"
+            name="Handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="86671304-2bcc-4c4f-a648-e184b0cc3488"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DLinkHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ef4dd6a0-fa12-4ef2-a8f8-65e841e54925"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29b40d1a-3cfc-4d6b-86f5-018c1c124a7b">
+                    <propertyInstance
+                      Id="caa00d29-84d3-45b9-8977-45796c2910ee"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d57048db-90ea-425f-95dc-3f945d5fc22c">
+                    <propertyInstance
+                      Id="b7e72f3b-8fb4-4ee7-a44a-d7c15ff5a304"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e573125-7f7a-411e-9ca3-37b6ea0250a9">
+                    <propertyInstance
+                      Id="41ebd8e7-92e6-4084-af64-7f6de7bc53fc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b630bbe1-e5d2-4252-886b-1a0a96a2522d">
+                    <propertyInstance
+                      Id="02daa11e-5bd2-4e7a-b984-c318dd29eba6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2345ec91-f129-4f2f-ae21-92a971891f85">
+                    <propertyInstance
+                      Id="d1a181f4-a21b-48ff-9779-65d11351a1e5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9aa6007-836e-4819-96d4-f52b03992847">
+                    <propertyInstance
+                      Id="9b6a2abd-ab9e-469c-9b26-55f125dd6fd8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4feed096-9c4f-46d9-a194-07b7f1ca418c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="DKD.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2863e1cc-c69f-4e99-8150-78b567fe21da"
+                  name="noot"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="89c5236a-81e7-47d3-a81f-94ea8cd9d90b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DLinkHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)]) ParameterIdentifier%3Dnoot"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="70d30eaa-9cd9-4aae-808e-f8a0ac53adaf"
+                      LastKnownName="Note"
+                      LastKnownLocation="Package10_1349.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="acc621a5-22c9-4ae2-8dff-2493331382a0"
+        name="MolKruisHandler"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3550faae-8e4b-4142-982e-17f47b3639ec"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DMolKruisHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2be4add5-ab6e-495b-9f64-ca639600e183"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c2dc19d4-5abe-45f6-9c44-cd2ae037b67d">
+                <propertyInstance
+                  Id="96f4e80a-a174-415f-ae13-3b1f2eba02c2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="678ff2aa-129f-499a-9097-a51dea9c70a9">
+                <propertyInstance
+                  Id="7ac2dbf5-4e5b-4cd2-aae6-839056196aa5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="37b4bc5c-0dc8-4f55-9219-d5b68def1dbc">
+                <propertyInstance
+                  Id="d7dd2f43-9a6d-47ce-9fb2-edda483770c2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c3afe129-6c3f-4f12-adc5-de570383fe8f">
+                <propertyInstance
+                  Id="36e0720e-76a4-4c58-99f1-f0641e1be177"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d1c3d62a-ca84-4f43-be6e-01542e88de3b">
+                <propertyInstance
+                  Id="fc963e1e-dfc0-4094-aaee-7fe51c836709"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="53f5bb12-2a8c-4ceb-aa79-c4e2943ae98f">
+            <interfaceMoniker
+              Id="32b3cdbe-3acd-4a87-9d52-9a392ed4fc05"
+              LastKnownName="NoteHandler"
+              LastKnownLocation="Package24_1349.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="1ad122d9-b84c-47d1-9494-e74766d2c977"
+            name="noteItemLookup"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="53b560b9-8ab5-4b80-b979-6a8f519444a2"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DMolKruisHandler Member%3DnoteItemLookup"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d45b5b53-c4d0-46a2-ab57-006bbc4c44bf"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="080b92c3-1321-474c-8444-2ec04d9e96e2">
+                    <propertyInstance
+                      Id="d212a745-f4dc-4f47-a4d4-38d33558e8b5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9edd0f6-7904-4a2f-9bd5-784fdbab52b8">
+                    <propertyInstance
+                      Id="6aa0946e-bd09-41dc-a298-6f97ef10f135"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4f979f0-a16b-4b3e-8914-f15c3af2df12">
+                    <propertyInstance
+                      Id="1ea3ffba-f26b-4b38-b452-6243e4064429"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0910562-eec8-4ea0-8e86-073442f8a226">
+                    <propertyInstance
+                      Id="45635885-bd9d-4f35-a255-4988680bf202"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4880d66d-210b-425f-acd3-86b176733345">
+                    <propertyInstance
+                      Id="f1b5d9db-548d-425b-ae48-fb3c87b8da3a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="1cbaa38d-a5ba-454e-8b06-a4d8c31f658f"
+                LastKnownName="Dictionary&lt;NootItem‎, String‎&gt;"
+                LastKnownLocation="Package16_1349.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bc5d8b75-887c-4c15-9f4a-d9509712fa06"
+            name="MolKruisHandler"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="91442af6-cd91-4d63-9476-ddd9edb0c240"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DMolKruisHandler Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="65cb0412-349f-4c0c-a9ad-aa6df2c73c06"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ba56cc0-d378-495b-a879-ee40c9e92e26">
+                    <propertyInstance
+                      Id="08cb33eb-43de-4ada-94e3-49aeea26b6c9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f485c54-5a08-416a-bbd8-baf3e2b383ea">
+                    <propertyInstance
+                      Id="a9d1a496-3401-474e-9a18-13e6ffeb983c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="adb759da-4044-4e62-860c-3f34b591a5a5">
+                    <propertyInstance
+                      Id="099d10da-02d0-407e-9b73-074e5a78f8d5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0dba39de-4aea-4509-a6e5-22686516de86">
+                    <propertyInstance
+                      Id="c628392d-db75-4110-a3e9-e737118b697d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce9c492a-9163-4015-8345-67f2a4260363">
+                    <propertyInstance
+                      Id="a5837bd3-0e56-4827-a8f9-496ee074ae30"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ee12d4a-48b7-4f21-85af-31a88353c1f4">
+                    <propertyInstance
+                      Id="bfc7ebaf-8345-4a2c-9cb9-b452ca19e440"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="0702de1e-ab87-4f0f-b8c2-22de48a0e133"
+            name="Handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b49d4c91-111b-48d7-871a-36792944dd83"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DMolKruisHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="864958bd-0145-43ee-93fb-fdfecbf2af17"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77d6a005-0c1c-415c-a56c-34b3626a0de2">
+                    <propertyInstance
+                      Id="b7397069-4653-4b4f-8ef3-6f928c7d903e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6dbdc35b-bd76-4a22-9b19-85fc0e910c3c">
+                    <propertyInstance
+                      Id="8f28369a-0752-4316-8099-4c4b4cbbc338"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30655cd5-4cd8-463d-b7fb-0ca86b4f2862">
+                    <propertyInstance
+                      Id="32a595c9-7725-4918-a239-dc3afea19d0e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71b12d16-d277-4f54-b02a-6bd67353252f">
+                    <propertyInstance
+                      Id="211d668e-6ffb-4993-9c24-bf37dc2486c1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c709bab1-322c-4525-8092-18ae6e13318d">
+                    <propertyInstance
+                      Id="8ea24945-d932-4a17-afe4-824be2206827"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce386993-a599-4e5f-8222-387e3d7b3601">
+                    <propertyInstance
+                      Id="b1ad403d-51d5-476b-9c1f-360d4a72c5b8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1dde405e-e883-4be0-b9f2-cc88788d34af"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="DKD.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9ee8a4d0-da97-43f7-a776-8daa6d4206f7"
+                  name="noot"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fef0cd10-7ed3-4853-b355-c43898d44568"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DMolKruisHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)]) ParameterIdentifier%3Dnoot"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="70d30eaa-9cd9-4aae-808e-f8a0ac53adaf"
+                      LastKnownName="Note"
+                      LastKnownLocation="Package10_1349.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d76c7ad2-3fc2-494f-b7a0-efd094e74b7d"
+        name="PuntHandler"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b401ed99-e98d-4013-8fc6-5b7a493f1efc"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DPuntHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a8f14993-07eb-4c10-bfa1-2e04760954d5"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9724773a-be30-48d6-96a8-d8f5f29ddb13">
+                <propertyInstance
+                  Id="ec7445b0-1d22-4a21-832f-d11a8d461a96"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ec77fb7d-22b9-4d82-ad75-741e5c472e3d">
+                <propertyInstance
+                  Id="73b84194-4c83-480b-901c-03afd9b2e200"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d0f3c256-ae6d-453a-8c0e-ac9a32f4448f">
+                <propertyInstance
+                  Id="9423a632-f71b-40f9-9169-01d3c3daba03"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b93133cf-70b1-4038-a857-ede0c2c71101">
+                <propertyInstance
+                  Id="a67672e0-8505-4d30-9f0d-27462205df19"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d5b0ffde-fe91-4bfd-895a-26bee6eff962">
+                <propertyInstance
+                  Id="4ea1de9b-b2a1-43b7-ab6f-d79dd98cf24a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="c90d3121-057a-4f2d-9781-5e46b5da4d36">
+            <interfaceMoniker
+              Id="32b3cdbe-3acd-4a87-9d52-9a392ed4fc05"
+              LastKnownName="NoteHandler"
+              LastKnownLocation="Package24_1349.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="54a4c8ca-1ac5-4866-8105-0d75b19ec86a"
+            name="PuntHandler"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="81c726fd-d212-47ba-b508-b47438390d8b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DPuntHandler Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4a0d88cd-04e1-4d36-b273-ae0bc32b2ec1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40bdd27d-1011-422a-8583-8b9bffb26b4c">
+                    <propertyInstance
+                      Id="cd9c60d3-bfa1-4bf7-a45f-27a83b13b93c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2ee25f3-de49-43d6-8a59-7cb65165ec2d">
+                    <propertyInstance
+                      Id="8c29f05f-0c2a-4ab4-9947-e7e72c5daed4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f015dbb9-cac4-4385-9019-8f8b2aa10b97">
+                    <propertyInstance
+                      Id="2101a553-954e-4d3e-95cd-36d8c60072df"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="513f886d-53c4-41d1-a20a-566c5a5b3e7c">
+                    <propertyInstance
+                      Id="8c4c9965-c86f-42c0-a17c-a012fdb77d60"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="078ba315-382b-450a-90c7-6b2f8a0ab4d4">
+                    <propertyInstance
+                      Id="c402ec3b-1cdf-46d0-8648-3751a794347f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44802769-55c4-4a84-8032-3e3a77617666">
+                    <propertyInstance
+                      Id="c937fa36-9be3-4992-988e-bd4d42053759"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="8b48dff8-6113-4bd8-8dee-70edc4754729"
+            name="Handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ebdb1433-0967-47bf-b804-d59d8689135a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DPuntHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dc3157d9-04a5-4237-96f7-04c6ac3f5af9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a705c55c-f2bc-46ff-ba64-719ec7de2e62">
+                    <propertyInstance
+                      Id="4d339124-8bf7-4c46-a76a-5deb9194cac4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8a92727-1663-4d5b-9e91-96f1343895ae">
+                    <propertyInstance
+                      Id="7fccf9a0-1300-4de2-a84d-7169467f70ea"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31e01ba8-e024-40f3-8273-5fd6b47d9d12">
+                    <propertyInstance
+                      Id="67096f1d-91f5-4738-a73c-97c2f716f8c9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8750089-861c-4f9e-b1fd-101f315ed2dd">
+                    <propertyInstance
+                      Id="24ae8f19-ba0b-46ae-9b4a-63b207e7cceb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2befaf9-d2d8-41f1-82e1-8894e9a2bf1f">
+                    <propertyInstance
+                      Id="5c5650a5-82f4-4e13-9038-89cbaef3f67b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dcf49df6-a008-466c-9ab6-731c4617b51d">
+                    <propertyInstance
+                      Id="bce7518b-5147-4923-ac70-bd555e6a0456"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="87a94fe7-f237-46ec-b8eb-2f0218d4bdc5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="DKD.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="43a4b3c5-a2d3-43d4-bb83-51d34f857cb4"
+                  name="noot"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="173ca66f-725f-4f5c-bb8a-e1a44dc3e62c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DPuntHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)]) ParameterIdentifier%3Dnoot"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="70d30eaa-9cd9-4aae-808e-f8a0ac53adaf"
+                      LastKnownName="Note"
+                      LastKnownLocation="Package10_1349.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3a1e9fb1-7825-4455-8205-e3c65db90727"
+        name="ToonhoogteHandler"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="850bfa7d-0929-4433-ab42-79152b44fd48"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DToonhoogteHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="bcf9077a-954f-4158-b800-50ca4effeed2"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1a0ab081-b1db-4ff7-8edf-6cdae7a60412">
+                <propertyInstance
+                  Id="59ac9293-5936-4a82-a9ce-ad212e261ab8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d31712f3-263a-4019-9861-ac75c39654a6">
+                <propertyInstance
+                  Id="158272b7-417c-4b7c-a463-32be0d96b03e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6873dc7a-b82b-4f96-b2d7-dd2ceb2973fe">
+                <propertyInstance
+                  Id="36dd0394-de11-440d-bfb8-3d17ea06e199"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3b7613a6-9c27-4ace-a9e0-36b17d71d32c">
+                <propertyInstance
+                  Id="e3e685bc-753b-4fe5-a507-c61530a24345"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c671bf1f-47b9-48bf-80b2-3dc55d270eb2">
+                <propertyInstance
+                  Id="e917c821-7d0c-4306-af9c-72eba76e795a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="c88cb43b-6f3d-4442-92a0-771de1b89438">
+            <interfaceMoniker
+              Id="32b3cdbe-3acd-4a87-9d52-9a392ed4fc05"
+              LastKnownName="NoteHandler"
+              LastKnownLocation="Package24_1349.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0ff033d4-2d82-4177-a0a1-70b78c203ed9"
+            name="ToonhoogteHandler"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="54168e29-2368-49d1-b5ac-d6496e4f57d9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DToonhoogteHandler Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="672e39dd-672d-43bf-8004-8b5ffed53fe0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2212d2fa-2401-44d7-b264-f9a0ca0e9267">
+                    <propertyInstance
+                      Id="ece2f327-5846-4448-877a-4ce02b5e8dd2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="816c9ca1-1a45-46cf-bda2-71d7cfb2059a">
+                    <propertyInstance
+                      Id="a9467d49-8210-4776-bf36-499b8f7aa52c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b693825f-24b4-4025-b768-c2fa5aca69ec">
+                    <propertyInstance
+                      Id="da80c0d3-66ef-4dc0-9995-8ce836a70b27"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f8ccc74-f155-446e-8e86-0eb0e9c8e7fe">
+                    <propertyInstance
+                      Id="83243da6-9b92-4b53-9fac-357f662ffbbf"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f18a6595-bb97-4f74-9f42-48e6c20951e9">
+                    <propertyInstance
+                      Id="6f6cf0bf-3160-4566-b591-caa24c3c3090"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d94705c9-52f8-462a-af81-fcd79b68bc84">
+                    <propertyInstance
+                      Id="f9ce8f67-03db-490a-9fe4-a25e5540ce50"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="6e81f644-03bf-48d3-9ebd-fba6efd93dad"
+            name="Handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="21131a38-f697-4008-a0c3-b0df94a67b64"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DToonhoogteHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cfa738e7-8e4d-4c98-be4b-4da8e11b55fc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c161cb0-f53b-489a-b970-884bd811cefe">
+                    <propertyInstance
+                      Id="844b1983-9976-44f1-acd3-8e0bc3dd6b54"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b550d28d-8e98-4268-a3e7-220d4c38268b">
+                    <propertyInstance
+                      Id="e0ce2cd5-f017-4539-9151-d71ac20c59ba"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="862d3f77-7b22-4acf-a940-9fddac5a12cd">
+                    <propertyInstance
+                      Id="09bf60f3-ab5f-4d9a-84e1-3c0e36389dff"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69889cad-e615-4bab-8499-db2db54ca83e">
+                    <propertyInstance
+                      Id="4cf3f587-ac46-4fcb-815b-58e78da45758"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e1bc5d72-0f07-4577-aad4-211d9f62de8a">
+                    <propertyInstance
+                      Id="5f478881-5f0a-473e-841a-2a4ed0d7587b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ee0ee3e-5948-4abc-b1ff-adbcc07bbf46">
+                    <propertyInstance
+                      Id="fcd1308f-729a-4219-867c-3c1687aba7ea"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6b5cada5-6b4c-46cd-a86e-9e304f70e80b"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="DKD.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f4f70de0-0340-4d29-a92a-d11eafc4773f"
+                  name="noot"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2af7372a-07f1-42ed-862d-8e8f6bbc3e93"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.writers.ToLilypont.handlers Type%3DToonhoogteHandler Member%3D(Name%3DHandle OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.classes Type%3DNote)]) ParameterIdentifier%3Dnoot"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="70d30eaa-9cd9-4aae-808e-f8a0ac53adaf"
+                      LastKnownName="Note"
+                      LastKnownLocation="Package10_1349.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

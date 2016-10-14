@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="2a8b5662-b2a9-4757-940a-7f39cafc5d90"
+  name="Midi"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="4d49fbe2-e8eb-49e2-bbb5-85a4b3c8d600"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSanford.Multimedia.Midi"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="e04a3278-43d3-430e-9639-5bf875b56198"
+        name="OutputDevice"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="cc9315cc-72cd-4ad7-bac2-3556536dc68f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FSanford.Multimedia.Midi.6.1.2%2Flib%2Fnet20%2FSanford.Multimedia.Midi.dll Namespace%3DSanford.Multimedia.Midi Type%3DOutputDevice"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5edf3f62-1b67-4fba-96d2-6a5d265471c1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="98179ea7-867e-4832-9770-ae44255eecaf">
+                <propertyInstance
+                  Id="ce1b4029-5f23-4337-b017-7080895eec0e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d7590dd7-be77-4c4d-8099-7352d78a355c">
+                <propertyInstance
+                  Id="ee21357d-8a59-45c8-a187-9e5e4e04ed51"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8586470c-6f8a-4488-8fda-8aecf8298fbd">
+                <propertyInstance
+                  Id="e0fed9ce-4e05-4137-91bb-ddba07430e40"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3b340b03-4717-4aeb-8ed8-6895d47dc518">
+                <propertyInstance
+                  Id="d7f9fdad-839d-44d8-9ae6-19f78b7f6a65"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="00253226-988c-4ec1-bdbf-7bf4e32272b2">
+                <propertyInstance
+                  Id="4b77c19e-e98f-47b1-ae6d-25f353382422"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e8869f90-53b8-462d-a1ed-7f73cbfca714"
+        name="Sequence"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c5322a12-ea2f-41b9-9e62-e58b42ef3d18"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FSanford.Multimedia.Midi.6.1.2%2Flib%2Fnet20%2FSanford.Multimedia.Midi.dll Namespace%3DSanford.Multimedia.Midi Type%3DSequence"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="355ed377-98d0-49dc-a43d-f376467c9e84"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ef7aa9a-1993-4e83-80c1-442634e633bb">
+                <propertyInstance
+                  Id="2f303673-d474-4411-85f7-0681ee318b9b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc8dd5c9-88e4-4bcb-8ba8-e4ab39246e2e">
+                <propertyInstance
+                  Id="ea169c0a-003f-4a93-b657-14d427fddfee"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="445abfde-c17c-4d9d-ad19-0ad02741768e">
+                <propertyInstance
+                  Id="3bd4d391-346d-4dc7-a416-2580da55144a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8eb46b16-daff-4ae8-a528-6192b613cb12">
+                <propertyInstance
+                  Id="e7230460-67c5-4cec-a12d-7733184c5d54"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="04fdbf36-c4a1-4556-b66c-0d772ac95af4">
+                <propertyInstance
+                  Id="810b8a0a-4b25-4a4b-82bc-ba02082912ce"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="af081136-a7a4-4a65-9324-a04b6af227e6">
+            <interfaceMoniker
+              Id="6b790ef8-1dc6-4ec1-a9b8-df033a1f5399"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package1_1349.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="da365476-e477-425e-bf29-1c0bf7c3e43c"
+        name="ChannelMessageEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4bcfe351-bd40-4c5b-a30d-6656ccb4452e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FSanford.Multimedia.Midi.6.1.2%2Flib%2Fnet20%2FSanford.Multimedia.Midi.dll Namespace%3DSanford.Multimedia.Midi Type%3DChannelMessageEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3c31ace3-6074-4dea-bc2f-c186ed087ed9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d723fcf1-6b6f-4f92-81b1-87bd60feb05c">
+                <propertyInstance
+                  Id="11ad2dd7-5fc2-4677-8b31-b07a4b1f3823"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="71d5909c-7101-4885-aee0-2d7611a72f54">
+                <propertyInstance
+                  Id="c58797bd-3129-47e2-a19f-ab556f073183"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c8002252-f4e3-4124-983d-0675ba476eed">
+                <propertyInstance
+                  Id="91f067dc-1a1b-4d31-9ed6-77868c1f9567"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fed29200-27f2-4dd4-9a61-209ef4f1cb2f">
+                <propertyInstance
+                  Id="a841ba11-7726-4135-98d4-57556372b4b2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2c190898-429c-4802-b44b-b8626632a37c">
+                <propertyInstance
+                  Id="1403941f-36bd-4f16-a12e-e5eb6e337963"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="738a5f11-e87a-4c08-aac6-5fb49969d9d0"
+        name="Sequencer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ecb7e19b-0a52-4392-af86-985d996199ad"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FSanford.Multimedia.Midi.6.1.2%2Flib%2Fnet20%2FSanford.Multimedia.Midi.dll Namespace%3DSanford.Multimedia.Midi Type%3DSequencer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8a85af9f-877e-408a-94f8-9babcd2c6023"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9776c69f-1d68-4409-807e-69f263fdd92b">
+                <propertyInstance
+                  Id="fc2343fb-e187-449f-9230-cbf16687f420"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b66ea343-8cab-4626-9024-71e9f30f0fc5">
+                <propertyInstance
+                  Id="9f25fc9b-7197-41b8-9ee1-8a562f07e573"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1aa4ee48-c06d-4a8f-b679-463586019391">
+                <propertyInstance
+                  Id="ef40f767-da2a-4654-a0ef-ed8a4b750081"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7ef0691c-0d95-41cd-a402-e124a367320c">
+                <propertyInstance
+                  Id="4a2d7b67-8ff4-450a-bdcf-bee18fd33570"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f24555f5-4e7f-4399-a1a4-4969aa4cd1e0">
+                <propertyInstance
+                  Id="120a785c-13d6-468e-96ec-de0b6d6141b8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="0a02b1fd-c5a4-45ff-8ff3-7eefec1dfb21">
+            <interfaceMoniker
+              Id="6b790ef8-1dc6-4ec1-a9b8-df033a1f5399"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package1_1349.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3d4f2564-6a26-409d-879b-bcdcd91b99cd"
+        name="MidiEvent"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3f16feb7-4442-419a-8e77-1e6d8a667a3d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FSanford.Multimedia.Midi.6.1.2%2Flib%2Fnet20%2FSanford.Multimedia.Midi.dll Namespace%3DSanford.Multimedia.Midi Type%3DMidiEvent"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="43ababce-c892-47cd-a99a-0426cf0bd477"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f5ac2a92-b059-4897-a996-4000f726aad7">
+                <propertyInstance
+                  Id="11261241-7c8a-4098-a552-b78634424dca"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="195bf88d-9865-4a3a-b09e-41afc0e5cf45">
+                <propertyInstance
+                  Id="b5600d10-59e0-4521-bfbd-d7774a3c3404"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="928b37e6-e3c4-4c1f-8716-e17a5dd0a2cf">
+                <propertyInstance
+                  Id="c7d40bde-79b7-4349-b5d7-2ca5a7fb72fa"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0dfaafb4-6a76-4495-8d8b-e019664fc8c5">
+                <propertyInstance
+                  Id="5ca7e511-d03a-42fc-bd92-e817edafdac2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="58325533-1857-4765-8fb0-615370d8832b">
+                <propertyInstance
+                  Id="183db4ac-a359-404c-9b5c-4046d4042b35"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="77a5e74d-4743-46fc-95fa-5872b72ee22b"
+        name="MessageType"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="cd7d805f-49ba-4d9a-a584-0dea26e159e5"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FSanford.Multimedia.Midi.6.1.2%2Flib%2Fnet20%2FSanford.Multimedia.Midi.dll Namespace%3DSanford.Multimedia.Midi Type%3DMessageType"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="12dc64a2-77c1-48c0-86bf-08d2dcc7bf7e"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="343bbc95-7889-4b36-9a1f-da8e124b5305">
+                <propertyInstance
+                  Id="daa8e33b-1dd0-4c35-86b8-3205c8c20e3e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="99c9142e-5e86-4527-a5c9-f6183aa0a04c">
+                <propertyInstance
+                  Id="6564025b-3a32-4ba8-9083-69527d422bf0"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c7a2aa42-4f05-47ca-accc-b684415baa2e">
+                <propertyInstance
+                  Id="c55a93b7-2318-4e2a-9157-9a328dfd98bb"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f6f3dfe1-94f1-491e-aa22-4fea8c5ebd91"
+        name="MetaMessage"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a671480c-1474-40cd-89d0-10da06375401"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FSanford.Multimedia.Midi.6.1.2%2Flib%2Fnet20%2FSanford.Multimedia.Midi.dll Namespace%3DSanford.Multimedia.Midi Type%3DMetaMessage"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0a054406-aafc-4a3c-ad21-71c62f28e1d0"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="400fb035-0f0d-40ed-a0a1-2297bcf36a2b">
+                <propertyInstance
+                  Id="d829cca1-2e0e-49af-b7e1-08f1e279e014"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fc84f7a1-5a60-4d23-b5e8-93d668e9caac">
+                <propertyInstance
+                  Id="17b4c46d-4688-43ea-bbfe-0da989370850"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f0094c7f-388a-4fbc-b9a4-0cc386ea2b70">
+                <propertyInstance
+                  Id="ad877cc5-823f-4a29-a6f8-0d8440de4320"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="86b63e9d-8685-48a0-b3c9-c4c7e1bc0f95">
+                <propertyInstance
+                  Id="3d244b91-309f-45f2-aed0-d76bbc7c9f92"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="957fcbbf-4961-45e1-9962-4ede7fb4daa9">
+                <propertyInstance
+                  Id="9d14f336-a7fb-4573-b125-46b199d6fc77"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="22d520e6-e43c-438c-a64d-74197a9af2bf"
+        name="MetaType"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="4c62e1ee-412e-4b1e-b3cd-0c8c4e8b3ca2"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FSanford.Multimedia.Midi.6.1.2%2Flib%2Fnet20%2FSanford.Multimedia.Midi.dll Namespace%3DSanford.Multimedia.Midi Type%3DMetaType"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1794ec9e-13d0-448c-9846-a55adc33daad"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0f8e98b6-ab4d-4251-8718-ccb68fb34be1">
+                <propertyInstance
+                  Id="6f014c3d-a062-496a-b183-67f469ccf35b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eafecfd8-631f-47b3-a176-7f465df930d7">
+                <propertyInstance
+                  Id="276eef84-8daa-4f95-b372-bda4f8faaec0"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7b205101-9610-4c4a-a6cb-aaab5f3e1bbe">
+                <propertyInstance
+                  Id="ff2f6e8c-13b1-4235-b777-4b2eca1729f2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

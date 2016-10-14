@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="0c6e9e21-007e-468b-85e1-efd523de4148"
+  name="PSAMControlLibrary"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e8ae551a-e2f7-4b9a-8473-0b4169a4ca6e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DPSAMControlLibrary"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="4627e4c2-7980-4fed-ab66-61d1a42358a0"
+        name="Clef"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="207a2b8e-117d-4098-b765-911b280abe54"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FPSAMControlLibrary.dll Namespace%3DPSAMControlLibrary Type%3DClef"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9487e6cd-e57d-4a8f-a8fe-a94892090d9a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1f42d400-8a27-497e-846d-ae65494aa835">
+                <propertyInstance
+                  Id="d96d49ee-17b2-42f2-92d7-e7835f806882"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fbeb5c0e-d4fd-484b-ba65-69e17c9ceb01">
+                <propertyInstance
+                  Id="81e6798c-7411-4ca3-a577-20b36413e192"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="187e41b9-e768-4656-9ab2-3e3c8e08d13c">
+                <propertyInstance
+                  Id="78ec914b-6d13-4508-98bb-2097f6384776"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="50b86542-41f6-4bf8-a2fc-e9c191ff6df5">
+                <propertyInstance
+                  Id="81129082-4013-4d95-8111-7c96eb356449"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f826adf-3cb3-428d-bd23-a4e00ba86e91">
+                <propertyInstance
+                  Id="7660d6e6-a410-4ec4-a507-28526154b59b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="82fc79fa-f275-405c-b940-71b2a8bbfad9"
+        name="Note"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="7fc01080-de3e-481b-9328-91e42af26a95"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FPSAMControlLibrary.dll Namespace%3DPSAMControlLibrary Type%3DNote"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5c5f9f3a-3809-4163-ba19-990de359c72f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b010b6df-0822-46c8-bcf5-03c884208353">
+                <propertyInstance
+                  Id="a70ce6d7-5ae6-4836-b0d0-63eca3fd60d2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="58eaa8dc-d9ca-42dd-9211-f389d90a6763">
+                <propertyInstance
+                  Id="3d7bc71f-2643-495b-a36d-6017e82a1ab8"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fff764b8-704c-4cbd-ab6a-9adb8354b8a1">
+                <propertyInstance
+                  Id="71e2eef5-7f91-41ce-a0c9-9049763e70ea"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="789c9f84-a176-4052-843f-92f73ad6d403">
+                <propertyInstance
+                  Id="07404eb1-8987-4e7f-8f55-9a16799d4508"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="53a9b81f-b98d-47ed-a2eb-688c830357c9">
+                <propertyInstance
+                  Id="c2509f0b-a109-4e10-a138-be9d46a12cc8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f5e2f073-a8ea-4f58-aa62-39bd665f36a7"
+        name="Rest"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="13b95b82-ef95-49a0-9694-b5f483d7a092"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FPSAMControlLibrary.dll Namespace%3DPSAMControlLibrary Type%3DRest"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4d60cdbf-5385-4d13-a3d0-32846dad7f98"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="357f9d6f-b003-45a1-9a45-5bf37804d7e8">
+                <propertyInstance
+                  Id="1a19d809-2b4f-47d4-a10c-aad17844c928"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a24c7775-1866-4c94-abb6-c04d2bcc803f">
+                <propertyInstance
+                  Id="76b93b9a-d909-4e9b-b8ba-b9f14eafd966"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="78fecd58-945a-4578-8b72-d0db0218d66d">
+                <propertyInstance
+                  Id="a175eebc-28fa-45a5-b665-6ef649b3d6c9"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e763f54c-c624-400b-9f20-32e428788630">
+                <propertyInstance
+                  Id="2421237e-eb0c-4652-aefe-971636dd717c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="05e2899b-f712-4919-9b23-9ac83f114b6d">
+                <propertyInstance
+                  Id="59718adb-2259-4b39-ac37-2da71577bb90"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="961b8ae5-44ce-47d0-8618-7e13904ab572"
+        name="NoteStemDirection"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="126ff09f-4f7c-4397-99b0-89fc8fa87a66"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FPSAMControlLibrary.dll Namespace%3DPSAMControlLibrary Type%3DNoteStemDirection"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7dadc245-e1b9-4edb-b34b-a8d56cf329ab"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="14a0f1cb-d1d8-4160-91e3-f819773d8a3d">
+                <propertyInstance
+                  Id="39da2c60-7645-4f65-b03b-330fe7a2aa8c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="35d85219-6304-4952-a9c7-8df0b8440334">
+                <propertyInstance
+                  Id="f6e2e9db-ace6-42f1-9973-5d06773e2629"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d2481a13-d563-4385-9455-7d0235475d14">
+                <propertyInstance
+                  Id="b8290abf-4d46-44b0-82a5-7da9494343bf"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="f75c645f-ad28-4694-bca4-75108e1d15b7"
+        name="MusicalSymbolDuration"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="c8fb9846-d119-40be-95aa-205ef3681322"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FPSAMControlLibrary.dll Namespace%3DPSAMControlLibrary Type%3DMusicalSymbolDuration"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3c692222-afa0-476c-84bd-99b17f88f26a"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06e27522-c638-4f4d-92d1-79837135d143">
+                <propertyInstance
+                  Id="4e8aec81-fd98-4fcc-8ceb-3e392ad4b98a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="960a4f26-5308-4cd9-80d4-fa4c0faa232e">
+                <propertyInstance
+                  Id="bd198555-fa15-474a-84c7-83919ab2abce"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab165989-e79e-4bfb-adc7-f0404e384cca">
+                <propertyInstance
+                  Id="3184fe59-58d4-4821-b39d-b3ddf5636548"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="08fb7b57-fe51-4670-8a63-0cdb1135b36a"
+        name="NoteTieType"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="eb32d24a-227c-4759-8cfe-7f272929dba6"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FPSAMControlLibrary.dll Namespace%3DPSAMControlLibrary Type%3DNoteTieType"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2288c40f-6ecd-4aec-8264-ff3022dcbac1"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6bf746a5-a3da-4241-a439-93ce66ab66b1">
+                <propertyInstance
+                  Id="818e2a11-08ec-4f61-8bce-80f77ebca0c4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="31063228-2cf8-4e09-8e95-15573c951374">
+                <propertyInstance
+                  Id="bddc04ed-f462-4641-9b99-1e02ce9e6505"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f75a7b5f-737d-464b-8788-f65046ea177e">
+                <propertyInstance
+                  Id="9044f1c9-d014-4fca-afc8-ba764f0cbf85"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

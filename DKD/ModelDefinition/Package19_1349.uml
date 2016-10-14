@@ -1,0 +1,741 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="21087fc1-10df-4658-a768-a29c83c32f1d"
+  name="MidiFileproces"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="44b87f81-5e9c-4062-aa4c-9abbcf79538c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DDPA_Musicsheets.MidiFileproces"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1b258559-c3b3-4d5d-aa5e-553842ae0e67"
+        LastKnownName="midiMessageHandler"
+        LastKnownLocation="Package20_1349.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6b151211-debe-4535-939f-267abfb65906"
+        name="Context"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="93a3bfc1-9e6c-41aa-b9c2-7a2239fd6e17"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.MidiFileproces Type%3DContext"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="906e3ff7-3d3e-4f84-94b9-4d174800c29c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2262ebd0-a9ba-4d8a-aafd-b362dcf4d7c4">
+                <propertyInstance
+                  Id="3e3be48e-55bd-4bf3-b527-d7e3c57214a6"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5ed5764a-3023-4932-a30d-6e59f6eb8991">
+                <propertyInstance
+                  Id="70f9f9d7-7379-435f-a2d8-4db54d99b486"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e714a944-a269-413f-b4f2-3d88346c1833">
+                <propertyInstance
+                  Id="68eed284-4fc3-49c1-9184-0acf48c00eeb"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="979a933d-289e-4e63-a605-9a532d1e1f8a">
+                <propertyInstance
+                  Id="8333dc59-b02a-4ed7-8d83-477756448a28"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1f6ab4c4-4618-42b7-b9d7-d1433c3df188">
+                <propertyInstance
+                  Id="def5ade8-bfbf-42ac-9670-e5470d6080fd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="62e07e1a-fc8c-4221-8a61-4cc112887cfc"
+            isDerived="false"
+            sourceEndRoleName="Context"
+            targetEndRoleName="musicSheet"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="faf5a7e2-da0b-4f5e-80b6-9281ee812a68"
+              LastKnownName="MusicSheet"
+              LastKnownLocation="Package10_1349.uml" />
+            <description>Property musicSheet references type MusicSheet.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dcad2a48-1037-4bdd-8a63-3ad5e98f17c5"
+                  name="Context"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d170ea30-8613-4cc2-b78d-a7d56c809475"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="58179a6e-7ea8-443e-aaf9-0525bf7c426e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bcdbe302-96d4-468b-a465-8c37b8b82c6e"
+                  name="musicSheet"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="593dbe1d-1f87-4155-9f0c-566ace7d5bb0"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e7c675fd-558c-40b5-b610-721e7ebe87b5"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bcac6e46-0c02-4d94-bc14-cb109c8b1bf8"
+            isDerived="false"
+            sourceEndRoleName="Context"
+            targetEndRoleName="nextEvent"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3d4f2564-6a26-409d-879b-bcdcd91b99cd"
+              LastKnownName="MidiEvent"
+              LastKnownLocation="Package9_1349.uml" />
+            <description>Property nextEvent references type MidiEvent.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="387b5ee7-40ad-4909-a4c2-9f85634ae7cd"
+                  name="Context"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1eb4103c-6029-4ed5-94c1-d544533f9f3b"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="aea65031-0d31-45da-bdb7-d580b1bf0146"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f9ecd92-50b9-49c7-98c6-defada745b13"
+                  name="nextEvent"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="20474a61-c96c-4852-9690-e4bc9b4429ae"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2b7e7b0d-14f6-41b0-a639-6086f3bbbaad"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3fa0dd8e-e63f-4c79-94fe-52638dcf6903"
+            isDerived="false"
+            sourceEndRoleName="Context"
+            targetEndRoleName="_sequence"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e8869f90-53b8-462d-a1ed-7f73cbfca714"
+              LastKnownName="Sequence"
+              LastKnownLocation="Package9_1349.uml" />
+            <description>Property _sequence references type Sequence.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="58231daa-8385-4ccd-9029-70be642bc752"
+                  name="Context"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="13db2952-71b7-46f3-ba7e-bf54fd414d4f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ec04484a-b898-43e6-bf9f-8a5582a244a9"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bbe9463e-3363-4f51-b355-66b28cb13d2b"
+                  name="_sequence"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5b56914d-4cb0-4571-b6cb-7277b7d1d4bc"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="488ce3cc-7c7a-4c23-a88a-e3cb6d3bfbc6"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cd0afe31-17d0-4700-a63e-43facf43a11c"
+            isDerived="false"
+            sourceEndRoleName="Context"
+            targetEndRoleName="currentTimesignature"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="540e1058-0e88-4089-9a60-ae936385e98f"
+              LastKnownName="TimeSignature"
+              LastKnownLocation="Package10_1349.uml" />
+            <description>Property currentTimesignature references type TimeSignature.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="81e40ad4-0434-43f0-bece-87b1d51e5beb"
+                  name="Context"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c8b29fd3-babb-46fc-8c58-d2fc38065f45"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7a0d8dd4-2120-4714-9d82-c3da0379622d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="523dde15-2392-4a6d-924c-b65faaeb2edd"
+                  name="currentTimesignature"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3b669be4-50e0-4545-9e8b-059c22956dc5"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="98b02285-284b-4ce0-b890-15e2d3d56e3a"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f94fc312-35cf-4964-913b-f605b7b8b84f"
+            name="musicSheet"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6dc05fea-1481-47c8-99d2-abcdc4ebb559"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.MidiFileproces Type%3DContext Member%3DmusicSheet"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="26be2cff-ddf5-495f-8edf-5c9fa2d6d2fc"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e82208d-1fac-4d4a-8620-d390bae42117">
+                    <propertyInstance
+                      Id="b2c8e906-0879-48a2-ad01-63220f7b8809"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e1feb2d7-b157-4141-9c8f-421bbb6b025a">
+                    <propertyInstance
+                      Id="1d320149-d666-49f9-a1d4-1e14c177a092"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3891aa7e-156d-4a99-9d02-e3772805c56f">
+                    <propertyInstance
+                      Id="cb70d152-a3a1-4f72-ba39-247eaf4238e9"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93d9c5af-4403-4493-9712-6b3a89ba24e0">
+                    <propertyInstance
+                      Id="b6cf3759-6f82-4b03-83b4-93892ad1ffd0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65c414b2-19ff-4940-b414-55b1e7f3d7ee">
+                    <propertyInstance
+                      Id="4c3a0330-34c2-4c2e-9dd3-8d04d03add1c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="819d9ab3-0b8d-4b8a-af1c-4e5664a09bf1">
+                    <propertyInstance
+                      Id="b04a3c3c-13f3-4db9-976e-114f53c304ec"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b8b434c9-2bf1-409f-bdf7-ba58f28b8e19">
+                    <propertyInstance
+                      Id="5426501d-8b45-4805-8413-7afbc0350d38"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="faf5a7e2-da0b-4f5e-80b6-9281ee812a68"
+                LastKnownName="MusicSheet"
+                LastKnownLocation="Package10_1349.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1d0b467f-1b7e-4e96-ad34-729115fc9125"
+            name="nextEvent"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="11b12edf-7a09-4037-a889-bd9ad15ee309"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.MidiFileproces Type%3DContext Member%3DnextEvent"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cf513204-deeb-429e-8628-b7a05a3228d8"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b63a564d-93cc-424d-9a73-67963aaf60a8">
+                    <propertyInstance
+                      Id="510003cd-005f-4715-a67e-5390edd94b6c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ca94adb-c613-4852-8b86-a7f1c0dbdec1">
+                    <propertyInstance
+                      Id="a6cf0dd2-d5e3-4d10-a3c2-9e9f6650ce02"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f57b7c3-6100-433f-9560-6222883223cd">
+                    <propertyInstance
+                      Id="6c965f0b-a13e-4569-8f83-572bf42e19a6"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4437cf07-7f7e-4076-8dfa-65cbcd9d8160">
+                    <propertyInstance
+                      Id="0b74f876-d3cf-4482-a3fe-6454bf97cf1d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50145eef-686a-48c1-bbf2-c4dcbb315be4">
+                    <propertyInstance
+                      Id="5527656c-744b-4ede-9f1f-e303f4f562c8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="947503c2-bc34-4a6f-8353-e66011cdc9c9">
+                    <propertyInstance
+                      Id="2277b3ed-7c2f-4077-a1c3-482e046138e4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="929cdd59-f57b-4193-b957-a01639647629">
+                    <propertyInstance
+                      Id="2fb44cf1-0f5f-4e0f-bbaa-6618fa1883eb"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="3d4f2564-6a26-409d-879b-bcdcd91b99cd"
+                LastKnownName="MidiEvent"
+                LastKnownLocation="Package9_1349.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d79da496-6655-4466-be97-62638ba69819"
+            name="_sequence"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4fa19a14-8827-4cad-92f6-a8f81f3d1494"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.MidiFileproces Type%3DContext Member%3D_sequence"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eeda1b1f-ad7c-4d34-a29b-e8f7cbd79494"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac8c4233-16a0-46a2-aa4d-bab0b931cf18">
+                    <propertyInstance
+                      Id="b142b806-adf3-4def-9a7e-2d33dd4e567d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e3dea90-03a7-48a8-8d0a-31b034c5fa1e">
+                    <propertyInstance
+                      Id="b8fb36ad-8826-403f-aa3c-7ec40f5bebed"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb851fbe-c393-4fbb-b85d-d325c2bac3da">
+                    <propertyInstance
+                      Id="b60ca29d-b221-4fc3-ad5f-bcea9f41f442"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7325e4b7-23e6-45a6-a92c-0e106d2f9dbd">
+                    <propertyInstance
+                      Id="c68a46fa-eb80-481f-88e3-d6e6f8f3bf8f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f8523ea-c01b-4bbd-b4bb-14d52c2bfb61">
+                    <propertyInstance
+                      Id="0083f69d-106a-4353-a410-27c02897d6dd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90d08ce3-4b36-463a-9901-cc6a5dc2ea3f">
+                    <propertyInstance
+                      Id="e4565c98-c402-4861-ae21-815594593176"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0888a0a7-b735-4bcd-8c06-f7bc7ac34832">
+                    <propertyInstance
+                      Id="3bbc89b5-cb0b-4290-8af2-cda0e7a548c7"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="e8869f90-53b8-462d-a1ed-7f73cbfca714"
+                LastKnownName="Sequence"
+                LastKnownLocation="Package9_1349.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1fda04c6-02ce-4b7c-8836-645f077a2e63"
+            name="currentTimesignature"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="456d7ffd-6e01-46fd-8c2e-059b231170fa"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.MidiFileproces Type%3DContext Member%3DcurrentTimesignature"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c716633e-1638-4333-9eb4-125e5b84868b"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f08034ac-1825-411a-8093-45686a81d96d">
+                    <propertyInstance
+                      Id="00f0a9d6-c785-4a75-93cd-6d7d7f2f05a6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9beff9f5-9e2b-4a2c-97bc-8da5dfed3167">
+                    <propertyInstance
+                      Id="435b3901-37b4-4995-9a71-01207012979b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34197023-2388-4b5a-b70a-d976f7aa63e7">
+                    <propertyInstance
+                      Id="f8263b10-465e-4c84-9548-bdbbd7c68ff2"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8965778a-365f-4791-8469-e7f81c08aef5">
+                    <propertyInstance
+                      Id="ee0e5ebd-5851-4e11-8a37-4f9bf8dbff0c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7fe7a98d-08c4-4480-ad14-511def5644a5">
+                    <propertyInstance
+                      Id="d6e6973b-42be-4a58-8c5a-78abc7946fe5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98e0a316-7090-4771-8078-4bc8fc709da1">
+                    <propertyInstance
+                      Id="c4b02ce2-a210-4feb-93f2-42de35c026e4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa0c30a1-5784-4bc6-9a87-51166624c5d7">
+                    <propertyInstance
+                      Id="6cea56aa-a19a-46a3-91a1-e8adc7cd9cec"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="540e1058-0e88-4089-9a60-ae936385e98f"
+                LastKnownName="TimeSignature"
+                LastKnownLocation="Package10_1349.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7d33d35f-6fc7-4663-9e2c-0402275f02a0"
+            name="Context"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1695b293-0990-41ef-8f45-d343a7134445"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2FDPA_Musicsheets%2Fbin%2FDebug%2FDPA_Musicsheets.exe Namespace%3DDPA_Musicsheets.MidiFileproces Type%3DContext Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ed4e9dc3-4f25-46fd-bbe7-4fe44b6ed551"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f380c25-072f-4133-bfa0-4f18033c1b80">
+                    <propertyInstance
+                      Id="372b6c1f-0b1b-4c56-b191-0becf68e44ed"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1e0c022-007e-4154-8656-995c47bdeef7">
+                    <propertyInstance
+                      Id="9814e60b-df26-496d-b812-84fee4d580d0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e45163b-a6f3-47f6-bcd3-05c345365932">
+                    <propertyInstance
+                      Id="e5b50017-dd7f-4294-a435-39b32bf57f36"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="871992ee-0a49-4612-b4ee-16431581c82b">
+                    <propertyInstance
+                      Id="d9bcd2a7-894a-4ab7-afcd-611205996cf6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1bea6bf-0392-4ea3-8828-7d26c4d42af5">
+                    <propertyInstance
+                      Id="f451348f-7d47-4002-b4ed-f248df0183d5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="363a24e2-e353-4974-b6e0-466873d2f1d6">
+                    <propertyInstance
+                      Id="b80a7eaa-0328-4815-8d8a-977924dde93f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8ec0df5e-6bcf-45d0-8312-c7e02aa01e67"
+        LastKnownName="midiTypeHandler"
+        LastKnownLocation="Package21_1349.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
