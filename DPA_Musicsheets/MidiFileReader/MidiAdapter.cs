@@ -108,7 +108,7 @@ namespace DPA_Musicsheets.MidiReader
         {
             var channelMessage = currentEvent.MidiMessage as ChannelMessage;
             //de noot is afgelopen dus kan die nu toegevoegd worden aan de music sheet
-            if (channelMessage.Data2 == 0)
+            if(channelMessage.Data2 == 0)
             {
                 int octaaf = (int)Math.Floor((Double)channelMessage.Data1 / 12);
                 String toonHoogte = noteLookup[channelMessage.Data1 - (octaaf * 12)];
@@ -122,19 +122,18 @@ namespace DPA_Musicsheets.MidiReader
                 double percentageOfBeatNote = deltaTicks / _sequence.Division;
                 double percentageOfWholeNote = (1.0 / currentTimesignature.timeSignature[1]) * percentageOfBeatNote;
                 double duur = berekenDuur(percentageOfWholeNote);
-                Note note = new Note(octaaf - 1, toonHoogte, duur, item, TieType.None);
-                if (percentageOfWholeNote != nootLengtLookup[duur])
+                Note note = new Note(octaaf -1, toonHoogte, duur, item, TieType.None);
+                if(percentageOfWholeNote != nootLengtLookup[duur])
                 {
                     //er is een punt
                     note.punten++;
                     note.duur = duur * 2;
                 }
                 musicSheet.addmusicSymbol(note);
-            }
-            else
+            } else
             {
                 //check of er rusts zijn
-                if (nextEvent.AbsoluteTicks != currentEvent.AbsoluteTicks)
+                if(nextEvent.AbsoluteTicks != currentEvent.AbsoluteTicks)
                 {
                     // er is een rust
                     double deltaTicks = Math.Abs(nextEvent.AbsoluteTicks - currentEvent.AbsoluteTicks);
