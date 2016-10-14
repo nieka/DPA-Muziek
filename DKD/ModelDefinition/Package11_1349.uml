@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b914c65f-2dad-492d-a2e1-0ed4cf5c39af"
+  name="PSAMWPFControlLibrary"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="fc7f3b05-8121-4455-86a4-56835f13d6f7"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DPSAMWPFControlLibrary"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="efc0777f-ebf2-4970-9c7e-5216e0abf749"
+        name="IncipitViewerWPF"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="830e7789-5985-440f-a2f2-aedddb101b83"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMichel%2FDocuments%2FGitHub%2FDPA-Muziek%2Fpackages%2FPSAMWPFControlLibrary.dll Namespace%3DPSAMWPFControlLibrary Type%3DIncipitViewerWPF"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d5cba2db-a026-4a95-9cdb-ad3387ac6840"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bd558c39-6d14-47ef-ab1e-2707017a2b14">
+                <propertyInstance
+                  Id="05d79b35-7296-47dd-a16d-21235f972a15"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="76d15efb-0a09-406a-9e3b-071c5de58792">
+                <propertyInstance
+                  Id="79eef8dc-d4a6-4ec1-821f-1522cb9b8d3d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="421996e1-2895-44d7-8456-37cfc3f207cf">
+                <propertyInstance
+                  Id="c586f70e-c1b0-4aa1-8aa9-7e589b3e1ccc"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="902ceba9-cb04-4232-8144-b5cad529cef0">
+                <propertyInstance
+                  Id="aed9f2c7-4d70-49f3-9237-e544801c692a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="643c884a-7fff-43e1-a46b-5643313149c5">
+                <propertyInstance
+                  Id="3074202b-82d5-4625-b947-977378fef2ce"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="d3d009a5-e4da-443a-b3a8-bea4fca31c6e">
+            <interfaceMoniker
+              Id="8f8ca807-ecf5-4585-952f-f41b10173f9d"
+              LastKnownName="IComponentConnector"
+              LastKnownLocation="Package12_1349.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

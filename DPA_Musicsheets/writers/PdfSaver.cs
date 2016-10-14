@@ -27,7 +27,7 @@ namespace DPA_Musicsheets.writers
                 sourcefile += tempArr[i] + "\\";
             }
             LilypondToPdfExample.SaveLilypondToPdf(sourcefile, tempArr[tempArr.Length - 1]);
-            //File.Delete(fileLocation);
+            
         }
     }
 }

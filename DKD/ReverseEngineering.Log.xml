@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///D:/PROGRAMS/VISUALSTUDIO/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-10-14T15:02:28" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'df8182c1-0b4e-49bc-9101-856211f6566f' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets' -  (Package)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::classes' -  (Package)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::classes::NootItem' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::classes::Note' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers' -  (Package)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont' -  (Package)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers' -  (Package)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Medium" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::ApostrofHandler' -  (Class)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::ApostrofHandler::ApostrofHandler' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::ApostrofHandler::Handle' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::ApostrofHandler::Handle::noot' -  (Parameter)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Medium" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::KommaHandler' -  (Class)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::KommaHandler::Handle' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::KommaHandler::Handle::noot' -  (Parameter)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::KommaHandler::KommaHandler' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Medium" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::LinkHandler' -  (Class)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::LinkHandler::Handle' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::LinkHandler::Handle::noot' -  (Parameter)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::LinkHandler::LinkHandler' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Medium" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::MolKruisHandler' -  (Class)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::MolKruisHandler::Handle' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::MolKruisHandler::Handle::noot' -  (Parameter)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::MolKruisHandler::MolKruisHandler' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::MolKruisHandler::noteItemLookup' -  (Property)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Medium" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::PuntHandler' -  (Class)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::PuntHandler::Handle' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::PuntHandler::Handle::noot' -  (Parameter)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::PuntHandler::PuntHandler' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Medium" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::ToonhoogteHandler' -  (Class)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::ToonhoogteHandler::Handle' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::ToonhoogteHandler::Handle::noot' -  (Parameter)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::handlers::ToonhoogteHandler::ToonhoogteHandler' -  (Operation)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::DPA_Musicsheets::writers::ToLilypont::NoteHandler' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::System' -  (Package)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::System::Collections' -  (Package)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::System::Collections::Generic::Dictionary' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD::System::Collections::Generic::Dictionary&lt;NootItem‎, String‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'e04cf120-a133-465a-9c13-2fc1c73f9576' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD::DPA_Musicsheets::writers::ToLilypont::handlers::ApostrofHandler to DKD::DPA_Musicsheets::writers::ToLilypont::NoteHandler (InterfaceRealization)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD::DPA_Musicsheets::writers::ToLilypont::handlers::KommaHandler to DKD::DPA_Musicsheets::writers::ToLilypont::NoteHandler (InterfaceRealization)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD::DPA_Musicsheets::writers::ToLilypont::handlers::LinkHandler to DKD::DPA_Musicsheets::writers::ToLilypont::NoteHandler (InterfaceRealization)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD::DPA_Musicsheets::writers::ToLilypont::handlers::MolKruisHandler to DKD::DPA_Musicsheets::writers::ToLilypont::NoteHandler (InterfaceRealization)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD::DPA_Musicsheets::writers::ToLilypont::handlers::PuntHandler to DKD::DPA_Musicsheets::writers::ToLilypont::NoteHandler (InterfaceRealization)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD::DPA_Musicsheets::writers::ToLilypont::handlers::ToonhoogteHandler to DKD::DPA_Musicsheets::writers::ToLilypont::NoteHandler (InterfaceRealization)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD::DPA_Musicsheets::classes::Note to DKD::DPA_Musicsheets::classes::AbstractNode (Generalization)" />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="High" Text="(6) type(s) fully reverse engineered." />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="High" Text="(5) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2016-10-14T15:02:31" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

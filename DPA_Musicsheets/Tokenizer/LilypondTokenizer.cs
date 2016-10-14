@@ -24,6 +24,8 @@ namespace DPA_Musicsheets.Tokenizer
             keyWords.Add("\\time", TokenType.timeSignature);
             keyWords.Add("\\clef", TokenType.Clef);
             keyWords.Add("treble", TokenType.ClefType);
+            keyWords.Add("alto", TokenType.ClefType);
+            keyWords.Add("bass", TokenType.ClefType);
             keyWords.Add("|", TokenType.Maatstreep);
             keyWords.Add("\\tempo", TokenType.Tempo);
             keyWords.Add("\\version", TokenType.Version);

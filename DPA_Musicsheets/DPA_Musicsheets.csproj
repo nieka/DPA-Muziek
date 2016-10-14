@@ -70,10 +70,12 @@
     </ApplicationDefinition>
     <Compile Include="Adapter\ClefAdapter.cs" />
     <Compile Include="Adapter\NootAdapter.cs" />
+    <Compile Include="Adapter\OldMidiAdapter.cs" />
     <Compile Include="classes\AbstractNode.cs" />
     <Compile Include="classes\ApplicationController.cs" />
     <Compile Include="classes\Clef.cs" />
     <Compile Include="classes\ClefType.cs" />
+    <Compile Include="classes\KeyType.cs" />
     <Compile Include="classes\LilypondFilereader.cs" />
     <Compile Include="classes\LilypondReader.cs" />
     <Compile Include="classes\MaatStreep.cs" />
@@ -82,14 +84,27 @@
     <Compile Include="classes\NootItem.cs" />
     <Compile Include="classes\Repeater.cs" />
     <Compile Include="classes\RustNode.cs" />
+    <Compile Include="classes\StateType.cs" />
     <Compile Include="classes\Tempo.cs" />
     <Compile Include="classes\TieType.cs" />
     <Compile Include="classes\Note.cs" />
     <Compile Include="classes\StafDrawer.cs" />
     <Compile Include="classes\TimeSignature.cs" />
+    <Compile Include="Commands\InsertBarLinesCommand.cs" />
+    <Compile Include="Commands\InsertClefCommand.cs" />
+    <Compile Include="Commands\InsertTempoCommand.cs" />
+    <Compile Include="Commands\InsertTime3_4Command.cs" />
+    <Compile Include="Commands\InsertTime6_8Command.cs" />
+    <Compile Include="Commands\InsertTimeCommand.cs" />
+    <Compile Include="Commands\OpenFileCommand.cs" />
+    <Compile Include="Commands\PlayMidiCommand.cs" />
+    <Compile Include="Commands\SaveAsLilypondCommand.cs" />
+    <Compile Include="Commands\SaveAsPDFCommand.cs" />
     <Compile Include="factories\ReaderFactory.cs" />
+    <Compile Include="interfaces\ICommand.cs" />
     <Compile Include="interfaces\IMusicSymbol.cs" />
     <Compile Include="interfaces\InputReader.cs" />
+    <Compile Include="interfaces\IState.cs" />
     <Compile Include="interfaces\IVisotor.cs" />
     <Compile Include="interfaces\NoteObserver.cs" />
     <Compile Include="Interperter\Context.cs" />
@@ -105,9 +120,23 @@
     <Compile Include="Interperter\ExpressionFactory.cs" />
     <Compile Include="Interperter\LyInterperter.cs" />
     <Compile Include="Interperter\expresions\TimeSignatureExpresion.cs" />
-    <Compile Include="MidiFileReader\MidiAdapter.cs" />
-    <Compile Include="MidiFileReader\MidiFileReader.cs" />
+    <Compile Include="memento\Memento.cs" />
+    <Compile Include="memento\Node.cs" />
+    <Compile Include="MidiFileproces\Context.cs" />
+    <Compile Include="MidiFileproces\MidiAdapter.cs" />
+    <Compile Include="MidiFileproces\MidiFileReader.cs" />
+    <Compile Include="MidiFileproces\midiMessageHandler\ChannelHandler.cs" />
+    <Compile Include="MidiFileproces\midiMessageHandler\ChannelHandlerFactory.cs" />
+    <Compile Include="MidiFileproces\midiMessageHandler\IMessageTypeHandler.cs" />
+    <Compile Include="MidiFileproces\midiMessageHandler\MetaHandler.cs" />
+    <Compile Include="MidiFileproces\midiTypeHandler\IMidiTypeHandler.cs" />
+    <Compile Include="MidiFileproces\midiTypeHandler\MidiTypeHandlerFactory.cs" />
+    <Compile Include="MidiFileproces\midiTypeHandler\TempoHanlder.cs" />
+    <Compile Include="MidiFileproces\midiTypeHandler\TimeSignatureHandler.cs" />
+    <Compile Include="MidiFileproces\midiTypeHandler\TrackNameHandler.cs" />
     <Compile Include="MidiTrack.cs" />
+    <Compile Include="States\EditState.cs" />
+    <Compile Include="States\PlayState.cs" />
     <Compile Include="Tokenizer\checkers\NoteChecker.cs" />
     <Compile Include="Tokenizer\checkers\NumberChecker.cs" />
     <Compile Include="Tokenizer\checkers\RustChecker.cs" />
@@ -167,6 +196,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DKD.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

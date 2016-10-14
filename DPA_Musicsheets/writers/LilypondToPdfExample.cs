@@ -27,6 +27,11 @@ namespace DPA_Musicsheets.writers
                 }
             };
             process.Start();
+            process.WaitForExit();
+            File.Delete(sourceFolder + sourceFileName);
+            //process.Exited += (sender, e) => {
+            //    File.Delete(sourceFolder + sourceFileName);
+            //};
         }
     }
 }

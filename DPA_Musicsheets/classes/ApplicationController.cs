@@ -1,11 +1,15 @@
 ﻿using DPA_Musicsheets.factories;
 using DPA_Musicsheets.interfaces;
+using DPA_Musicsheets.States;
 using DPA_Musicsheets.writers;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using DPA_Musicsheets.memento;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace DPA_Musicsheets.classes
 {
@@ -14,16 +18,25 @@ namespace DPA_Musicsheets.classes
         private InputReader inputReader;
         private MusicSheet musicSheet;
         private List<NoteObserver> noteObservers;
-
         private ToLilypontConverter LilypondConverter;
+        public MainWindow window { get; set; }
+        public Memento memento { get; set; }
         public bool HasSaved { get; set; }
+        public string CommandKeys { get; set; }
+        public string EditString { get; set; }
+        public IState State { get; set; }
 
-        public ApplicationController()
+        public ApplicationController(MainWindow window)
         {
             musicSheet = new MusicSheet();
             noteObservers = new List<NoteObserver>();
             LilypondConverter = new ToLilypontConverter();
+            this.window = window;
             HasSaved = true;
+            CommandKeys = "";
+            EditString = "";
+            State = new PlayState(this);
+            memento = new Memento(this);
         }
 
         public void convertFile(String location)
@@ -58,6 +71,49 @@ namespace DPA_Musicsheets.classes
         public string GetLilypond()
         {
             return LilypondConverter.ToLilypoint(musicSheet);
+        }
+
+        public void OpenFile()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                //txt_MidiFilePath.Text = openFileDialog.FileName;
+                convertFile(openFileDialog.FileName);
+
+                window.SetMidiFilePath(openFileDialog.FileName);
+            }
+        }
+
+        public void SaveFile()
+        {
+           SaveFile(window.GetSaveState());
+           
+        }
+
+        public void SaveFile(string type)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Title = "Sla je muziek op";
+            saveFileDialog1.ShowDialog();
+            if (saveFileDialog1.FileName != "")
+            {
+                save(type, saveFileDialog1.FileName);
+                HasSaved = true;
+            }
+        }
+
+        public void SetEditText(string txt)
+        {
+            EditString = txt;
+            window.SetEditBox(txt);
+        }
+
+        public void RedrawStaf()
+        {
+            inputReader = ReaderFactory.getReader("lilypond");
+            musicSheet = inputReader.readNotes(EditString);
+            notifyAll();
         }
     }
 }
